@@ -42,6 +42,9 @@ export default function HomePage() {
           cue="keep walking"
         />
 
+        {/* ── Slide two — the promise ───────────────────────────────── */}
+        <EditorialChapter lead="the week you’ve been promising yourself" />
+
         {/* ── Movement One — The Last of Its Kind ───────────────────── */}
         {/* Truth: an untouched place still exists. Trust imagery; almost no text. */}
         <CinematicChapter
