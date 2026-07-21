@@ -89,6 +89,15 @@
   --sidebar-accent-foreground: var(--ink);
   --sidebar-border: var(--border);
   --sidebar-ring: var(--sage);
+
+  /* Motion language — one easing, three tempos. Nothing entertains. */
+  --ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-quick: 0.6s;
+  --motion-base: 1s;
+  --motion-slow: 1.4s;
+
+  /* Editorial reading measure */
+  --measure: 42rem;
 }
 
 @layer base {
@@ -115,25 +124,53 @@
     font-style: italic;
   }
 
-  /* Cinematic reveal — restrained, slow */
-  .reveal {
-    opacity: 0;
-    transform: translateY(1.75rem);
-    transition:
-      opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1),
-      transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
-    will-change: opacity, transform;
+  /* ---- Typographic scale (fluid, carved into the landscape) ---- */
+  /* Banner — reserved for the rare, emotional line. */
+  .type-banner {
+    font-family: var(--font-banner);
+    font-style: italic;
+    font-size: clamp(2.75rem, 8vw, 5.5rem);
+    line-height: 0.95;
+    letter-spacing: 0.01em;
   }
-  .reveal.is-visible {
-    opacity: 1;
-    transform: none;
+  /* Hero / chapter opening statement. */
+  .type-hero {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5.2vw, 3.75rem);
+    line-height: 1.04;
+    letter-spacing: -0.01em;
   }
-  @media (prefers-reduced-motion: reduce) {
-    .reveal {
-      opacity: 1;
-      transform: none;
-      transition: none;
-    }
+  /* Lead — the sentence that carries a chapter. */
+  .type-lead {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3.4vw, 2.5rem);
+    line-height: 1.14;
+  }
+  /* Body — editorial reading, generous. */
+  .type-body {
+    font-family: var(--font-sans);
+    font-size: clamp(1.0625rem, 1.1vw, 1.25rem);
+    line-height: 1.68;
+  }
+  /* Small caps label — chapter markers, eyebrows, meta. */
+  .type-eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+  }
+
+  /* ---- Spacing rhythm ---- */
+  /* A chapter's vertical breathing room. */
+  .section-y {
+    padding-block: clamp(7rem, 14vw, 11rem);
+  }
+  .section-y-sm {
+    padding-block: clamp(4rem, 8vw, 6rem);
+  }
+  /* Editorial reading measure. */
+  .measure {
+    max-width: var(--measure);
   }
 
   /* 35mm film grain overlay */
