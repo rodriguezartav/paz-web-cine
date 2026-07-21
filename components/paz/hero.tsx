@@ -16,6 +16,7 @@ export function Hero({
   imageAlt,
   eyebrow,
   meta,
+  title,
   tagline,
   cue,
   children,
@@ -26,6 +27,8 @@ export function Hero({
   eyebrow?: ReactNode
   /** small label, upper-right (e.g. a date) */
   meta?: ReactNode
+  /** the large display statement beneath the wordmark */
+  title?: ReactNode
   /** the single line beneath the wordmark */
   tagline?: ReactNode
   /** the quiet scroll cue at the base */
@@ -71,8 +74,13 @@ export function Hero({
           {children ?? (
             <>
               <Wordmark size="lg" className="drop-shadow-[0_1px_18px_rgba(64,59,58,0.4)]" />
+              {title ? (
+                <h1 className="type-hero mt-10 max-w-4xl text-balance text-bone drop-shadow-[0_1px_22px_rgba(64,59,58,0.45)]">
+                  {title}
+                </h1>
+              ) : null}
               {tagline ? (
-                <p className="mt-10 max-w-md font-display text-lg leading-relaxed text-balance text-bone/90 md:text-xl">
+                <p className="mt-8 max-w-md font-display text-lg leading-relaxed text-balance text-bone/90 md:text-xl">
                   {tagline}
                 </p>
               ) : null}

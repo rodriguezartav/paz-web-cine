@@ -36,6 +36,7 @@ export default function HomePage() {
         <Hero
           image="/images/opening-coastline.png"
           imageAlt="A wild, undeveloped coastline at dawn where primary rainforest runs down to an empty grey-sand beach, hills wrapped in low mist above a calm Pacific."
+          title="the week you’ve been promising yourself"
           tagline="where the last of the rainforest still meets the sea"
           cue="keep walking"
         />
