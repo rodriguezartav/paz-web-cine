@@ -8,6 +8,7 @@ import {
   SectionDivider,
   SiteFooter,
 } from '@/components/paz'
+import { RotatingDreamTitle } from '@/components/paz/rotating-dream-title'
 
 export const metadata: Metadata = {
   title: 'Paz Corcovado',
@@ -36,8 +37,8 @@ export default function HomePage() {
         <Hero
           image="/images/opening-coastline.png"
           imageAlt="A wild, undeveloped coastline at dawn where primary rainforest runs down to an empty grey-sand beach, hills wrapped in low mist above a calm Pacific."
-          title="the week you’ve been promising yourself"
-          tagline="where the last of the rainforest still meets the sea"
+          title={<RotatingDreamTitle />}
+          tagline="As far as we know — the last of its kind"
           cue="keep walking"
         />
 
