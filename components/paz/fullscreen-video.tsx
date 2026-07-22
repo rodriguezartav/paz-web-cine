@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import type { ReactNode } from 'react'
 import Image from 'next/image'
+import MuxVideo from '@mux/mux-video-react'
 import { useReducedMotion } from 'motion/react'
 import { cn } from '@/lib/utils'
 import { Reveal } from '@/components/paz/reveal'
@@ -16,14 +17,17 @@ import { Reveal } from '@/components/paz/reveal'
  * until it is almost needed.
  */
 export function FullscreenVideo({
-  src,
+  playbackId,
+  mobilePlaybackId,
   poster,
   posterAlt,
   chapter,
   caption,
   align = 'end',
 }: {
-  src: string
+  playbackId: string
+  /** optional portrait playback selected on narrow viewports */
+  mobilePlaybackId?: string
   /** a still frame shown before/while the video loads, and always under reduced-motion */
   poster: string
   posterAlt: string
@@ -35,6 +39,15 @@ export function FullscreenVideo({
   const ref = useRef<HTMLDivElement | null>(null)
   const videoRef = useRef<HTMLVideoElement | null>(null)
   const [active, setActive] = useState(false)
+  const [mobile, setMobile] = useState(false)
+
+  useEffect(() => {
+    const media = window.matchMedia('(max-width: 767px)')
+    const update = () => setMobile(media.matches)
+    update()
+    media.addEventListener('change', update)
+    return () => media.removeEventListener('change', update)
+  }, [])
 
   useEffect(() => {
     if (reduce) return
@@ -70,15 +83,15 @@ export function FullscreenVideo({
           className="object-cover"
         />
         {!reduce && active ? (
-          <video
+          <MuxVideo
             ref={videoRef}
             className="absolute inset-0 h-full w-full object-cover"
-            src={src}
+            playbackId={mobile && mobilePlaybackId ? mobilePlaybackId : playbackId}
             poster={poster}
             muted
             loop
             playsInline
-            preload="none"
+            preload="metadata"
             aria-hidden="true"
           />
         ) : null}

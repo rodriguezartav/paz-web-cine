@@ -4,10 +4,14 @@ import {
   Hero,
   CinematicChapter,
   EditorialChapter,
+  FullscreenVideo,
   ImageEssay,
   SectionDivider,
   SiteFooter,
 } from '@/components/paz'
+
+const DESKTOP_VIDEO_PLAYBACK_ID = 'SkgfY9F8a33A1rGZIq0147z2KM3CLBm02gdje3aax44Tg'
+const MOBILE_VIDEO_PLAYBACK_ID = 'd7oGXU3Mpz891zJ02aul7xiwezR1P2z02EJNbgJSgKMtA'
 
 export const metadata: Metadata = {
   title: 'Paz Corcovado',
@@ -73,11 +77,13 @@ export default function HomePage() {
 
         {/* ── Movement Two — A Place That Still Belongs to Nature ────── */}
         {/* Truth: it is Corcovado. Answer "where is this?" with reality, not a map. */}
-        <CinematicChapter
-          image="/images/hero-jungle-ocean.png"
-          imageAlt="Dense green rainforest framing a pale, misty Pacific at first light, seen from within the trees."
+        <FullscreenVideo
+          playbackId={DESKTOP_VIDEO_PLAYBACK_ID}
+          mobilePlaybackId={MOBILE_VIDEO_PLAYBACK_ID}
+          poster="/images/hero-jungle-ocean.png"
+          posterAlt="Dense green rainforest framing a pale, misty Pacific at first light, seen from within the trees."
           chapter="ii ~ a place that still belongs to nature"
-          caption="this is corcovado."
+          caption="this is paz in corcovado"
           align="end"
         />
 
