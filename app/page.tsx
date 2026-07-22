@@ -47,15 +47,14 @@ export default function HomePage() {
         <CinematicChapter
           image="/images/canopy-rain.png"
           imageAlt="Rain moving through a dense rainforest canopy, large wet leaves catching soft grey light."
-          chapter="i ~ the last of its kind"
-          caption="long before it reaches the ground, the rain has passed through a hundred years of leaves."
+          caption="you don't visit the wildlife here. you live inside it ~ awake around you, day and night."
           align="end"
         />
 
         <CinematicChapter
           image="/images/lineup-waiting.png"
           imageAlt="A lone surfer sitting still on a board far out on a glassy, empty ocean at dawn, a forested headland behind."
-          caption="one wave. and no one waiting for a turn."
+          caption="one wave, and no one waiting for a turn. walk down anytime, grab a board ~ and surf more in a morning than most do in a week."
           align="start"
         />
 
