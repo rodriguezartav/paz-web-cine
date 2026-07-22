@@ -1,0 +1,92 @@
+import Image from 'next/image'
+import { Container, Section } from './layout'
+import { Reveal } from './reveal'
+import { cn } from '@/lib/utils'
+
+type Passage = {
+  text: string
+  image: string
+  imageAlt: string
+  side: 'left' | 'right'
+}
+
+const passages: Passage[] = [
+  {
+    text: "this is our family's home ~ we're of this land. we surf, we live simple, pura vida, the way we always have.",
+    // TODO: replace with the family's own fire-side photograph.
+    image: '/images/family-fire-table.png',
+    imageAlt: 'A local family gathered naturally around a fire and shared table at dusk.',
+    side: 'left',
+  },
+  {
+    text: "we're of the land, not hosting on it ~ so the forest is the house. it moves through while you sleep, and you stay warm, and somehow still outside.",
+    // TODO: replace with the final screened-house photograph.
+    image: '/images/screened-cabin.png',
+    imageAlt: 'The rainforest moving through the open screens of a simple bedroom at dawn.',
+    side: 'right',
+  },
+  {
+    text: "a home, not a wellness business ~ so there are no guests. you arrive a stranger and leave with a home most people don't have at home.",
+    // TODO: replace with a candid mid-meal photograph at the long table.
+    image: '/images/shared-table.png',
+    imageAlt: 'A long shared table beneath an open rainforest shelter after a meal.',
+    side: 'left',
+  },
+  {
+    text: 'and a cave sauna dug into the earth, older than any of it ~ where the last wall, the one inside you, tends to come down too.',
+    // TODO: replace with the final cave-sauna film photograph.
+    image: '/images/earthen-cave-sauna.png',
+    imageAlt: 'A dark earthen cave sauna lit softly by firelight.',
+    side: 'right',
+  },
+]
+
+/**
+ * One intimate, continuous passage. Text carries the chapter; photographs
+ * remain secondary, tucked into its rhythm like images in a field journal.
+ */
+export function WayWeLiveChapter() {
+  return (
+    <Section className="overflow-hidden">
+      <Container width="measure" className="flex flex-col gap-24 md:gap-32">
+        <Reveal>
+          <p className="type-lead max-w-xl text-balance text-sage">
+            what opens people here isn&apos;t anything we built ~ it&apos;s the way we live.
+          </p>
+        </Reveal>
+
+        {passages.map((passage) => (
+          <div key={passage.text} className="flex flex-col gap-8 md:gap-10">
+            <Reveal>
+              <p className="type-body max-w-xl text-pretty text-ink">{passage.text}</p>
+            </Reveal>
+            <Reveal
+              className={cn(
+                'w-[82%] sm:w-[58%] md:w-[52%]',
+                passage.side === 'right' ? 'self-end' : 'self-start',
+              )}
+            >
+              <figure className="film-grain overflow-hidden rounded-sm">
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={passage.image}
+                    alt={passage.imageAlt}
+                    fill
+                    sizes="(max-width: 640px) 82vw, 26rem"
+                    className="object-cover"
+                  />
+                </div>
+              </figure>
+            </Reveal>
+          </div>
+        ))}
+
+        <Reveal className="py-10 text-center md:py-16">
+          <p className="type-body mx-auto max-w-lg text-balance text-ink">
+            we open it to a few at a time ~ with faith that it gives them what they need.
+          </p>
+        </Reveal>
+      </Container>
+    </Section>
+  )
+}

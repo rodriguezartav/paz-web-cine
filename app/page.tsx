@@ -7,6 +7,7 @@ import {
   FullscreenVideo,
   SectionDivider,
   SiteFooter,
+  WayWeLiveChapter,
 } from '@/components/paz'
 
 const DESKTOP_VIDEO_PLAYBACK_ID = 'SkgfY9F8a33A1rGZIq0147z2KM3CLBm02gdje3aax44Tg'
@@ -98,39 +99,7 @@ export default function HomePage() {
           align="end"
         />
 
-        {/* TODO: replace with the family's own fire-side photograph. */}
-        <CinematicChapter
-          image="/images/family-fire-table.png"
-          imageAlt="A local family gathered naturally around a fire and shared table at dusk."
-          caption="this is our family's home ~ we're of this land. we surf, we live simple, pura vida, the way we always have."
-          align="end"
-        />
-
-        {/* TODO: replace with the final screened-house photograph. */}
-        <CinematicChapter
-          image="/images/screened-cabin.png"
-          imageAlt="The rainforest moving through the open screens of a simple bedroom at dawn."
-          caption="we're of the land, not hosting on it ~ so the forest is the house. it moves through while you sleep, and you stay warm, and somehow still outside."
-          align="start"
-        />
-
-        {/* TODO: replace with a candid mid-meal photograph at the long table. */}
-        <CinematicChapter
-          image="/images/shared-table.png"
-          imageAlt="A long shared table beneath an open rainforest shelter after a meal."
-          caption="a home, not a wellness business ~ so there are no guests. you arrive a stranger and leave with a home most people don't have at home."
-          align="end"
-        />
-
-        {/* TODO: replace with the final cave-sauna film photograph. */}
-        <CinematicChapter
-          image="/images/earthen-cave-sauna.png"
-          imageAlt="A dark earthen cave sauna lit softly by firelight."
-          caption="and a cave sauna dug into the earth, older than any of it ~ where the last wall, the one inside you, tends to come down too."
-          align="start"
-        />
-
-        <EditorialChapter lead="we open it to a few at a time ~ with faith that it gives them what they need." />
+        <WayWeLiveChapter />
 
         <SectionDivider mark="~" tone="ink" />
 
