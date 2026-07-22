@@ -5,7 +5,6 @@ import {
   CinematicChapter,
   EditorialChapter,
   FullscreenVideo,
-  ImageEssay,
   SectionDivider,
   SiteFooter,
 } from '@/components/paz'
@@ -99,32 +98,39 @@ export default function HomePage() {
           align="end"
         />
 
-        <ImageEssay
-          intro="this is our family's home. we're of this land ~ we surf, we live simple, pura vida, the way we always have. // and we open it to a few at a time, with faith that it gives them what they need."
-          plates={[
-            {
-              src: '/images/macaws.png',
-              alt: 'A pair of scarlet macaws perched close together on a bare branch against a soft overcast sky.',
-              caption:
-                'scarlet macaws, nearly gone from this coast a generation ago, nest here again in pairs.',
-              place: 'left',
-            },
-            {
-              src: '/images/sloth-cecropia.png',
-              alt: 'A three-toed sloth hanging still from a cecropia branch high in the rainforest canopy.',
-              caption:
-                'close to half of costa rica’s species live within a day’s walk of the water.',
-              place: 'right',
-            },
-            {
-              src: '/images/surf-wave.png',
-              alt: 'A lone surfer riding a small clean wave along a wild, jungle-backed coastline under overcast light.',
-              caption:
-                'the wave breaks inside a protected reserve. most mornings, it goes unridden.',
-              place: 'left',
-            },
-          ]}
+        {/* TODO: replace with the family's own fire-side photograph. */}
+        <CinematicChapter
+          image="/images/family-fire-table.png"
+          imageAlt="A local family gathered naturally around a fire and shared table at dusk."
+          caption="this is our family's home ~ we're of this land. we surf, we live simple, pura vida, the way we always have."
+          align="end"
         />
+
+        {/* TODO: replace with the final screened-house photograph. */}
+        <CinematicChapter
+          image="/images/screened-cabin.png"
+          imageAlt="The rainforest moving through the open screens of a simple bedroom at dawn."
+          caption="we're of the land, not hosting on it ~ so the forest is the house. it moves through while you sleep, and you stay warm, and somehow still outside."
+          align="start"
+        />
+
+        {/* TODO: replace with a candid mid-meal photograph at the long table. */}
+        <CinematicChapter
+          image="/images/shared-table.png"
+          imageAlt="A long shared table beneath an open rainforest shelter after a meal."
+          caption="a home, not a wellness business ~ so there are no guests. you arrive a stranger and leave with a home most people don't have at home."
+          align="end"
+        />
+
+        {/* TODO: replace with the final cave-sauna film photograph. */}
+        <CinematicChapter
+          image="/images/earthen-cave-sauna.png"
+          imageAlt="A dark earthen cave sauna lit softly by firelight."
+          caption="and a cave sauna dug into the earth, older than any of it ~ where the last wall, the one inside you, tends to come down too."
+          align="start"
+        />
+
+        <EditorialChapter lead="we open it to a few at a time ~ with faith that it gives them what they need." />
 
         <SectionDivider mark="~" tone="ink" />
 
