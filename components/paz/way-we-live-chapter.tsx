@@ -74,7 +74,7 @@ export function WayWeLiveChapter() {
               )}
             >
               <figure className="film-grain overflow-hidden rounded-sm">
-                <div className="relative aspect-[4/3]">
+                <div className="relative aspect-[4/3] md:aspect-[16/9]">
                   <Image
                     src={passage.image}
                     alt={passage.imageAlt}
