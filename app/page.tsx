@@ -66,9 +66,8 @@ export default function HomePage() {
 
         <EditorialChapter lead="somewhere, this still exists.">
           <p>
-            no resort strip. no coast road worth the name. only a shoreline the
-            last century never quite found its way to — and never got around to
-            changing.
+            far enough from the world, and long enough, that the noise runs out ~
+            and something quieter moves in.
           </p>
         </EditorialChapter>
 
