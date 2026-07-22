@@ -126,13 +126,13 @@ export function FullscreenVideo({
         <button
           type="button"
           onClick={togglePlayback}
-          className="absolute right-6 top-6 z-10 flex size-12 items-center justify-center rounded-full border border-bone/50 bg-ink/25 text-bone backdrop-blur-sm transition-colors duration-500 hover:bg-ink/45 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bone focus-visible:ring-offset-2 focus-visible:ring-offset-ink md:right-12 md:top-10 md:size-14"
+          className="absolute left-1/2 top-1/2 z-10 flex size-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-bone/50 bg-ink/25 text-bone backdrop-blur-sm transition-colors duration-500 hover:bg-ink/45 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bone focus-visible:ring-offset-2 focus-visible:ring-offset-ink md:size-24"
           aria-label={playing ? 'Pause film' : 'Play film'}
         >
           {playing ? (
-            <Pause aria-hidden="true" className="size-5" strokeWidth={1.5} />
+            <Pause aria-hidden="true" className="size-7 md:size-8" strokeWidth={1.5} />
           ) : (
-            <Play aria-hidden="true" className="ml-0.5 size-5" strokeWidth={1.5} />
+            <Play aria-hidden="true" className="ml-1 size-7 md:size-8" strokeWidth={1.5} />
           )}
         </button>
       ) : null}
