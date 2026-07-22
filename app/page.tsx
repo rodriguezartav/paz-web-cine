@@ -68,6 +68,13 @@ export default function HomePage() {
           imageAlt="Mist drifting slowly through tall primary rainforest at dawn, layers of trees fading into soft grey fog."
         />
 
+        <CinematicChapter
+          image="/images/mist-forest.png"
+          imageAlt="Mist drifting through layers of tall primary rainforest at dawn."
+          caption="far enough from the world, and slow enough that you follow the tides, the sun, the birds ~ until the noise runs out, and something quieter moves in."
+          align="end"
+        />
+
         <EditorialChapter lead="somewhere, this still exists.">
           <p>paz is a local family&apos;s home ~ opened to a few at a time.</p>
           <p>
@@ -112,13 +119,6 @@ export default function HomePage() {
               caption:
                 'the wave breaks inside a protected reserve. most mornings, it goes unridden.',
               place: 'left',
-            },
-            {
-              src: '/images/mist-forest.png',
-              alt: 'Mist drifting through layers of tall primary rainforest at dawn.',
-              caption:
-                'far enough from the world, and slow enough that you follow the tides, the sun, the birds ~ until the noise runs out, and something quieter moves in.',
-              place: 'right',
             },
           ]}
         />
