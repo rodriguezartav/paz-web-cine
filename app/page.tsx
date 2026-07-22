@@ -36,9 +36,11 @@ export default function HomePage() {
         <Hero
           image="/images/opening-coastline.png"
           imageAlt="A wild, undeveloped coastline at dawn where primary rainforest runs down to an empty grey-sand beach, hills wrapped in low mist above a calm Pacific."
-          tagline="where the last of the rainforest still meets the sea"
+          title="the week you've been promising yourself"
           cue="keep walking"
         />
+
+        <EditorialChapter lead="here, a set of conditions comes together to make something that, as far as we know, is the last of its kind." />
 
         {/* ── Movement One — The Last of Its Kind ───────────────────── */}
         {/* Truth: an untouched place still exists. Trust imagery; almost no text. */}
