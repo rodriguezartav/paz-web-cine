@@ -69,8 +69,8 @@ export default function HomePage() {
         />
 
         <CinematicChapter
-          image="/images/mist-forest.png"
-          imageAlt="Mist drifting through layers of tall primary rainforest at dawn."
+          image="/images/tidal-morning.png"
+          imageAlt="Shorebirds moving along an empty Costa Rican beach at low tide beneath soft morning light."
           caption="far enough from the world, and slow enough that you follow the tides, the sun, the birds ~ until the noise runs out, and something quieter moves in."
           align="end"
         />
