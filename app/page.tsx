@@ -113,6 +113,13 @@ export default function HomePage() {
                 'the wave breaks inside a protected reserve. most mornings, it goes unridden.',
               place: 'left',
             },
+            {
+              src: '/images/mist-forest.png',
+              alt: 'Mist drifting through layers of tall primary rainforest at dawn.',
+              caption:
+                'far enough from the world, and slow enough that you follow the tides, the sun, the birds ~ until the noise runs out, and something quieter moves in.',
+              place: 'right',
+            },
           ]}
         />
 
