@@ -71,7 +71,7 @@ export default function HomePage() {
         <CinematicChapter
           image="/images/tidal-morning.png"
           imageAlt="Shorebirds moving along an empty Costa Rican beach at low tide beneath soft morning light."
-          caption="far enough from the world, and slow enough that you follow the tides, the sun, the birds ~ until the noise runs out, and something quieter moves in."
+          caption="far enough from the world, and quiet enough that there is nothing left to follow but the tides, the sun, the birds"
           align="end"
         />
 
