@@ -100,7 +100,7 @@ export default function HomePage() {
         />
 
         <ImageEssay
-          intro="national geographic once called it the most biologically intense place on earth. it was not a slogan. it was a measurement."
+          intro="this is our family's home. we're of this land ~ we surf, we live simple, pura vida, the way we always have. // and we open it to a few at a time, with faith that it gives them what they need."
           plates={[
             {
               src: '/images/macaws.png',
