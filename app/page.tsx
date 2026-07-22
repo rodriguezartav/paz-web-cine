@@ -81,6 +81,10 @@ export default function HomePage() {
             animal that stops and looks back ~ and something in you lights up in
             a way it hasn&apos;t in years.
           </p>
+          <p>
+            we didn&apos;t create any of this, and we run no programs. we only open
+            the door, and let nature do the rest.
+          </p>
         </EditorialChapter>
 
         {/* ── Movement Two — A Place That Still Belongs to Nature ────── */}
