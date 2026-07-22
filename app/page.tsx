@@ -40,6 +40,8 @@ export default function HomePage() {
           cue="keep walking"
         />
 
+        <EditorialChapter lead="here, a set of conditions comes together to make something that, as far as we know, is the last of its kind." />
+
         {/* ── Movement One — The Last of Its Kind ───────────────────── */}
         {/* Truth: an untouched place still exists. Trust imagery; almost no text. */}
         <CinematicChapter
