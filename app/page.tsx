@@ -69,9 +69,11 @@ export default function HomePage() {
         />
 
         <EditorialChapter lead="somewhere, this still exists.">
+          <p>paz is a local family&apos;s home ~ opened to a few at a time.</p>
           <p>
-            far enough from the world, and long enough, that the noise runs out ~
-            and something quieter moves in.
+            not a resort, not a program ~ a place on the beach, led by nature,
+            where people come to quiet their minds and get back something
+            they&apos;d lost.
           </p>
         </EditorialChapter>
 
