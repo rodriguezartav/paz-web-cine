@@ -12,32 +12,39 @@ type Passage = {
 
 const passages: Passage[] = [
   {
-    text: "this is our family's home ~ we're of this land. we surf, we live simple, pura vida, the way we always have.",
-    // TODO: replace with the family's own fire-side photograph.
+    text: "we're of this land ~ born to it, surfing it, living it simple, pura vida, the way we always have.",
+    // TODO: replace with the family's own unposed water-side photograph.
     image: '/images/family-fire-table.png',
     imageAlt: 'A local family gathered naturally around a fire and shared table at dusk.',
     side: 'left',
   },
   {
-    text: "we're of the land, not hosting on it ~ so the forest is the house. it moves through while you sleep, and you stay warm, and somehow still outside.",
+    text: "so this was never a business. it's our home ~ and we just leave the door open.",
+    // TODO: replace with the final lived-in threshold photograph.
+    image: '/images/open-forest-threshold.png',
+    imageAlt: 'A simple lived-in threshold opening from a wooden porch into the rainforest.',
+    side: 'right',
+  },
+  {
+    text: 'the forest walks in with you. it moves through the house while you sleep, and still you stay warm.',
     // TODO: replace with the final screened-house photograph.
     image: '/images/screened-cabin.png',
     imageAlt: 'The rainforest moving through the open screens of a simple bedroom at dawn.',
-    side: 'right',
-  },
-  {
-    text: "a home, not a wellness business ~ so there are no guests. you arrive a stranger and leave with a home most people don't have at home.",
-    // TODO: replace with a candid mid-meal photograph at the long table.
-    image: '/images/shared-table.png',
-    imageAlt: 'A long shared table beneath an open rainforest shelter after a meal.',
     side: 'left',
   },
   {
-    text: 'and a cave sauna dug into the earth, older than any of it ~ where the last wall, the one inside you, tends to come down too.',
+    text: "there are no guests at the table ~ only people who were strangers on monday, and aren't by friday.",
+    // TODO: replace with a candid mid-meal photograph at the long table.
+    image: '/images/shared-table.png',
+    imageAlt: 'A long shared table beneath an open rainforest shelter after a meal.',
+    side: 'right',
+  },
+  {
+    text: "and when the fire's lit in the cave dug into the earth, the last wall ~ the one inside you ~ tends to come down too.",
     // TODO: replace with the final cave-sauna film photograph.
     image: '/images/earthen-cave-sauna.png',
     imageAlt: 'A dark earthen cave sauna lit softly by firelight.',
-    side: 'right',
+    side: 'left',
   },
 ]
 
@@ -62,7 +69,7 @@ export function WayWeLiveChapter() {
             </Reveal>
             <Reveal
               className={cn(
-                'w-[82%] sm:w-[58%] md:w-[52%]',
+                'w-[55%] md:w-[48%]',
                 passage.side === 'right' ? 'self-end' : 'self-start',
               )}
             >
