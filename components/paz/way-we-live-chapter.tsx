@@ -12,7 +12,7 @@ type Passage = {
 
 const passages: Passage[] = [
   {
-    text: "we're of this land ~ born to it, surfing it, living it simple, pura vida, the way we always have.",
+    text: "we're of this land ~ surfing it, living it simple, pura vida, the way we always have.",
     // TODO: replace with the family's own unposed water-side photograph.
     image: '/images/family-fire-table.png',
     imageAlt: 'A local family gathered naturally around a fire and shared table at dusk.',
@@ -69,7 +69,7 @@ export function WayWeLiveChapter() {
             </Reveal>
             <Reveal
               className={cn(
-                'w-[55%] md:w-[48%]',
+                'w-[55%] md:w-[78%] lg:w-[86%]',
                 passage.side === 'right' ? 'self-end' : 'self-start',
               )}
             >
@@ -79,7 +79,7 @@ export function WayWeLiveChapter() {
                     src={passage.image}
                     alt={passage.imageAlt}
                     fill
-                    sizes="(max-width: 640px) 82vw, 26rem"
+                    sizes="(max-width: 767px) 55vw, (max-width: 1023px) 52rem, 58rem"
                     className="object-cover"
                   />
                 </div>
