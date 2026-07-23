@@ -126,7 +126,7 @@ export function ConditionsChapter() {
         it was.
       </ImmersiveCondition>
 
-      <div className="bg-bone px-[4vw] py-[18vh] md:px-[5vw] md:py-[22vh]">
+      <div className="bg-bone px-[4vw] pb-[18vh] pt-0 md:px-[5vw] md:pb-[22vh]">
         <div className="columns-2 gap-2.5 md:columns-3 lg:columns-4">
           {wildlifeImages.map((image, index) => (
             <motion.div
