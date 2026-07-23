@@ -1,7 +1,9 @@
 'use client'
 
 import Image from 'next/image'
+import { motion, useReducedMotion } from 'motion/react'
 import { Reveal } from '@/components/paz/reveal'
+import { EASE_CINEMATIC } from '@/lib/motion'
 
 function ImmersiveCondition({
   image,
@@ -33,6 +35,8 @@ function ImmersiveCondition({
 }
 
 export function ConditionsChapter() {
+  const reduceMotion = useReducedMotion()
+
   return (
     <section aria-label="the conditions" className="bg-bone text-ink">
       <div className="flex min-h-svh items-center justify-center bg-ink px-6 py-24 text-bone md:px-12">
@@ -95,24 +99,46 @@ export function ConditionsChapter() {
         </Reveal>
       </div>
 
-      <div className="bg-ink px-6 text-bone md:px-12">
-        <div className="mx-auto flex min-h-svh max-w-5xl items-center justify-center py-28 text-center">
-          <Reveal as="p" className="type-hero text-balance">
+      <div className="flex min-h-svh items-center bg-[#403B3A] px-6 py-20 text-bone md:px-12">
+        <motion.div
+          className="mx-auto flex w-full max-w-5xl flex-col items-center gap-14 text-center md:gap-20"
+          initial={reduceMotion ? false : 'hidden'}
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.55 }}
+        >
+          <motion.p
+            className="font-display text-balance text-[clamp(3rem,8vw,6rem)] leading-[0.98]"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            transition={{ duration: reduceMotion ? 0 : 1.5, ease: EASE_CINEMATIC }}
+          >
             somewhere, this still exists.
-          </Reveal>
-        </div>
-        <div className="mx-auto flex min-h-svh max-w-5xl items-center justify-center py-28 text-center">
-          <Reveal as="p" duration={1.6} className="type-hero text-balance">
-            we didn&apos;t create any of this, and run no programs. we only open the door, and let
-            nature do the rest.
-          </Reveal>
-        </div>
-        <div className="mx-auto flex min-h-[120svh] max-w-5xl items-center justify-center py-28 text-center">
-          <Reveal as="p" duration={1.8} className="type-hero text-balance">
-            then one afternoon ~ a wave you didn&apos;t expect to make, or an animal that stops and
-            looks back ~ and something in you lights up in a way it hasn&apos;t in years.
-          </Reveal>
-        </div>
+          </motion.p>
+
+          <motion.div
+            className="max-w-4xl text-balance font-display text-[clamp(1.65rem,4vw,3.5rem)] leading-[1.08]"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            transition={{
+              duration: reduceMotion ? 0 : 1.8,
+              delay: reduceMotion ? 0 : 2.2,
+              ease: EASE_CINEMATIC,
+            }}
+          >
+            <p>
+              we didn&apos;t create any of this, and run no programs. we only open the door, and let
+              nature do the rest.
+            </p>
+            <p className="mt-5 md:mt-7">
+              then one afternoon ~ a wave you didn&apos;t expect to make, or an animal that stops and
+              looks back ~ and something in you lights up in a way it hasn&apos;t in years.
+            </p>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   )
