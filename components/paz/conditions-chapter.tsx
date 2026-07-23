@@ -111,8 +111,8 @@ export function ConditionsChapter() {
           </div>
         </Reveal>
         <Reveal as="p" className="type-lead order-1 max-w-2xl text-balance md:order-2">
-          join a costa rican home, lived the old unhurried way ~ tied to the land in ways english
-          has no words for.
+          a costa rican home, lived the old unhurried way ~ tied to the land in ways english has no
+          words for.
         </Reveal>
       </div>
 
