@@ -7,10 +7,7 @@ import {
   Section,
   CinematicChapter,
   ConditionsChapter,
-  EditorialChapter,
   FullscreenVideo,
-  SectionDivider,
-  SiteFooter,
   WayWeLiveChapter,
 } from '@/components/paz'
 
@@ -87,48 +84,6 @@ export default function HomePage() {
           </Container>
         </Section>
 
-        <SectionDivider mark="~" tone="ink" />
-
-        <EditorialChapter lead="the land is protected. the access was never sold.">
-          <p>
-            there are no ticket gates here, and no crowds to funnel through
-            them. what keeps people away is simply distance — and distance, it
-            turns out, is what has kept the place alive.
-          </p>
-        </EditorialChapter>
-
-        {/* ── Movement Three — The Conditions ───────────────────────── */}
-        {/* Truth: nature sets the schedule. Present conditions; explain nothing. */}
-        <CinematicChapter
-          image="/images/figure-shore.png"
-          imageAlt="A person crouched low at the edge of the ocean on a wild grey-sand beach at dawn, a misty headland behind."
-          chapter="iii ~ the conditions"
-          caption="here, the day is not something you plan."
-          align="end"
-          presentation="clearing"
-          imageScale="full"
-        />
-
-        <EditorialChapter lead="nature keeps the schedule.">
-          <p>morning begins with light, not an alarm.</p>
-          <p>the day follows the tide.</p>
-          <p>meals are shared at one long table.</p>
-          <p>phones lose their signal, and then their hold.</p>
-          <p>movement takes the place of entertainment.</p>
-          <p>and slowly, the silence comes back.</p>
-        </EditorialChapter>
-
-        <CinematicChapter
-          image="/images/shared-table.png"
-          imageAlt="A long, plain wooden table set for a shared meal under an open-air rainforest structure in soft morning light."
-          caption="almost everything here is shared — the table, the water, the weather."
-          align="start"
-          presentation="clearing"
-          imageScale="inset"
-        />
-
-        {/* ── Horizon — not a conclusion ────────────────────────────── */}
-        {/* The recognition, then a door left open. The walk has only begun. */}
         <CinematicChapter
           image="/images/cold-water-dawn.png"
           imageAlt="A person submerged to the chest in cold, dark, still water at dawn, breath held, mist on the surface."
@@ -139,8 +94,6 @@ export default function HomePage() {
           imageScale="full"
           cta={{ label: 'continue the descent', href: '/about' }}
         />
-
-        <SiteFooter />
       </main>
     </>
   )
