@@ -15,12 +15,9 @@ function ImmersiveCondition({
   align?: 'start' | 'end'
 }) {
   return (
-    <div className="bg-bone pt-[22vh] text-ink">
-      <div className="grain relative h-svh min-h-[560px] w-full overflow-hidden">
-        <Image src={image} alt={imageAlt} fill sizes="100vw" className="object-cover" />
-      </div>
+    <div className="bg-bone text-ink">
       <div
-        className={`flex min-h-[65svh] items-center px-6 py-[20vh] md:px-12 ${
+        className={`flex min-h-[70svh] items-center px-6 py-[22vh] md:px-12 ${
           align === 'end' ? 'justify-end' : 'justify-start'
         }`}
       >
@@ -32,6 +29,9 @@ function ImmersiveCondition({
         >
           {children}
         </Reveal>
+      </div>
+      <div className="grain relative h-svh min-h-[560px] w-full overflow-hidden">
+        <Image src={image} alt={imageAlt} fill sizes="100vw" className="object-cover" />
       </div>
     </div>
   )
@@ -82,8 +82,12 @@ export function ConditionsChapter() {
         it was.
       </ImmersiveCondition>
 
-      <div className="mx-auto grid min-h-svh max-w-6xl items-center gap-16 px-6 py-[22vh] md:grid-cols-[0.82fr_1fr] md:gap-20 md:px-10">
-        <Reveal delay={0.1} className="relative order-2 aspect-[4/3] w-full overflow-hidden md:order-1">
+      <div className="mx-auto grid min-h-svh max-w-6xl items-center gap-16 px-6 py-[22vh] md:grid-cols-[1fr_0.82fr] md:gap-20 md:px-10">
+        <Reveal as="p" className="type-lead max-w-2xl text-balance">
+          join a costa rican home, lived the old unhurried way ~ tied to the land in ways english
+          has no words for.
+        </Reveal>
+        <Reveal delay={0.1} className="relative aspect-[4/3] w-full overflow-hidden">
           <div className="grain absolute inset-0">
             <Image
               src="/images/family-fire-table.png"
@@ -93,10 +97,6 @@ export function ConditionsChapter() {
               className="object-cover"
             />
           </div>
-        </Reveal>
-        <Reveal as="p" className="type-lead order-1 max-w-2xl text-balance md:order-2">
-          join a costa rican home, lived the old unhurried way ~ tied to the land in ways english
-          has no words for.
         </Reveal>
       </div>
 
