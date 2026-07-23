@@ -2,6 +2,9 @@ import type { Metadata } from 'next'
 import {
   Navigation,
   Hero,
+  Container,
+  Reveal,
+  Section,
   CinematicChapter,
   EditorialChapter,
   FullscreenVideo,
@@ -100,6 +103,28 @@ export default function HomePage() {
         />
 
         <WayWeLiveChapter />
+
+        <Section aria-label="roberto" className="overflow-hidden">
+          <Container width="measure" className="flex flex-col">
+            <div className="flex min-h-[70svh] items-center">
+              <Reveal>
+                <p className="type-lead max-w-xl text-balance text-ink">
+                  years ago, roberto came here with nothing left ~ and the land gave him back to
+                  himself.
+                </p>
+              </Reveal>
+            </div>
+
+            <div className="flex min-h-[70svh] items-center justify-end">
+              <Reveal delay={0.1} className="max-w-xl">
+                <p className="type-body text-pretty text-ink/85">
+                  that&apos;s the only reason the door is open. we can&apos;t hand you what happened to
+                  him. we can only bring you to the same place, and let it do what it does.
+                </p>
+              </Reveal>
+            </div>
+          </Container>
+        </Section>
 
         <SectionDivider mark="~" tone="ink" />
 
