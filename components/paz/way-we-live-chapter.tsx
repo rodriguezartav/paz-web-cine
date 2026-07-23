@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { Container, Section } from './layout'
 import { Reveal } from './reveal'
+import { StillLife } from './still-life'
 import { cn } from '@/lib/utils'
 
 type Passage = {
@@ -87,6 +88,30 @@ export function WayWeLiveChapter() {
             <Reveal>
               <p className="type-body max-w-xl text-pretty text-ink">{passage.text}</p>
             </Reveal>
+
+            {index === 1 ? (
+              <>
+                {/* TODO: replace this placeholder with a found woven detail photographed at Paz. */}
+                <StillLife
+                  src="/images/still-life/woven-fiber.png"
+                  side="right"
+                  rotation="-3"
+                  shape="landscape"
+                  className="min-h-[16vh] px-2 md:min-h-[18vh]"
+                />
+              </>
+            ) : null}
+            {index === 3 ? (
+              <>
+                {/* TODO: replace this placeholder with a found ember detail photographed at Paz. */}
+                <StillLife
+                  src="/images/still-life/embers.png"
+                  side="left"
+                  rotation="3"
+                  className="min-h-[16vh] px-2 md:min-h-[18vh]"
+                />
+              </>
+            ) : null}
           </div>
         ))}
 

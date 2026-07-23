@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { motion, useReducedMotion } from 'motion/react'
 import { Reveal } from '@/components/paz/reveal'
+import { StillLife } from '@/components/paz/still-life'
 import { EASE_CINEMATIC } from '@/lib/motion'
 
 // Content direction: mix scales and kinds — macaw, sloth, frog, insect, crab,
@@ -72,6 +73,14 @@ export function ConditionsChapter() {
           the last of its kind.
         </Reveal>
       </div>
+
+      {/* TODO: replace this placeholder with a found shell photographed at Paz. */}
+      <StillLife
+        src="/images/still-life/shell.png"
+        side="right"
+        rotation="2"
+        shape="portrait"
+      />
 
       <div className="mx-auto grid min-h-svh max-w-6xl items-center gap-16 px-6 py-[22vh] md:grid-cols-[1fr_0.82fr] md:gap-20 md:px-10">
         <Reveal as="p" className="type-lead max-w-2xl text-balance">
