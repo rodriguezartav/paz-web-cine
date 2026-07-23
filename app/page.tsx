@@ -64,7 +64,7 @@ export default function HomePage() {
 
         <Section aria-label="roberto" className="overflow-hidden">
           <Container width="measure" className="flex flex-col">
-            <div className="flex min-h-[70svh] items-center">
+            <div className="flex items-end pt-[28vh]">
               <Reveal>
                 <p className="type-lead max-w-xl text-balance text-ink">
                   years ago, roberto came here with nothing left ~ and the land gave him back to
@@ -73,7 +73,7 @@ export default function HomePage() {
               </Reveal>
             </div>
 
-            <div className="flex min-h-[70svh] items-center justify-end">
+            <div className="flex items-start justify-end pb-[28vh] pt-8 md:pt-10">
               <Reveal delay={0.1} className="max-w-xl">
                 <p className="type-body text-pretty text-ink/85">
                   that&apos;s the only reason the door is open. we can&apos;t hand you what happened to
