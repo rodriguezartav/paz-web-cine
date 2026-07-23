@@ -26,17 +26,17 @@ const passages: Passage[] = [
     side: 'left',
   },
   {
-    text: "nobody's guiding you. we just take you ~ to the waterfall when it's running, the beach when the light's right, the wave when it turns on. and after that, you go back on your own, whenever you want.",
-    // TODO: replace with the final waterfall, creek, or forest-walk photograph.
-    image: '/images/forest-waterfall-walk.png',
-    imageAlt: 'A narrow rainforest path leading toward a small waterfall and creek.',
-    side: 'right',
-  },
-  {
     text: "there are no guests at the table ~ only people who were strangers on monday, and aren't by friday.",
     // TODO: replace with a candid mid-meal photograph at the long table.
     image: '/images/shared-table.png',
     imageAlt: 'A long shared table beneath an open rainforest shelter after a meal.',
+    side: 'right',
+  },
+  {
+    text: "nobody's guiding you. we just take you ~ to the waterfall when it's running, the beach when the light's right, the wave when it turns on. and after that, you go back on your own, whenever you want.",
+    // TODO: replace with the final waterfall, creek, or forest-walk photograph.
+    image: '/images/forest-waterfall-walk.png',
+    imageAlt: 'A narrow rainforest path leading toward a small waterfall and creek.',
     side: 'left',
   },
   {
