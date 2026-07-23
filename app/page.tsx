@@ -9,7 +9,6 @@ import {
   ConditionsChapter,
   FullscreenVideo,
   WayWeLiveChapter,
-  StillLife,
 } from '@/components/paz'
 
 const DESKTOP_VIDEO_PLAYBACK_ID = 'SkgfY9F8a33A1rGZIq0147z2KM3CLBm02gdje3aax44Tg'
@@ -61,14 +60,6 @@ export default function HomePage() {
           align="end"
         />
 
-        {/* TODO: replace this placeholder with a fallen flower photographed at Paz. */}
-        <StillLife
-          src="/images/still-life/flower.png"
-          side="left"
-          rotation="-2"
-          shape="square"
-        />
-
         <WayWeLiveChapter />
 
         <Section aria-label="roberto" className="overflow-hidden">
@@ -92,14 +83,6 @@ export default function HomePage() {
             </div>
           </Container>
 
-          {/* TODO: replace this placeholder with a found dried leaf photographed at Paz. */}
-          <StillLife
-            src="/images/still-life/dried-leaf.png"
-            side="left"
-            rotation="3"
-            shape="portrait"
-            className="min-h-[18vh] md:absolute md:inset-x-0 md:top-1/2 md:min-h-0 md:-translate-y-1/2"
-          />
         </Section>
 
         <CinematicChapter
@@ -113,13 +96,6 @@ export default function HomePage() {
           cta={{ label: 'continue the descent', href: '/about' }}
         />
 
-        {/* TODO: replace this placeholder with a worn table-edge detail photographed at Paz. */}
-        <StillLife
-          src="/images/still-life/table-edge.png"
-          side="right"
-          rotation="-3"
-          shape="landscape"
-        />
       </main>
     </>
   )
