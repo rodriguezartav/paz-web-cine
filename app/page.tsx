@@ -6,6 +6,7 @@ import {
   Reveal,
   Section,
   CinematicChapter,
+  ConditionsChapter,
   EditorialChapter,
   FullscreenVideo,
   SectionDivider,
@@ -47,8 +48,6 @@ export default function HomePage() {
           cue="keep walking"
         />
 
-        <EditorialChapter lead="here, a set of conditions comes together to make something that, as far as we know, is the last of its kind." />
-
         <CinematicChapter
           image="/images/tidal-morning.png"
           imageAlt="Shorebirds moving along an empty Costa Rican beach at low tide beneath soft morning light."
@@ -59,45 +58,7 @@ export default function HomePage() {
         />
 
         {/* ── Movement One — The Last of Its Kind ───────────────────── */}
-        {/* Truth: an untouched place still exists. Trust imagery; almost no text. */}
-        <CinematicChapter
-          image="/images/lineup-waiting.png"
-          imageAlt="A lone surfer sitting still on a board far out on a glassy, empty ocean at dawn, a forested headland behind."
-          caption="waves, and no one waiting for a turn ~ you surf more in a morning than most do in a week."
-          align="start"
-          presentation="clearing"
-          imageScale="inset"
-        />
-
-        <CinematicChapter
-          image="/images/canopy-rain.png"
-          imageAlt="Rain moving through a dense rainforest canopy, large wet leaves catching soft grey light."
-          caption="you don't visit. you live inside ~ so much wildlife that it takes your whole body a few days to adjust: the sound of it, the presence of it, the shock of nature still being what it was."
-          align="end"
-          presentation="clearing"
-          imageScale="full"
-        />
-
-        <CinematicChapter
-          image="/images/mist-forest.png"
-          imageAlt="Mist drifting slowly through tall primary rainforest at dawn, layers of trees fading into soft grey fog."
-          caption="join a costa rican home, lived the old way, unhurried ~ tied to the land in ways english has no words for."
-          align="start"
-          presentation="clearing"
-          imageScale="inset"
-        />
-
-        <EditorialChapter lead="somewhere, this still exists.">
-          <p>
-            and then one afternoon ~ a wave you didn&apos;t expect to make, or an
-            animal that stops and looks back ~ and something in you lights up in
-            a way it hasn&apos;t in years.
-          </p>
-          <p>
-            we didn&apos;t create any of this, and we run no programs. we only open
-            the door, and let nature do the rest.
-          </p>
-        </EditorialChapter>
+        <ConditionsChapter />
 
         {/* ── Movement Two — A Place That Still Belongs to Nature ────── */}
         {/* Truth: it is Corcovado. Answer "where is this?" with reality, not a map. */}
