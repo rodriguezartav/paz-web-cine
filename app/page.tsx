@@ -54,6 +54,8 @@ export default function HomePage() {
           imageAlt="Shorebirds moving along an empty Costa Rican beach at low tide beneath soft morning light."
           caption="far enough from the world, and quiet enough that there is nothing left to follow but the tides, the sun, the birds"
           align="end"
+          presentation="clearing"
+          imageScale="full"
         />
 
         {/* ── Movement One — The Last of Its Kind ───────────────────── */}
@@ -63,6 +65,8 @@ export default function HomePage() {
           imageAlt="A lone surfer sitting still on a board far out on a glassy, empty ocean at dawn, a forested headland behind."
           caption="waves, and no one waiting for a turn ~ you surf more in a morning than most do in a week."
           align="start"
+          presentation="clearing"
+          imageScale="inset"
         />
 
         <CinematicChapter
@@ -70,6 +74,8 @@ export default function HomePage() {
           imageAlt="Rain moving through a dense rainforest canopy, large wet leaves catching soft grey light."
           caption="you don't visit. you live inside ~ so much wildlife that it takes your whole body a few days to adjust: the sound of it, the presence of it, the shock of nature still being what it was."
           align="end"
+          presentation="clearing"
+          imageScale="full"
         />
 
         <CinematicChapter
@@ -77,6 +83,8 @@ export default function HomePage() {
           imageAlt="Mist drifting slowly through tall primary rainforest at dawn, layers of trees fading into soft grey fog."
           caption="join a costa rican home, lived the old way, unhurried ~ tied to the land in ways english has no words for."
           align="start"
+          presentation="clearing"
+          imageScale="inset"
         />
 
         <EditorialChapter lead="somewhere, this still exists.">
@@ -145,6 +153,8 @@ export default function HomePage() {
           chapter="iii ~ the conditions"
           caption="here, the day is not something you plan."
           align="end"
+          presentation="clearing"
+          imageScale="full"
         />
 
         <EditorialChapter lead="nature keeps the schedule.">
@@ -161,6 +171,8 @@ export default function HomePage() {
           imageAlt="A long, plain wooden table set for a shared meal under an open-air rainforest structure in soft morning light."
           caption="almost everything here is shared — the table, the water, the weather."
           align="start"
+          presentation="clearing"
+          imageScale="inset"
         />
 
         {/* ── Horizon — not a conclusion ────────────────────────────── */}
@@ -171,6 +183,8 @@ export default function HomePage() {
           variant="banner"
           caption="come back to life"
           note="you have not reached the end of anything. you have only started walking."
+          presentation="clearing"
+          imageScale="full"
           cta={{ label: 'continue the descent', href: '/about' }}
         />
 

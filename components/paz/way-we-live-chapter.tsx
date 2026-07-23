@@ -48,21 +48,23 @@ const passages: Passage[] = [
 export function WayWeLiveChapter() {
   return (
     <Section className="overflow-hidden">
-      <Container width="measure" className="flex flex-col gap-24 md:gap-32">
+      <Container width="measure" className="flex flex-col gap-40 md:gap-48">
         <Reveal>
           <p className="type-lead max-w-xl text-balance text-sage">
             what opens people here isn&apos;t anything we built ~ it&apos;s the way we live.
           </p>
         </Reveal>
 
-        {passages.map((passage) => (
-          <div key={passage.text} className="flex flex-col gap-8 md:gap-10">
+        {passages.map((passage, index) => (
+          <div key={passage.text} className="flex flex-col gap-20 md:gap-24">
             <Reveal>
               <p className="type-body max-w-xl text-pretty text-ink">{passage.text}</p>
             </Reveal>
             <Reveal
               className={cn(
-                'w-[55%] md:w-[78%] lg:w-[86%]',
+                index % 2 === 0
+                  ? 'w-[72%] md:w-[86%]'
+                  : 'w-[62%] md:w-[72%]',
                 passage.side === 'right' ? 'self-end' : 'self-start',
               )}
             >
