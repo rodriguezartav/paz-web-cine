@@ -84,8 +84,8 @@ export function ConditionsChapter() {
             viewport={{ once: true, amount: 0.7 }}
             transition={{ duration: reduceMotion ? 0 : 1.8, ease: EASE_CINEMATIC }}
           >
-            here, a set of conditions comes together to make something that, as far as we know, is
-            the last of its kind.
+            here, conditions come together to make something that, as far as we know, is the last
+            of its kind.
           </motion.p>
         </div>
 
