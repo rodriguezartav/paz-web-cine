@@ -63,14 +63,43 @@ export function ConditionsChapter() {
 
   return (
     <section aria-label="the conditions" className="bg-bone text-ink">
-      <div className="flex min-h-svh items-center justify-center bg-ink px-6 py-24 text-bone md:px-12">
-        <Reveal
-          as="p"
-          className="mx-auto max-w-[52ch] text-center text-balance font-display text-[1.25rem] leading-[1.8] tracking-[0.01em] md:text-[1.375rem]"
-        >
-          here, a set of conditions comes together to make something that, as far as we know, is
-          the last of its kind.
-        </Reveal>
+      <div className="bg-ink px-6 text-bone md:px-12">
+        <div className="mx-auto flex min-h-svh max-w-[52ch] items-center justify-center py-[24vh] text-center">
+          <motion.p
+            className="text-balance font-display text-[1.25rem] leading-[1.8] tracking-[0.01em] md:text-[1.375rem]"
+            initial={reduceMotion ? false : { opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.7 }}
+            transition={{ duration: reduceMotion ? 0 : 1.8, ease: EASE_CINEMATIC }}
+          >
+            you&apos;re not looking for more. you&apos;re looking for something real enough to meet you.
+          </motion.p>
+        </div>
+
+        <div className="mx-auto flex min-h-svh max-w-[52ch] items-center justify-center py-[24vh] text-center">
+          <motion.p
+            className="text-balance font-display text-[1.25rem] leading-[1.8] tracking-[0.01em] md:text-[1.375rem]"
+            initial={reduceMotion ? false : { opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.7 }}
+            transition={{ duration: reduceMotion ? 0 : 1.8, ease: EASE_CINEMATIC }}
+          >
+            here, a set of conditions comes together to make something that, as far as we know, is
+            the last of its kind.
+          </motion.p>
+        </div>
+
+        <div className="mx-auto flex min-h-svh items-center justify-center py-[20vh] text-center">
+          <motion.p
+            className="max-w-[30ch] text-balance font-display text-[1.75rem] uppercase leading-[1.35] tracking-[0.15em] text-bone md:text-[2rem]"
+            initial={reduceMotion ? false : { opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.78 }}
+            transition={{ duration: reduceMotion ? 0 : 2.8, ease: EASE_CINEMATIC }}
+          >
+            raw nature that changes you from within, without words.
+          </motion.p>
+        </div>
       </div>
 
       <div className="mx-auto grid min-h-svh max-w-6xl items-center gap-16 px-6 py-[22vh] md:grid-cols-[1fr_0.82fr] md:gap-20 md:px-10">
@@ -164,18 +193,6 @@ export function ConditionsChapter() {
             transition={{ duration: reduceMotion ? 0 : 1.8, ease: EASE_CINEMATIC }}
           >
             somewhere, this still exists.
-          </motion.p>
-        </div>
-
-        <div className="mx-auto flex min-h-svh items-center justify-center py-[20vh] text-center">
-          <motion.p
-            className="max-w-[30ch] text-balance font-display text-[1.75rem] uppercase leading-[1.35] tracking-[0.15em] text-ink md:text-[2rem]"
-            initial={reduceMotion ? false : { opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, amount: 0.78 }}
-            transition={{ duration: reduceMotion ? 0 : 2.8, ease: EASE_CINEMATIC }}
-          >
-            raw nature that changes you from within, without words.
           </motion.p>
         </div>
 
