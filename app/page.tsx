@@ -61,7 +61,7 @@ export default function HomePage() {
         <CinematicChapter
           image="/images/canopy-rain.png"
           imageAlt="Rain moving through a dense rainforest canopy, large wet leaves catching soft grey light."
-          caption="you don't visit the wildlife here. you live inside it ~ awake around you, day and night."
+          caption="you don't visit. you live inside ~ so much wildlife that it takes your whole body a few days to adjust: the sound of it, the presence of it, the shock of nature still being what it was."
           align="end"
         />
 
