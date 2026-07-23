@@ -5,6 +5,22 @@ import { motion, useReducedMotion } from 'motion/react'
 import { Reveal } from '@/components/paz/reveal'
 import { EASE_CINEMATIC } from '@/lib/motion'
 
+// Content direction: mix scales and kinds — macaw, sloth, frog, insect, crab,
+// hummingbird, monkey, snake, moth, and lizard — observed in habitat, never staged.
+// TODO: replace these generated placeholder paths with final field photographs.
+const wildlifeImages = [
+  { src: '/images/wildlife/macaw.png', alt: 'A scarlet macaw perched on a rainforest branch.', shape: 'aspect-square' },
+  { src: '/images/wildlife/sloth.png', alt: 'A sloth moving through a cecropia tree.', shape: 'aspect-[2/3]' },
+  { src: '/images/wildlife/frog.png', alt: 'A small tree frog resting on a wet leaf.', shape: 'aspect-square' },
+  { src: '/images/wildlife/hummingbird.png', alt: 'A hummingbird hovering beside a tropical flower.', shape: 'aspect-square' },
+  { src: '/images/wildlife/crab.png', alt: 'A land crab crossing damp forest leaves.', shape: 'aspect-[3/2]' },
+  { src: '/images/wildlife/monkey.png', alt: 'A capuchin monkey moving through the canopy.', shape: 'aspect-square' },
+  { src: '/images/wildlife/snake.png', alt: 'A green vine snake among wet rainforest leaves.', shape: 'aspect-[2/3]' },
+  { src: '/images/wildlife/moth.png', alt: 'A pale moth resting on weathered wood.', shape: 'aspect-square' },
+  { src: '/images/wildlife/lizard.png', alt: 'A basilisk lizard beside a forest stream.', shape: 'aspect-[3/2]' },
+  { src: '/images/wildlife/beetle.png', alt: 'An iridescent beetle crossing damp bark.', shape: 'aspect-square' },
+]
+
 function ImmersiveCondition({
   image,
   imageAlt,
@@ -109,6 +125,34 @@ export function ConditionsChapter() {
         days to adjust: the sound of it, the presence of it, the shock of nature still being what
         it was.
       </ImmersiveCondition>
+
+      <div className="bg-bone px-[4vw] py-[18vh] md:px-[5vw] md:py-[22vh]">
+        <div className="columns-2 gap-2.5 md:columns-3 lg:columns-4">
+          {wildlifeImages.map((image, index) => (
+            <motion.div
+              key={image.src}
+              className={`grain relative mb-2.5 break-inside-avoid overflow-hidden rounded-sm ${image.shape}`}
+              initial={reduceMotion ? false : { opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{
+                duration: reduceMotion ? 0 : 1.2,
+                delay: reduceMotion ? 0 : index * 0.07,
+                ease: EASE_CINEMATIC,
+              }}
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                loading="lazy"
+                sizes="(max-width: 767px) 46vw, (max-width: 1023px) 30vw, 22vw"
+                className="object-cover"
+              />
+            </motion.div>
+          ))}
+        </div>
+      </div>
 
       <div className="bg-bone px-6 text-ink md:px-12">
         <div className="mx-auto flex min-h-svh max-w-2xl items-center justify-center py-[24vh] text-center">
