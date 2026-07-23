@@ -7,31 +7,26 @@ function ImmersiveCondition({
   image,
   imageAlt,
   children,
-  align = 'start',
+  calm = false,
 }: {
   image: string
   imageAlt: string
   children: React.ReactNode
-  align?: 'start' | 'end'
+  calm?: boolean
 }) {
   return (
-    <div className="bg-bone text-ink">
+    <div className="grain relative h-svh min-h-[560px] w-full overflow-hidden text-bone">
+      <Image src={image} alt={imageAlt} fill sizes="100vw" className="object-cover" />
       <div
-        className={`flex min-h-[70svh] items-center px-6 py-[22vh] md:px-12 ${
-          align === 'end' ? 'justify-end' : 'justify-start'
+        className={`absolute inset-0 ${
+          calm ? 'bg-ink/20' : 'bg-gradient-to-t from-ink/55 via-ink/10 to-transparent'
         }`}
-      >
-        <Reveal
-          as="p"
-          className={`type-lead max-w-3xl text-balance ${
-            align === 'end' ? 'md:text-right' : ''
-          }`}
-        >
+        aria-hidden="true"
+      />
+      <div className="relative flex h-full items-center justify-center px-6 py-24 md:px-12">
+        <Reveal as="p" className="type-lead max-w-4xl text-center text-balance text-bone">
           {children}
         </Reveal>
-      </div>
-      <div className="grain relative h-svh min-h-[560px] w-full overflow-hidden">
-        <Image src={image} alt={imageAlt} fill sizes="100vw" className="object-cover" />
       </div>
     </div>
   )
@@ -75,7 +70,7 @@ export function ConditionsChapter() {
       <ImmersiveCondition
         image="/images/canopy-rain.png"
         imageAlt="Rain moving through a dense rainforest canopy, large wet leaves catching soft grey light."
-        align="end"
+        calm
       >
         you don&apos;t visit. you live inside ~ so much wildlife that it takes your whole body a few
         days to adjust: the sound of it, the presence of it, the shock of nature still being what
