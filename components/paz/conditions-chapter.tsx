@@ -17,18 +17,26 @@ function ImmersiveCondition({
   calm?: boolean
 }) {
   return (
-    <div className="grain relative h-svh min-h-[560px] w-full overflow-hidden text-bone">
-      <Image src={image} alt={imageAlt} fill sizes="100vw" className="object-cover" />
-      <div
-        className={`absolute inset-0 ${
-          calm ? 'bg-ink/20' : 'bg-gradient-to-t from-ink/55 via-ink/10 to-transparent'
-        }`}
-        aria-hidden="true"
-      />
-      <div className="relative flex h-full items-center justify-center px-6 py-24 md:px-12">
-        <Reveal as="p" className="type-lead max-w-4xl text-center text-balance text-bone">
-          {children}
-        </Reveal>
+    <div className="bg-bone px-[4vw] py-[6vh] md:px-[5vw] md:py-[7vh]">
+      <div className="grain relative h-[84svh] min-h-[520px] w-full overflow-hidden rounded-sm text-bone md:h-[82svh]">
+        <Image
+          src={image}
+          alt={imageAlt}
+          fill
+          sizes="(max-width: 767px) 92vw, 90vw"
+          className="object-cover"
+        />
+        <div
+          className={`absolute inset-0 ${
+            calm ? 'bg-ink/20' : 'bg-gradient-to-t from-ink/55 via-ink/10 to-transparent'
+          }`}
+          aria-hidden="true"
+        />
+        <div className="relative flex h-full items-center justify-center px-6 py-24 md:px-12">
+          <Reveal as="p" className="type-lead max-w-4xl text-center text-balance text-bone">
+            {children}
+          </Reveal>
+        </div>
       </div>
     </div>
   )
