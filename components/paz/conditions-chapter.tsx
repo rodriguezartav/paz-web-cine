@@ -120,23 +120,27 @@ export function ConditionsChapter() {
           </motion.p>
         </div>
 
-        <div className="mx-auto flex min-h-svh max-w-2xl items-center justify-center py-[24vh] text-center">
-          <motion.div
-            className="type-body text-balance"
+        <div className="mx-auto flex min-h-svh max-w-[52ch] flex-col items-center justify-center py-[28vh] text-center font-display text-[1.25rem] leading-[1.8] tracking-[0.01em] md:text-[1.375rem]">
+          <motion.p
+            className="text-balance"
             initial={reduceMotion ? false : { opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: true, amount: 0.6 }}
+            viewport={{ once: true, amount: 0.65 }}
             transition={{ duration: reduceMotion ? 0 : 1.8, ease: EASE_CINEMATIC }}
           >
-            <p>
-              we didn&apos;t create any of this, and run no programs. we only open the door, and let
-              nature do the rest.
-            </p>
-            <p className="mt-5">
-              then one afternoon ~ a wave you didn&apos;t expect to make, or an animal that stops and
-              looks back ~ and something in you lights up in a way it hasn&apos;t in years.
-            </p>
-          </motion.div>
+            we didn&apos;t create any of this, and run no programs. we only open the door, and let
+            nature do the rest.
+          </motion.p>
+          <motion.p
+            className="mt-[9vh] text-balance"
+            initial={reduceMotion ? false : { opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.65 }}
+            transition={{ duration: reduceMotion ? 0 : 1.8, ease: EASE_CINEMATIC }}
+          >
+            then one afternoon ~ a wave you didn&apos;t expect to make, or an animal that stops and
+            looks back ~ and something in you lights up in a way it hasn&apos;t in years.
+          </motion.p>
         </div>
       </div>
     </section>
