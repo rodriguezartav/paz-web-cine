@@ -72,10 +72,11 @@ export default function HomePage() {
           align="end"
         />
 
-        {/* A held breath — the scroll is not rewarded. Only the forest, and silence. */}
         <CinematicChapter
           image="/images/mist-forest.png"
           imageAlt="Mist drifting slowly through tall primary rainforest at dawn, layers of trees fading into soft grey fog."
+          caption="join a costa rican home, lived the old way, unhurried ~ tied to the land in ways english has no words for."
+          align="start"
         />
 
         <EditorialChapter lead="somewhere, this still exists.">

@@ -12,13 +12,6 @@ type Passage = {
 
 const passages: Passage[] = [
   {
-    text: 'join a costa rican home, lived the old way, unhurried ~ tied to the land in ways english has no words for.',
-    // TODO: replace with the family's own unposed water-side photograph.
-    image: '/images/family-fire-table.png',
-    imageAlt: 'A local family gathered naturally around a fire and shared table at dusk.',
-    side: 'left',
-  },
-  {
     text: "so this was never a business. it's our home ~ and we just leave the door open.",
     // TODO: replace with the final lived-in threshold photograph.
     image: '/images/open-forest-threshold.png',
