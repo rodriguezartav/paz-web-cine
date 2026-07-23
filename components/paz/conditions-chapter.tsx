@@ -48,7 +48,10 @@ export function ConditionsChapter() {
   return (
     <section aria-label="the conditions" className="bg-bone text-ink">
       <div className="flex min-h-svh items-center justify-center bg-ink px-6 py-24 text-bone md:px-12">
-        <Reveal as="p" className="type-hero mx-auto max-w-4xl text-center text-balance">
+        <Reveal
+          as="p"
+          className="mx-auto max-w-[52ch] text-center text-balance font-display text-[1.25rem] leading-[1.8] tracking-[0.01em] md:text-[1.375rem]"
+        >
           here, a set of conditions comes together to make something that, as far as we know, is
           the last of its kind.
         </Reveal>
