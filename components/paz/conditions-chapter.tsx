@@ -3,6 +3,40 @@
 import Image from 'next/image'
 import { Reveal } from '@/components/paz/reveal'
 
+function ImmersiveCondition({
+  image,
+  imageAlt,
+  children,
+  align = 'start',
+}: {
+  image: string
+  imageAlt: string
+  children: React.ReactNode
+  align?: 'start' | 'end'
+}) {
+  return (
+    <div className="bg-bone pt-[22vh] text-ink">
+      <div className="grain relative h-svh min-h-[560px] w-full overflow-hidden">
+        <Image src={image} alt={imageAlt} fill sizes="100vw" className="object-cover" />
+      </div>
+      <div
+        className={`flex min-h-[65svh] items-center px-6 py-[20vh] md:px-12 ${
+          align === 'end' ? 'justify-end' : 'justify-start'
+        }`}
+      >
+        <Reveal
+          as="p"
+          className={`type-lead max-w-3xl text-balance ${
+            align === 'end' ? 'md:text-right' : ''
+          }`}
+        >
+          {children}
+        </Reveal>
+      </div>
+    </div>
+  )
+}
+
 export function ConditionsChapter() {
   return (
     <section aria-label="the conditions" className="bg-bone text-ink">
@@ -13,17 +47,16 @@ export function ConditionsChapter() {
         </Reveal>
       </div>
 
-      <div className="mx-auto grid min-h-svh max-w-6xl items-center gap-14 px-6 py-[20vh] md:grid-cols-[1fr_0.82fr] md:gap-20 md:px-10">
+      <div className="mx-auto grid min-h-svh max-w-6xl items-center gap-16 px-6 py-[22vh] md:grid-cols-[1fr_0.82fr] md:gap-20 md:px-10">
         <Reveal as="p" className="type-lead max-w-2xl text-balance">
-          you don&apos;t visit. you live inside ~ so much wildlife that it takes your whole body a few
-          days to adjust: the sound of it, the presence of it, the shock of nature still being what
-          it was.
+          far enough from the world, and quiet enough that there is nothing left to follow but the
+          tides, the sun, the birds.
         </Reveal>
         <Reveal delay={0.1} className="relative aspect-[4/3] w-full overflow-hidden">
           <div className="grain absolute inset-0">
             <Image
-              src="/images/canopy-rain.png"
-              alt="Rain moving through a dense rainforest canopy, large wet leaves catching soft grey light."
+              src="/images/tidal-morning.png"
+              alt="Shorebirds moving along an empty Costa Rican beach at low tide beneath soft morning light."
               fill
               sizes="(max-width: 767px) 100vw, 45vw"
               className="object-cover"
@@ -32,40 +65,39 @@ export function ConditionsChapter() {
         </Reveal>
       </div>
 
-      <div className="pt-[22vh]">
-        <div className="grain relative h-[78svh] min-h-[520px] w-full overflow-hidden">
-          <Image
-            src="/images/lineup-waiting.png"
-            alt="A lone surfer sitting still on a board far out on a glassy, empty ocean at dawn, a forested headland behind."
-            fill
-            sizes="100vw"
-            className="object-cover"
-          />
-        </div>
-        <div className="flex min-h-[65svh] items-center px-6 py-[20vh] md:px-12">
-          <Reveal as="p" className="type-lead max-w-3xl text-balance">
-            waves, and no one waiting for a turn ~ you surf more in a morning than most do in a
-            week.
-          </Reveal>
-        </div>
-      </div>
+      <ImmersiveCondition
+        image="/images/lineup-waiting.png"
+        imageAlt="A lone surfer sitting still on a board far out on a glassy, empty ocean at dawn, a forested headland behind."
+      >
+        waves, and no one waiting for a turn ~ you surf more in a morning than most do in a week.
+      </ImmersiveCondition>
 
-      <div className="pt-[22vh]">
-        <div className="grain relative h-[78svh] min-h-[520px] w-full overflow-hidden">
-          <Image
-            src="/images/mist-forest.png"
-            alt="Mist drifting slowly through tall primary rainforest at dawn, layers of trees fading into soft grey fog."
-            fill
-            sizes="100vw"
-            className="object-cover sepia-[0.12]"
-          />
-        </div>
-        <div className="flex min-h-[65svh] items-center justify-end px-6 py-[20vh] md:px-12">
-          <Reveal as="p" className="type-lead max-w-3xl text-balance md:text-right">
-            join a costa rican home, lived the old unhurried way ~ tied to the land in ways english
-            has no words for.
-          </Reveal>
-        </div>
+      <ImmersiveCondition
+        image="/images/canopy-rain.png"
+        imageAlt="Rain moving through a dense rainforest canopy, large wet leaves catching soft grey light."
+        align="end"
+      >
+        you don&apos;t visit. you live inside ~ so much wildlife that it takes your whole body a few
+        days to adjust: the sound of it, the presence of it, the shock of nature still being what
+        it was.
+      </ImmersiveCondition>
+
+      <div className="mx-auto grid min-h-svh max-w-6xl items-center gap-16 px-6 py-[22vh] md:grid-cols-[0.82fr_1fr] md:gap-20 md:px-10">
+        <Reveal delay={0.1} className="relative order-2 aspect-[4/3] w-full overflow-hidden md:order-1">
+          <div className="grain absolute inset-0">
+            <Image
+              src="/images/family-fire-table.png"
+              alt="A local Costa Rican family gathered naturally around a fire and shared table at dusk."
+              fill
+              sizes="(max-width: 767px) 100vw, 45vw"
+              className="object-cover"
+            />
+          </div>
+        </Reveal>
+        <Reveal as="p" className="type-lead order-1 max-w-2xl text-balance md:order-2">
+          join a costa rican home, lived the old unhurried way ~ tied to the land in ways english
+          has no words for.
+        </Reveal>
       </div>
 
       <div className="bg-ink px-6 text-bone md:px-12">

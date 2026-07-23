@@ -48,15 +48,6 @@ export default function HomePage() {
           cue="keep walking"
         />
 
-        <CinematicChapter
-          image="/images/tidal-morning.png"
-          imageAlt="Shorebirds moving along an empty Costa Rican beach at low tide beneath soft morning light."
-          caption="far enough from the world, and quiet enough that there is nothing left to follow but the tides, the sun, the birds"
-          align="end"
-          presentation="clearing"
-          imageScale="full"
-        />
-
         {/* ── Movement One — The Last of Its Kind ───────────────────── */}
         <ConditionsChapter />
 
