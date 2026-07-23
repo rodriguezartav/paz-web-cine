@@ -151,9 +151,14 @@ export function ConditionsChapter() {
         calm
       >
         you don&apos;t visit. you live inside ~ so much wildlife that it takes your whole body a few
-        days to adjust: the sound of it, the presence of it, the shock of nature still being what
-        it was.
+        days to adjust:
       </ImmersiveCondition>
+
+      <div className="flex min-h-[48svh] items-center justify-center bg-bone px-6 py-[14vh] text-center text-ink md:px-12">
+        <Reveal as="p" className="type-body max-w-[42ch] text-balance">
+          the sound of it, the presence of it, the shock of nature still being what it was.
+        </Reveal>
+      </div>
 
       <div className="bg-bone px-[4vw] pb-[18vh] pt-0 md:px-[5vw] md:pb-[22vh]">
         <div className="columns-2 gap-2.5 md:columns-3 lg:columns-4">
