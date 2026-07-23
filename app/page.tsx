@@ -68,7 +68,7 @@ export default function HomePage() {
         <CinematicChapter
           image="/images/lineup-waiting.png"
           imageAlt="A lone surfer sitting still on a board far out on a glassy, empty ocean at dawn, a forested headland behind."
-          caption="one wave, and no one waiting for a turn. walk down anytime, grab a board ~ and surf more in a morning than most do in a week."
+          caption="waves, and no one waiting for a turn ~ you surf more in a morning than most do in a week."
           align="start"
         />
 
