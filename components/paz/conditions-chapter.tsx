@@ -154,8 +154,11 @@ export function ConditionsChapter() {
         days to adjust:
       </ImmersiveCondition>
 
-      <div className="flex min-h-[48svh] items-center justify-center bg-bone px-6 py-[14vh] text-center text-ink md:px-12">
-        <Reveal as="p" className="type-body max-w-[42ch] text-balance">
+      <div className="flex min-h-[36svh] items-center justify-center bg-bone px-6 py-[10.5vh] text-center text-ink md:px-12">
+        <Reveal
+          as="p"
+          className="max-w-[42ch] text-balance font-display text-[1.25rem] leading-[1.7] md:text-[1.375rem]"
+        >
           the sound of it, the presence of it, the shock of nature still being what it was.
         </Reveal>
       </div>
