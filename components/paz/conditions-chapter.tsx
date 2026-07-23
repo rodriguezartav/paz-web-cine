@@ -99,46 +99,37 @@ export function ConditionsChapter() {
         it was.
       </ImmersiveCondition>
 
-      <div className="flex min-h-svh items-center bg-[#403B3A] px-6 py-20 text-bone md:px-12">
-        <motion.div
-          className="mx-auto flex w-full max-w-5xl flex-col items-center gap-14 text-center md:gap-20"
-          initial={reduceMotion ? false : 'hidden'}
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.55 }}
-        >
+      <div className="bg-bone px-6 text-ink md:px-12">
+        <div className="mx-auto flex min-h-svh max-w-2xl items-center justify-center py-[24vh] text-center">
           <motion.p
-            className="font-display text-balance text-[clamp(3rem,8vw,6rem)] leading-[0.98]"
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              visible: { opacity: 1, y: 0 },
-            }}
-            transition={{ duration: reduceMotion ? 0 : 1.5, ease: EASE_CINEMATIC }}
+            className="type-body text-balance"
+            initial={reduceMotion ? false : { opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.65 }}
+            transition={{ duration: reduceMotion ? 0 : 1.8, ease: EASE_CINEMATIC }}
           >
             somewhere, this still exists.
           </motion.p>
+        </div>
 
+        <div className="mx-auto flex min-h-svh max-w-2xl items-center justify-center py-[24vh] text-center">
           <motion.div
-            className="max-w-4xl text-balance font-display text-[clamp(1.65rem,4vw,3.5rem)] leading-[1.08]"
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              visible: { opacity: 1, y: 0 },
-            }}
-            transition={{
-              duration: reduceMotion ? 0 : 1.8,
-              delay: reduceMotion ? 0 : 2.2,
-              ease: EASE_CINEMATIC,
-            }}
+            className="type-body text-balance"
+            initial={reduceMotion ? false : { opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.6 }}
+            transition={{ duration: reduceMotion ? 0 : 1.8, ease: EASE_CINEMATIC }}
           >
             <p>
               we didn&apos;t create any of this, and run no programs. we only open the door, and let
               nature do the rest.
             </p>
-            <p className="mt-5 md:mt-7">
+            <p className="mt-5">
               then one afternoon ~ a wave you didn&apos;t expect to make, or an animal that stops and
               looks back ~ and something in you lights up in a way it hasn&apos;t in years.
             </p>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )
