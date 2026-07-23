@@ -59,17 +59,17 @@ export default function HomePage() {
         {/* ── Movement One — The Last of Its Kind ───────────────────── */}
         {/* Truth: an untouched place still exists. Trust imagery; almost no text. */}
         <CinematicChapter
-          image="/images/canopy-rain.png"
-          imageAlt="Rain moving through a dense rainforest canopy, large wet leaves catching soft grey light."
-          caption="you don't visit. you live inside ~ so much wildlife that it takes your whole body a few days to adjust: the sound of it, the presence of it, the shock of nature still being what it was."
-          align="end"
-        />
-
-        <CinematicChapter
           image="/images/lineup-waiting.png"
           imageAlt="A lone surfer sitting still on a board far out on a glassy, empty ocean at dawn, a forested headland behind."
           caption="waves, and no one waiting for a turn ~ you surf more in a morning than most do in a week."
           align="start"
+        />
+
+        <CinematicChapter
+          image="/images/canopy-rain.png"
+          imageAlt="Rain moving through a dense rainforest canopy, large wet leaves catching soft grey light."
+          caption="you don't visit. you live inside ~ so much wildlife that it takes your whole body a few days to adjust: the sound of it, the presence of it, the shock of nature still being what it was."
+          align="end"
         />
 
         {/* A held breath — the scroll is not rewarded. Only the forest, and silence. */}
