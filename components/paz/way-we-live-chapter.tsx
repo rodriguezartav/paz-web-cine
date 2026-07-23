@@ -64,9 +64,6 @@ export function WayWeLiveChapter() {
 
         {passages.map((passage, index) => (
           <div key={passage.text} className="flex flex-col gap-20 md:gap-24">
-            <Reveal>
-              <p className="type-body max-w-xl text-pretty text-ink">{passage.text}</p>
-            </Reveal>
             <Reveal
               className={cn(
                 index % 2 === 0
@@ -86,6 +83,9 @@ export function WayWeLiveChapter() {
                   />
                 </div>
               </figure>
+            </Reveal>
+            <Reveal>
+              <p className="type-body max-w-xl text-pretty text-ink">{passage.text}</p>
             </Reveal>
           </div>
         ))}
