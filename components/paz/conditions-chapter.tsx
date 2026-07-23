@@ -71,22 +71,8 @@ export function ConditionsChapter() {
         waves, and no one waiting for a turn ~ you surf more in a morning than most do in a week.
       </ImmersiveCondition>
 
-      <ImmersiveCondition
-        image="/images/canopy-rain.png"
-        imageAlt="Rain moving through a dense rainforest canopy, large wet leaves catching soft grey light."
-        calm
-      >
-        you don&apos;t visit. you live inside ~ so much wildlife that it takes your whole body a few
-        days to adjust: the sound of it, the presence of it, the shock of nature still being what
-        it was.
-      </ImmersiveCondition>
-
-      <div className="mx-auto grid min-h-svh max-w-6xl items-center gap-16 px-6 py-[22vh] md:grid-cols-[1fr_0.82fr] md:gap-20 md:px-10">
-        <Reveal as="p" className="type-lead max-w-2xl text-balance">
-          join a costa rican home, lived the old unhurried way ~ tied to the land in ways english
-          has no words for.
-        </Reveal>
-        <Reveal delay={0.1} className="relative aspect-[4/3] w-full overflow-hidden">
+      <div className="mx-auto grid min-h-svh max-w-6xl items-center gap-16 px-6 py-[22vh] md:grid-cols-[0.82fr_1fr] md:gap-20 md:px-10">
+        <Reveal delay={0.1} className="relative order-2 aspect-[4/3] w-full overflow-hidden md:order-1">
           <div className="grain absolute inset-0">
             <Image
               src="/images/family-fire-table.png"
@@ -97,7 +83,21 @@ export function ConditionsChapter() {
             />
           </div>
         </Reveal>
+        <Reveal as="p" className="type-lead order-1 max-w-2xl text-balance md:order-2">
+          join a costa rican home, lived the old unhurried way ~ tied to the land in ways english
+          has no words for.
+        </Reveal>
       </div>
+
+      <ImmersiveCondition
+        image="/images/canopy-rain.png"
+        imageAlt="Rain moving through a dense rainforest canopy, large wet leaves catching soft grey light."
+        calm
+      >
+        you don&apos;t visit. you live inside ~ so much wildlife that it takes your whole body a few
+        days to adjust: the sound of it, the presence of it, the shock of nature still being what
+        it was.
+      </ImmersiveCondition>
 
       <div className="flex min-h-svh items-center bg-[#403B3A] px-6 py-20 text-bone md:px-12">
         <motion.div
