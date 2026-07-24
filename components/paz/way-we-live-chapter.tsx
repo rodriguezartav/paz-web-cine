@@ -7,6 +7,9 @@ type Passage = {
   text: string
   image: string
   imageAlt: string
+  /** Optional second photograph, paired with the first as an upright diptych. */
+  secondImage?: string
+  secondImageAlt?: string
   side: 'left' | 'right'
 }
 
@@ -19,8 +22,10 @@ const passages: Passage[] = [
   },
   {
     text: 'the forest walks in with you. it moves through the house while you sleep, and still you stay warm.',
-    image: '/images/dropbox/wildlife-flower.webp',
-    imageAlt: 'An open kitchen looking directly into the surrounding rainforest.',
+    image: '/images/dropbox/DSCF9734.webp',
+    imageAlt: 'A glass-walled room open to the rainforest, someone reading on a low daybed.',
+    secondImage: '/images/dropbox/DSCF9878.webp',
+    secondImageAlt: 'Someone resting on a bed beside a window that opens onto the palms at dusk.',
     side: 'left',
   },
   {
@@ -61,23 +66,52 @@ export function WayWeLiveChapter() {
           <div key={passage.text} className="flex flex-col gap-20 md:gap-24">
             <Reveal
               className={cn(
-                index % 2 === 0
-                  ? 'w-[72%] md:w-[86%]'
-                  : 'w-[62%] md:w-[72%]',
+                passage.secondImage
+                  ? 'w-[88%] md:w-[80%]'
+                  : index % 2 === 0
+                    ? 'w-[72%] md:w-[86%]'
+                    : 'w-[62%] md:w-[72%]',
                 passage.side === 'right' ? 'self-end' : 'self-start',
               )}
             >
-              <figure className="film-grain overflow-hidden rounded-sm">
-                <div className="relative aspect-[4/3] md:aspect-[16/9]">
-                  <Image
-                    src={passage.image}
-                    alt={passage.imageAlt}
-                    fill
-                    sizes="(max-width: 767px) 55vw, (max-width: 1023px) 52rem, 58rem"
-                    className="object-cover"
-                  />
+              {passage.secondImage ? (
+                <div className="flex items-start gap-4 md:gap-6">
+                  <figure className="film-grain flex-1 overflow-hidden rounded-sm">
+                    <div className="relative aspect-[3/4]">
+                      <Image
+                        src={passage.image}
+                        alt={passage.imageAlt}
+                        fill
+                        sizes="(max-width: 767px) 42vw, 28rem"
+                        className="object-cover"
+                      />
+                    </div>
+                  </figure>
+                  <figure className="film-grain mt-10 flex-1 overflow-hidden rounded-sm md:mt-16">
+                    <div className="relative aspect-[3/4]">
+                      <Image
+                        src={passage.secondImage}
+                        alt={passage.secondImageAlt ?? ''}
+                        fill
+                        sizes="(max-width: 767px) 42vw, 28rem"
+                        className="object-cover"
+                      />
+                    </div>
+                  </figure>
                 </div>
-              </figure>
+              ) : (
+                <figure className="film-grain overflow-hidden rounded-sm">
+                  <div className="relative aspect-[4/3] md:aspect-[16/9]">
+                    <Image
+                      src={passage.image}
+                      alt={passage.imageAlt}
+                      fill
+                      sizes="(max-width: 767px) 55vw, (max-width: 1023px) 52rem, 58rem"
+                      className="object-cover"
+                    />
+                  </div>
+                </figure>
+              )}
             </Reveal>
             <Reveal>
               <p className="type-body max-w-xl text-pretty text-ink">{passage.text}</p>
