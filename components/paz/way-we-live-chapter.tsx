@@ -13,30 +13,26 @@ type Passage = {
 const passages: Passage[] = [
   {
     text: "so this was never a business. it's our home ~ and we just leave the door open.",
-    // TODO: replace with the final lived-in threshold photograph.
-    image: '/images/open-forest-threshold.png',
-    imageAlt: 'A simple lived-in threshold opening from a wooden porch into the rainforest.',
+    image: '/images/dropbox/supporting-shell.webp',
+    imageAlt: 'The Pacific framed by the branches of a coastal tree.',
     side: 'right',
   },
   {
     text: 'the forest walks in with you. it moves through the house while you sleep, and still you stay warm.',
-    // TODO: replace with the final screened-house photograph.
-    image: '/images/screened-cabin.png',
-    imageAlt: 'The rainforest moving through the open screens of a simple bedroom at dawn.',
+    image: '/images/dropbox/wildlife-flower.webp',
+    imageAlt: 'An open kitchen looking directly into the surrounding rainforest.',
     side: 'left',
   },
   {
     text: "there are no guests at the table ~ only people who were strangers on monday, and aren't by friday.",
-    // TODO: replace with a candid mid-meal photograph at the long table.
-    image: '/images/shared-table.png',
-    imageAlt: 'A long shared table beneath an open rainforest shelter after a meal.',
+    image: '/images/dropbox/family-fire.webp',
+    imageAlt: 'Friends gathered around a shared table and fire beneath the palms at night.',
     side: 'right',
   },
   {
     text: "nobody's guiding you. we just take you ~ to the waterfall when it's running, the beach when the light's right, the wave when it turns on. and after that, you go back on your own, whenever you want.",
-    // TODO: replace with the final waterfall, creek, or forest-walk photograph.
-    image: '/images/forest-waterfall-walk.png',
-    imageAlt: 'A narrow rainforest path leading toward a small waterfall and creek.',
+    image: '/images/dropbox/wildlife-canopy.webp',
+    imageAlt: 'A figure following a rocky path beneath the deep rainforest canopy.',
     side: 'left',
   },
   {

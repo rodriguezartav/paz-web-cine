@@ -5,20 +5,17 @@ import { motion, useReducedMotion } from 'motion/react'
 import { Reveal } from '@/components/paz/reveal'
 import { EASE_CINEMATIC } from '@/lib/motion'
 
-// Content direction: mix scales and kinds — macaw, sloth, frog, insect, crab,
-// hummingbird, monkey, snake, moth, and lizard — observed in habitat, never staged.
-// TODO: replace these generated placeholder paths with final field photographs.
 const wildlifeImages = [
-  { src: '/images/wildlife/macaw.png', alt: 'A scarlet macaw perched on a rainforest branch.', shape: 'aspect-square' },
-  { src: '/images/wildlife/sloth.png', alt: 'A sloth moving through a cecropia tree.', shape: 'aspect-[2/3]' },
-  { src: '/images/wildlife/frog.png', alt: 'A small tree frog resting on a wet leaf.', shape: 'aspect-square' },
-  { src: '/images/wildlife/hummingbird.png', alt: 'A hummingbird hovering beside a tropical flower.', shape: 'aspect-square' },
-  { src: '/images/wildlife/crab.png', alt: 'A land crab crossing damp forest leaves.', shape: 'aspect-[3/2]' },
-  { src: '/images/wildlife/monkey.png', alt: 'A capuchin monkey moving through the canopy.', shape: 'aspect-square' },
-  { src: '/images/wildlife/snake.png', alt: 'A green vine snake among wet rainforest leaves.', shape: 'aspect-[2/3]' },
-  { src: '/images/wildlife/moth.png', alt: 'A pale moth resting on weathered wood.', shape: 'aspect-square' },
-  { src: '/images/wildlife/lizard.png', alt: 'A basilisk lizard beside a forest stream.', shape: 'aspect-[3/2]' },
-  { src: '/images/wildlife/beetle.png', alt: 'An iridescent beetle crossing damp bark.', shape: 'aspect-square' },
+  { src: '/images/dropbox/wildlife-bird.webp', alt: 'A narrow cascade descending through dense rainforest.', shape: 'aspect-square' },
+  { src: '/images/dropbox/wildlife-butterfly.webp', alt: 'An earthen shelter surrounded by rainforest.', shape: 'aspect-[2/3]' },
+  { src: '/images/dropbox/wildlife-monkey.webp', alt: 'A rainforest animal crossing a quiet forest track.', shape: 'aspect-square' },
+  { src: '/images/dropbox/wildlife-flower.webp', alt: 'A home kitchen opening directly onto the rainforest.', shape: 'aspect-square' },
+  { src: '/images/dropbox/wildlife-tidepool.webp', alt: 'Still water and stones along the tropical shore.', shape: 'aspect-[3/2]' },
+  { src: '/images/dropbox/wildlife-lizard.webp', alt: 'People walking a sunlit trail through dense forest.', shape: 'aspect-square' },
+  { src: '/images/dropbox/wildlife-canopy.webp', alt: 'A figure walking beneath the rainforest canopy.', shape: 'aspect-[2/3]' },
+  { src: '/images/dropbox/wildlife-moth.webp', alt: 'A pale moth resting against a dark natural surface.', shape: 'aspect-square' },
+  { src: '/images/dropbox/wildlife-leaves.webp', alt: 'A turquoise Pacific wave seen beneath coastal branches.', shape: 'aspect-[3/2]' },
+  { src: '/images/dropbox/wildlife-shell.webp', alt: 'A shell found along the Corcovado coast.', shape: 'aspect-square' },
 ]
 
 function ImmersiveCondition({
@@ -79,8 +76,8 @@ export function ConditionsChapter() {
             <div className="absolute inset-x-0 top-[calc(100%+150px)] flex justify-evenly">
               <div className="relative aspect-square w-[24%] overflow-hidden rounded-sm">
                 <Image
-                  src="/images/supporting-shell.png"
-                  alt=""
+                  src="/images/dropbox/supporting-shell.webp"
+                  alt="A Pacific wave framed by a coastal tree."
                   fill
                   sizes="(max-width: 767px) 24vw, 185px"
                   className="object-cover"
@@ -88,8 +85,8 @@ export function ConditionsChapter() {
               </div>
               <div className="relative aspect-square w-[24%] overflow-hidden rounded-sm">
                 <Image
-                  src="/images/supporting-flower.png"
-                  alt=""
+                  src="/images/dropbox/supporting-flower.webp"
+                  alt="A quiet portrait made in soft coastal light."
                   fill
                   sizes="(max-width: 767px) 24vw, 185px"
                   className="object-cover"
@@ -133,8 +130,8 @@ export function ConditionsChapter() {
         <Reveal delay={0.1} className="relative aspect-[4/3] w-full overflow-hidden">
           <div className="grain absolute inset-0">
             <Image
-              src="/images/tidal-morning.png"
-              alt="Shorebirds moving along an empty Costa Rican beach at low tide beneath soft morning light."
+              src="/images/dropbox/empty-wave.webp"
+              alt="A lone surfer walking an empty Pacific beach beneath overhanging palms."
               fill
               sizes="(max-width: 767px) 100vw, 45vw"
               className="object-cover"
@@ -144,8 +141,8 @@ export function ConditionsChapter() {
       </div>
 
       <ImmersiveCondition
-        image="/images/lineup-waiting.png"
-        imageAlt="A lone surfer sitting still on a board far out on a glassy, empty ocean at dawn, a forested headland behind."
+        image="/images/dropbox/tidal-morning.webp"
+        imageAlt="A surfer carving across a clear blue wave on an empty Pacific break."
       >
         waves, and no one waiting for a turn ~ you surf more in a morning than most do in a week.
       </ImmersiveCondition>

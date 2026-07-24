@@ -39,8 +39,8 @@ export default function HomePage() {
         {/* ── Threshold ─────────────────────────────────────────────── */}
         {/* The extraordinary shown, not described. The place is not yet named. */}
         <Hero
-          image="/images/opening-coastline.png"
-          imageAlt="A wild, undeveloped coastline at dawn where primary rainforest runs down to an empty grey-sand beach, hills wrapped in low mist above a calm Pacific."
+          image="/images/dropbox/hero-coast.webp"
+          imageAlt="A solitary figure standing among driftwood on a wild Pacific shoreline."
           title="the week you've been promising yourself"
           cue="keep walking"
         />
@@ -53,8 +53,8 @@ export default function HomePage() {
         <FullscreenVideo
           playbackId={DESKTOP_VIDEO_PLAYBACK_ID}
           mobilePlaybackId={MOBILE_VIDEO_PLAYBACK_ID}
-          poster="/images/hero-jungle-ocean.png"
-          posterAlt="Dense green rainforest framing a pale, misty Pacific at first light, seen from within the trees."
+          poster="/images/dropbox/supporting-shell.webp"
+          posterAlt="A turquoise Pacific break framed by the branches of a coastal tree."
           chapter="ii ~ a place that still belongs to nature"
           caption="this is paz in corcovado"
           align="end"
@@ -86,8 +86,8 @@ export default function HomePage() {
         </Section>
 
         <CinematicChapter
-          image="/images/cold-water-dawn.png"
-          imageAlt="A person submerged to the chest in cold, dark, still water at dawn, breath held, mist on the surface."
+          image="/images/dropbox/closing-waterfall.webp"
+          imageAlt="A person standing beneath a rainforest waterfall, surrounded by dark stone and water."
           variant="banner"
           caption="come back to life"
           note="you have not reached the end of anything. you have only started walking."
