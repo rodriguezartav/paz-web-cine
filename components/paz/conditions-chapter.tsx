@@ -23,11 +23,14 @@ function ImmersiveCondition({
   imageAlt,
   children,
   calm = false,
+  topOnMobile = false,
 }: {
   image: string
   imageAlt: string
   children: React.ReactNode
   calm?: boolean
+  /** On mobile, sit the copy at the top of the frame instead of centring it. */
+  topOnMobile?: boolean
 }) {
   return (
     <div className="bg-bone px-[4vw] py-[6vh] md:px-[5vw] md:py-[7vh]">
@@ -41,11 +44,19 @@ function ImmersiveCondition({
         />
         <div
           className={`absolute inset-0 ${
-            calm ? 'bg-ink/20' : 'bg-gradient-to-t from-ink/55 via-ink/10 to-transparent'
+            calm
+              ? 'bg-ink/20'
+              : topOnMobile
+                ? 'bg-gradient-to-b from-ink/60 via-ink/10 to-transparent md:bg-gradient-to-t md:from-ink/55'
+                : 'bg-gradient-to-t from-ink/55 via-ink/10 to-transparent'
           }`}
           aria-hidden="true"
         />
-        <div className="relative flex h-full items-center justify-center px-6 py-24 md:px-12">
+        <div
+          className={`relative flex h-full justify-center px-6 md:items-center md:px-12 md:py-24 ${
+            topOnMobile ? 'items-start pb-24 pt-12' : 'items-center py-24'
+          }`}
+        >
           <Reveal as="p" className="type-lead max-w-4xl text-center text-balance text-bone">
             {children}
           </Reveal>
@@ -142,6 +153,7 @@ export function ConditionsChapter() {
       <ImmersiveCondition
         image="/images/dropbox/supporting-shell.webp"
         imageAlt="An empty turquoise Pacific wave framed by the branches of a coastal tree."
+        topOnMobile
       >
         waves, and no one waiting for a turn ~ you surf more in a morning than most do in a week.
       </ImmersiveCondition>
