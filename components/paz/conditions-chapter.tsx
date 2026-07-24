@@ -165,22 +165,34 @@ export function ConditionsChapter() {
         </Reveal>
       </div>
 
-      <div className="mx-auto flex w-full max-w-3xl justify-evenly px-6 pb-[18vh] md:px-0 md:pb-[22vh]">
-        <Reveal className="relative aspect-square w-[24%] overflow-hidden rounded-sm">
+      <div className="mx-auto grid w-full max-w-3xl grid-cols-[1fr_1fr_0.8fr] items-center gap-6 px-6 pb-[18vh] md:gap-10 md:px-0 md:pb-[22vh]">
+        <Reveal className="relative aspect-square w-full -translate-y-5 overflow-hidden rounded-sm md:-translate-y-8">
           <Image
             src="/images/dropbox/DSCF8980.webp"
             alt="A person playing a wooden flute beside a rainforest waterfall."
             fill
-            sizes="(max-width: 767px) 24vw, 185px"
+            sizes="(max-width: 767px) 28vw, 220px"
             className="object-cover"
           />
         </Reveal>
-        <Reveal delay={0.12} className="relative aspect-square w-[24%] overflow-hidden rounded-sm">
+        <Reveal
+          delay={0.12}
+          className="relative aspect-square w-full translate-y-5 overflow-hidden rounded-sm md:translate-y-8"
+        >
           <Image
             src="/images/dropbox/DSCF9144.webp"
             alt="Hands working with wet earth on the rainforest floor."
             fill
-            sizes="(max-width: 767px) 24vw, 185px"
+            sizes="(max-width: 767px) 28vw, 220px"
+            className="object-cover"
+          />
+        </Reveal>
+        <Reveal delay={0.24} className="relative aspect-[2/3] w-full overflow-hidden rounded-sm">
+          <Image
+            src="/images/dropbox/DSCF9161.webp"
+            alt="People bathing beneath a narrow waterfall in the rainforest."
+            fill
+            sizes="(max-width: 767px) 23vw, 175px"
             className="object-cover"
           />
         </Reveal>
