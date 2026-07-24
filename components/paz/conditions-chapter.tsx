@@ -141,8 +141,8 @@ export function ConditionsChapter() {
       </div>
 
       <ImmersiveCondition
-        image="/images/dropbox/tidal-morning.webp"
-        imageAlt="A surfer carving across a clear blue wave on an empty Pacific break."
+        image="/images/dropbox/supporting-shell.webp"
+        imageAlt="An empty turquoise Pacific wave framed by the branches of a coastal tree."
       >
         waves, and no one waiting for a turn ~ you surf more in a morning than most do in a week.
       </ImmersiveCondition>
@@ -151,8 +151,8 @@ export function ConditionsChapter() {
         <Reveal delay={0.1} className="relative order-2 aspect-[4/3] w-full overflow-hidden md:order-1">
           <div className="grain absolute inset-0">
             <Image
-              src="/images/family-fire-table.png"
-              alt="A local Costa Rican family gathered naturally around a fire and shared table at dusk."
+              src="/images/dropbox/family-fire.webp"
+              alt="Friends gathered around a shared fire and table beneath the palms at night."
               fill
               sizes="(max-width: 767px) 100vw, 45vw"
               className="object-cover"
@@ -166,8 +166,8 @@ export function ConditionsChapter() {
       </div>
 
       <ImmersiveCondition
-        image="/images/canopy-rain.png"
-        imageAlt="Rain moving through a dense rainforest canopy, large wet leaves catching soft grey light."
+        image="/images/dropbox/canopy-rain.webp"
+        imageAlt="Dense rainforest foliage moving around a quiet forest home."
         calm
       >
         you don&apos;t visit. you live inside ~ so much wildlife that it takes your whole body a few
