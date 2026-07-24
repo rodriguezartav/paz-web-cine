@@ -166,8 +166,8 @@ export function ConditionsChapter() {
       </div>
 
       <ImmersiveCondition
-        image="/images/dropbox/canopy-rain.webp"
-        imageAlt="Dense rainforest foliage moving around a quiet forest home."
+        image="/images/dropbox/DSCF9683.JPG"
+        imageAlt="Wildlife observed in the dense rainforest around Paz."
         calm
       >
         you don&apos;t visit. you live inside ~ so much wildlife that it takes your whole body a few
