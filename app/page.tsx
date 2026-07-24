@@ -39,8 +39,8 @@ export default function HomePage() {
         {/* ── Threshold ─────────────────────────────────────────────── */}
         {/* The extraordinary shown, not described. The place is not yet named. */}
         <Hero
-          image="/images/dropbox/hero-coast.webp"
-          imageAlt="A solitary figure standing among driftwood on a wild Pacific shoreline."
+          image="/images/dropbox/empty-wave.webp"
+          imageAlt="A lone surfer walking an empty Pacific beach beneath overhanging palms."
           title="the week you've been promising yourself"
           cue="keep walking"
         />
