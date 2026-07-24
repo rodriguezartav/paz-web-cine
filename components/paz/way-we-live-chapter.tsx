@@ -37,8 +37,8 @@ const passages: Passage[] = [
   },
   {
     text: "and when the fire's lit in the cave dug into the earth, the last wall ~ the one inside you ~ tends to come down too.",
-    image: '/images/dropbox/live-cave.webp',
-    imageAlt: 'A simple forest shelter lit by a small fire after dark.',
+    image: '/images/dropbox/DSCF9588.webp',
+    imageAlt: 'People resting outside a domed earthen cave sauna in the rainforest.',
     side: 'right',
   },
 ]
