@@ -6,16 +6,16 @@ import { Reveal } from '@/components/paz/reveal'
 import { EASE_CINEMATIC } from '@/lib/motion'
 
 const wildlifeImages = [
-  { src: '/images/dropbox/wildlife-bird.webp', alt: 'A narrow cascade descending through dense rainforest.', shape: 'aspect-square' },
-  { src: '/images/dropbox/wildlife-butterfly.webp', alt: 'An earthen shelter surrounded by rainforest.', shape: 'aspect-[2/3]' },
-  { src: '/images/dropbox/wildlife-monkey.webp', alt: 'A rainforest animal crossing a quiet forest track.', shape: 'aspect-square' },
-  { src: '/images/dropbox/wildlife-flower.webp', alt: 'A home kitchen opening directly onto the rainforest.', shape: 'aspect-square' },
-  { src: '/images/dropbox/wildlife-tidepool.webp', alt: 'Still water and stones along the tropical shore.', shape: 'aspect-[3/2]' },
-  { src: '/images/dropbox/wildlife-lizard.webp', alt: 'People walking a sunlit trail through dense forest.', shape: 'aspect-square' },
-  { src: '/images/dropbox/wildlife-canopy.webp', alt: 'A figure walking beneath the rainforest canopy.', shape: 'aspect-[2/3]' },
-  { src: '/images/dropbox/wildlife-moth.webp', alt: 'A pale moth resting against a dark natural surface.', shape: 'aspect-square' },
-  { src: '/images/dropbox/wildlife-leaves.webp', alt: 'A turquoise Pacific wave seen beneath coastal branches.', shape: 'aspect-[3/2]' },
-  { src: '/images/dropbox/wildlife-shell.webp', alt: 'A shell found along the Corcovado coast.', shape: 'aspect-square' },
+  { src: '/images/dropbox/DSCF6251.webp', alt: 'A monkey high among the rainforest branches.', shape: 'aspect-square' },
+  { src: '/images/dropbox/DSCF7046.webp', alt: 'A black and white butterfly resting with its wings open.', shape: 'aspect-[2/3]' },
+  { src: '/images/dropbox/DSCF7963.webp', alt: 'A scarlet macaw perched among glossy green leaves.', shape: 'aspect-square' },
+  { src: '/images/dropbox/DSCF6258.webp', alt: 'A red heliconia glowing beneath the forest canopy.', shape: 'aspect-square' },
+  { src: '/images/dropbox/DSCF7782.webp', alt: 'An immense rainforest tree rising from buttress roots.', shape: 'aspect-[3/2]' },
+  { src: '/images/dropbox/DSCF9210.webp', alt: 'A small wild animal crossing a quiet rainforest path.', shape: 'aspect-square' },
+  { src: '/images/dropbox/DSCF7790.webp', alt: 'Ancient buttress roots disappearing into dense rainforest.', shape: 'aspect-[2/3]' },
+  { src: '/images/dropbox/DSCF7975.webp', alt: 'Two scarlet macaws framed by tropical foliage.', shape: 'aspect-square' },
+  { src: '/images/dropbox/DSCF8650.webp', alt: 'A shorebird standing among stones at the waterline.', shape: 'aspect-[3/2]' },
+  { src: '/images/dropbox/DSCF6253.webp', alt: 'A large seashell found along the wild Pacific coast.', shape: 'aspect-square' },
 ]
 
 function ImmersiveCondition({
