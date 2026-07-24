@@ -130,8 +130,8 @@ export function ConditionsChapter() {
         <Reveal delay={0.1} className="relative aspect-[4/3] w-full overflow-hidden">
           <div className="grain absolute inset-0">
             <Image
-              src="/images/dropbox/empty-wave.webp"
-              alt="A lone surfer walking an empty Pacific beach beneath overhanging palms."
+              src="/images/dropbox/hero-coast.webp"
+              alt="A solitary figure standing among driftwood on a wild Pacific shoreline."
               fill
               sizes="(max-width: 767px) 100vw, 45vw"
               className="object-cover"
