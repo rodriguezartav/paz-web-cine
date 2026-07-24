@@ -151,8 +151,8 @@ export function ConditionsChapter() {
         <Reveal delay={0.1} className="relative order-2 aspect-[4/3] w-full overflow-hidden md:order-1">
           <div className="grain absolute inset-0">
             <Image
-              src="/images/dropbox/family-fire.webp"
-              alt="Friends gathered around a shared fire and table beneath the palms at night."
+              src="/images/dropbox/kitchen2.webp"
+              alt="Two people preparing food together in a warmly lit Costa Rican kitchen."
               fill
               sizes="(max-width: 767px) 100vw, 45vw"
               className="object-cover"
