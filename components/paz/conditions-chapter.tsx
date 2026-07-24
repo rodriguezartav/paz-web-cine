@@ -165,6 +165,27 @@ export function ConditionsChapter() {
         </Reveal>
       </div>
 
+      <div className="mx-auto flex w-full max-w-3xl justify-evenly px-6 pb-[18vh] md:px-0 md:pb-[22vh]">
+        <Reveal className="relative aspect-square w-[24%] overflow-hidden rounded-sm">
+          <Image
+            src="/images/dropbox/DSCF8980.webp"
+            alt="A person playing a wooden flute beside a rainforest waterfall."
+            fill
+            sizes="(max-width: 767px) 24vw, 185px"
+            className="object-cover"
+          />
+        </Reveal>
+        <Reveal delay={0.12} className="relative aspect-square w-[24%] overflow-hidden rounded-sm">
+          <Image
+            src="/images/dropbox/DSCF9144.webp"
+            alt="Hands working with wet earth on the rainforest floor."
+            fill
+            sizes="(max-width: 767px) 24vw, 185px"
+            className="object-cover"
+          />
+        </Reveal>
+      </div>
+
       <ImmersiveCondition
         image="/images/dropbox/DSCF9683.JPG"
         imageAlt="Wildlife observed in the dense rainforest around Paz."
