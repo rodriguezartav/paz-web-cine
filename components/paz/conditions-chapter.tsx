@@ -76,22 +76,22 @@ export function ConditionsChapter() {
               you&apos;re not looking for more. you&apos;re looking for something real enough to meet you.
             </motion.p>
 
-            <div className="absolute inset-x-0 top-[calc(100%+150px)] grid grid-cols-2 gap-[8%] px-[8%]">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
+            <div className="absolute inset-x-0 top-[calc(100%+150px)] flex justify-evenly">
+              <div className="relative aspect-square w-[24%] overflow-hidden rounded-sm">
                 <Image
                   src="/images/supporting-shell.png"
                   alt=""
                   fill
-                  sizes="(max-width: 767px) 38vw, 240px"
+                  sizes="(max-width: 767px) 24vw, 185px"
                   className="object-cover"
                 />
               </div>
-              <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
+              <div className="relative aspect-square w-[24%] overflow-hidden rounded-sm">
                 <Image
                   src="/images/supporting-flower.png"
                   alt=""
                   fill
-                  sizes="(max-width: 767px) 38vw, 240px"
+                  sizes="(max-width: 767px) 24vw, 185px"
                   className="object-cover"
                 />
               </div>
