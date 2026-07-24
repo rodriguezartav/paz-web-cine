@@ -147,7 +147,7 @@ export function ConditionsChapter() {
         waves, and no one waiting for a turn ~ you surf more in a morning than most do in a week.
       </ImmersiveCondition>
 
-      <div className="mx-auto grid min-h-svh max-w-6xl items-center gap-16 px-6 py-[22vh] md:grid-cols-[0.82fr_1fr] md:gap-20 md:px-10">
+      <div className="mx-auto grid min-h-svh max-w-6xl items-center gap-16 px-6 pb-[10vh] pt-[22vh] md:grid-cols-[0.82fr_1fr] md:gap-20 md:px-10 md:pb-[12vh]">
         <Reveal delay={0.1} className="relative order-2 aspect-[4/3] w-full overflow-hidden md:order-1">
           <div className="grain absolute inset-0">
             <Image
