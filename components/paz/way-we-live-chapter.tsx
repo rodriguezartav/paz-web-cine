@@ -31,8 +31,8 @@ const passages: Passage[] = [
   },
   {
     text: "nobody's guiding you. we just take you ~ to the waterfall when it's running, the beach when the light's right, the wave when it turns on. and after that, you go back on your own, whenever you want.",
-    image: '/images/dropbox/wildlife-canopy.webp',
-    imageAlt: 'A figure following a rocky path beneath the deep rainforest canopy.',
+    image: '/images/dropbox/DSCF9026.webp',
+    imageAlt: 'Two people beside a tall rainforest waterfall falling into a dark pool.',
     side: 'left',
   },
   {
