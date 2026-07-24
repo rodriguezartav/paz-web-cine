@@ -85,8 +85,8 @@ export function ConditionsChapter() {
               </div>
               <div className="relative aspect-square w-[24%] overflow-hidden rounded-sm">
                 <Image
-                  src="/images/dropbox/supporting-flower.webp"
-                  alt="A quiet portrait made in soft coastal light."
+                  src="/images/dropbox/DSCF9851.webp"
+                  alt="A small white seashell resting on weathered wood."
                   fill
                   sizes="(max-width: 767px) 24vw, 185px"
                   className="object-cover"
