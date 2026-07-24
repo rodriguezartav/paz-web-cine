@@ -64,16 +64,39 @@ export function ConditionsChapter() {
   return (
     <section aria-label="the conditions" className="bg-bone text-ink">
       <div className="bg-ink px-6 text-bone md:px-12">
-        <div className="mx-auto flex min-h-svh max-w-[52ch] items-center justify-center py-[24vh] text-center">
-          <motion.p
-            className="text-balance font-display text-[1.25rem] leading-[1.8] tracking-[0.01em] md:text-[1.375rem]"
-            initial={reduceMotion ? false : { opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, amount: 0.7 }}
-            transition={{ duration: reduceMotion ? 0 : 1.8, ease: EASE_CINEMATIC }}
-          >
-            you&apos;re not looking for more. you&apos;re looking for something real enough to meet you.
-          </motion.p>
+        <div className="mx-auto flex min-h-svh max-w-3xl items-center justify-center py-[24vh] text-center">
+          <div className="relative w-full">
+            <motion.p
+              className="mx-auto max-w-[52ch] text-balance font-display text-[1.25rem] leading-[1.8] tracking-[0.01em] md:text-[1.375rem]"
+              initial={reduceMotion ? false : { opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.7 }}
+              transition={{ duration: reduceMotion ? 0 : 1.8, ease: EASE_CINEMATIC }}
+            >
+              you&apos;re not looking for more. you&apos;re looking for something real enough to meet you.
+            </motion.p>
+
+            <div className="absolute inset-x-0 top-[calc(100%+150px)] grid grid-cols-2 gap-[8%] px-[8%]">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
+                <Image
+                  src="/images/supporting-shell.png"
+                  alt=""
+                  fill
+                  sizes="(max-width: 767px) 38vw, 240px"
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
+                <Image
+                  src="/images/supporting-flower.png"
+                  alt=""
+                  fill
+                  sizes="(max-width: 767px) 38vw, 240px"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="mx-auto flex min-h-svh max-w-[52ch] items-center justify-center py-[24vh] text-center">
