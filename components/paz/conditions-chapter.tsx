@@ -76,8 +76,8 @@ export function ConditionsChapter() {
             <div className="absolute inset-x-0 top-[calc(100%+150px)] flex justify-evenly">
               <div className="relative aspect-square w-[24%] overflow-hidden rounded-sm">
                 <Image
-                  src="/images/dropbox/supporting-shell.webp"
-                  alt="A Pacific wave framed by a coastal tree."
+                  src="/images/dropbox/DSCF8925.JPG"
+                  alt=""
                   fill
                   sizes="(max-width: 767px) 24vw, 185px"
                   className="object-cover"
