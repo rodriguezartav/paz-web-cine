@@ -13,8 +13,8 @@ type Passage = {
 const passages: Passage[] = [
   {
     text: "so this was never a business. it's our home ~ and we just leave the door open.",
-    image: '/images/dropbox/supporting-shell.webp',
-    imageAlt: 'The Pacific framed by the branches of a coastal tree.',
+    image: '/images/dropbox/DSCF9708.webp',
+    imageAlt: 'An open screened living room looking directly into dense rainforest.',
     side: 'right',
   },
   {
