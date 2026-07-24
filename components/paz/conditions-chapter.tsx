@@ -164,7 +164,7 @@ export function ConditionsChapter() {
         </Reveal>
       </div>
 
-      <div className="mx-auto grid w-full max-w-3xl grid-cols-[1fr_1fr_0.8fr] items-center gap-6 px-6 pb-[18vh] md:gap-10 md:px-0 md:pb-[22vh]">
+      <div className="mx-auto grid w-full max-w-3xl grid-cols-[1fr_1fr_1.4fr] items-center gap-6 px-6 pb-[18vh] md:gap-10 md:px-0 md:pb-[22vh]">
         <Reveal className="relative aspect-square w-full -translate-y-5 overflow-hidden rounded-sm md:-translate-y-8">
           <Image
             src="/images/dropbox/DSCF8980.webp"
@@ -191,7 +191,7 @@ export function ConditionsChapter() {
             src="/images/dropbox/DSCF9161.webp"
             alt="People bathing beneath a narrow waterfall in the rainforest."
             fill
-            sizes="(max-width: 767px) 23vw, 175px"
+            sizes="(max-width: 767px) 38vw, 285px"
             className="object-cover"
           />
         </Reveal>
