@@ -70,10 +70,17 @@ export function Hero({
           </div>
         )}
 
-        <div className="flex flex-1 flex-col items-center justify-center px-6 text-center">
+        <div className="flex flex-1 flex-col items-center justify-center px-6 text-center md:items-start md:px-10 md:text-left">
           {children ?? (
             <>
-              <Wordmark size="lg" className="drop-shadow-[0_1px_18px_rgba(64,59,58,0.4)]" />
+              <Wordmark
+                size="lg"
+                className={cn(
+                  'drop-shadow-[0_1px_18px_rgba(64,59,58,0.4)]',
+                  // on mobile the wordmark travels down to sit directly above the title
+                  title && 'hidden md:block',
+                )}
+              />
               {tagline ? (
                 <p className="mt-8 max-w-md font-display text-lg leading-relaxed text-balance text-bone/90 md:text-xl">
                   {tagline}
@@ -84,7 +91,11 @@ export function Hero({
         </div>
 
         {title && !children ? (
-          <div className="px-6 pb-8 text-center md:px-10 md:pb-10 md:text-left">
+          <div className="flex flex-col items-center px-6 pb-8 text-center md:items-start md:px-10 md:pb-10 md:text-left">
+            <Wordmark
+              size="lg"
+              className="mb-7 drop-shadow-[0_1px_18px_rgba(64,59,58,0.4)] md:hidden"
+            />
             <h1 className="type-hero mx-auto max-w-4xl text-balance text-bone drop-shadow-[0_1px_22px_rgba(64,59,58,0.45)] md:mx-0 md:max-w-2xl">
               {title}
             </h1>
