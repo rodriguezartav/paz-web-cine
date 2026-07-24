@@ -73,25 +73,24 @@ export function ConditionsChapter() {
               you&apos;re not looking for more. you&apos;re looking for something real enough to meet you.
             </motion.p>
 
-            <div className="absolute inset-x-0 top-[calc(100%+150px)] flex justify-evenly">
-              <div className="relative aspect-square w-[24%] overflow-hidden rounded-sm">
-                <Image
-                  src="/images/dropbox/DSCF8925.JPG"
-                  alt=""
-                  fill
-                  sizes="(max-width: 767px) 24vw, 185px"
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative aspect-square w-[24%] overflow-hidden rounded-sm">
-                <Image
-                  src="/images/dropbox/DSCF9851.webp"
-                  alt="A small white seashell resting on weathered wood."
-                  fill
-                  sizes="(max-width: 767px) 24vw, 185px"
-                  className="object-cover"
-                />
-              </div>
+            <div className="absolute bottom-[calc(100%+90px)] left-0 aspect-square w-[42%] overflow-hidden rounded-sm border border-bone md:w-[22%]">
+              <Image
+                src="/images/dropbox/DSCF8925.JPG"
+                alt=""
+                fill
+                sizes="(max-width: 767px) 42vw, 170px"
+                className="object-cover"
+              />
+            </div>
+
+            <div className="absolute right-0 top-[calc(100%+90px)] aspect-square w-[42%] overflow-hidden rounded-sm border border-bone md:w-[22%]">
+              <Image
+                src="/images/dropbox/DSCF9851.webp"
+                alt="A small white seashell resting on weathered wood."
+                fill
+                sizes="(max-width: 767px) 42vw, 170px"
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
