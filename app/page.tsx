@@ -2,12 +2,17 @@ import type { Metadata } from 'next'
 import {
   Navigation,
   Hero,
+  Container,
+  Reveal,
+  Section,
   CinematicChapter,
-  EditorialChapter,
-  ImageEssay,
-  SectionDivider,
-  SiteFooter,
+  ConditionsChapter,
+  FullscreenVideo,
+  WayWeLiveChapter,
 } from '@/components/paz'
+
+const DESKTOP_VIDEO_PLAYBACK_ID = 'SkgfY9F8a33A1rGZIq0147z2KM3CLBm02gdje3aax44Tg'
+const MOBILE_VIDEO_PLAYBACK_ID = 'd7oGXU3Mpz891zJ02aul7xiwezR1P2z02EJNbgJSgKMtA'
 
 export const metadata: Metadata = {
   title: 'Paz Corcovado',
@@ -40,124 +45,57 @@ export default function HomePage() {
           cue="keep walking"
         />
 
-        <EditorialChapter lead="here, a set of conditions comes together to make something that, as far as we know, is the last of its kind." />
-
         {/* ── Movement One — The Last of Its Kind ───────────────────── */}
-        {/* Truth: an untouched place still exists. Trust imagery; almost no text. */}
-        <CinematicChapter
-          image="/images/canopy-rain.png"
-          imageAlt="Rain moving through a dense rainforest canopy, large wet leaves catching soft grey light."
-          chapter="i ~ the last of its kind"
-          caption="long before it reaches the ground, the rain has passed through a hundred years of leaves."
-          align="end"
-        />
-
-        <CinematicChapter
-          image="/images/lineup-waiting.png"
-          imageAlt="A lone surfer sitting still on a board far out on a glassy, empty ocean at dawn, a forested headland behind."
-          caption="one wave. and no one waiting for a turn."
-          align="start"
-        />
-
-        {/* A held breath — the scroll is not rewarded. Only the forest, and silence. */}
-        <CinematicChapter
-          image="/images/mist-forest.png"
-          imageAlt="Mist drifting slowly through tall primary rainforest at dawn, layers of trees fading into soft grey fog."
-        />
-
-        <EditorialChapter lead="somewhere, this still exists.">
-          <p>
-            no resort strip. no coast road worth the name. only a shoreline the
-            last century never quite found its way to — and never got around to
-            changing.
-          </p>
-        </EditorialChapter>
+        <ConditionsChapter />
 
         {/* ── Movement Two — A Place That Still Belongs to Nature ────── */}
         {/* Truth: it is Corcovado. Answer "where is this?" with reality, not a map. */}
-        <CinematicChapter
-          image="/images/hero-jungle-ocean.png"
-          imageAlt="Dense green rainforest framing a pale, misty Pacific at first light, seen from within the trees."
+        <FullscreenVideo
+          playbackId={DESKTOP_VIDEO_PLAYBACK_ID}
+          mobilePlaybackId={MOBILE_VIDEO_PLAYBACK_ID}
+          poster="/images/hero-jungle-ocean.png"
+          posterAlt="Dense green rainforest framing a pale, misty Pacific at first light, seen from within the trees."
           chapter="ii ~ a place that still belongs to nature"
-          caption="this is corcovado."
+          caption="this is paz in corcovado"
           align="end"
         />
 
-        <ImageEssay
-          intro="national geographic once called it the most biologically intense place on earth. it was not a slogan. it was a measurement."
-          plates={[
-            {
-              src: '/images/macaws.png',
-              alt: 'A pair of scarlet macaws perched close together on a bare branch against a soft overcast sky.',
-              caption:
-                'scarlet macaws, nearly gone from this coast a generation ago, nest here again in pairs.',
-              place: 'left',
-            },
-            {
-              src: '/images/sloth-cecropia.png',
-              alt: 'A three-toed sloth hanging still from a cecropia branch high in the rainforest canopy.',
-              caption:
-                'close to half of costa rica’s species live within a day’s walk of the water.',
-              place: 'right',
-            },
-            {
-              src: '/images/surf-wave.png',
-              alt: 'A lone surfer riding a small clean wave along a wild, jungle-backed coastline under overcast light.',
-              caption:
-                'the wave breaks inside a protected reserve. most mornings, it goes unridden.',
-              place: 'left',
-            },
-          ]}
-        />
+        <WayWeLiveChapter />
 
-        <SectionDivider mark="~" tone="ink" />
+        <Section aria-label="roberto" className="overflow-hidden">
+          <Container width="measure" className="flex flex-col">
+            <div className="flex items-end pt-[28vh]">
+              <Reveal>
+                <p className="type-lead max-w-xl text-balance text-ink">
+                  years ago, roberto came here with nothing left ~ and the land gave him back to
+                  himself.
+                </p>
+              </Reveal>
+            </div>
 
-        <EditorialChapter lead="the land is protected. the access was never sold.">
-          <p>
-            there are no ticket gates here, and no crowds to funnel through
-            them. what keeps people away is simply distance — and distance, it
-            turns out, is what has kept the place alive.
-          </p>
-        </EditorialChapter>
+            <div className="flex items-start justify-end pb-[28vh] pt-8 md:pt-10">
+              <Reveal delay={0.1} className="max-w-xl">
+                <p className="type-body text-pretty text-ink/85">
+                  that&apos;s the only reason the door is open. we can&apos;t hand you what happened to
+                  him. we can only bring you to the same place, and let it do what it does.
+                </p>
+              </Reveal>
+            </div>
+          </Container>
 
-        {/* ── Movement Three — The Conditions ───────────────────────── */}
-        {/* Truth: nature sets the schedule. Present conditions; explain nothing. */}
-        <CinematicChapter
-          image="/images/figure-shore.png"
-          imageAlt="A person crouched low at the edge of the ocean on a wild grey-sand beach at dawn, a misty headland behind."
-          chapter="iii ~ the conditions"
-          caption="here, the day is not something you plan."
-          align="end"
-        />
+        </Section>
 
-        <EditorialChapter lead="nature keeps the schedule.">
-          <p>morning begins with light, not an alarm.</p>
-          <p>the day follows the tide.</p>
-          <p>meals are shared at one long table.</p>
-          <p>phones lose their signal, and then their hold.</p>
-          <p>movement takes the place of entertainment.</p>
-          <p>and slowly, the silence comes back.</p>
-        </EditorialChapter>
-
-        <CinematicChapter
-          image="/images/shared-table.png"
-          imageAlt="A long, plain wooden table set for a shared meal under an open-air rainforest structure in soft morning light."
-          caption="almost everything here is shared — the table, the water, the weather."
-          align="start"
-        />
-
-        {/* ── Horizon — not a conclusion ────────────────────────────── */}
-        {/* The recognition, then a door left open. The walk has only begun. */}
         <CinematicChapter
           image="/images/cold-water-dawn.png"
           imageAlt="A person submerged to the chest in cold, dark, still water at dawn, breath held, mist on the surface."
           variant="banner"
           caption="come back to life"
           note="you have not reached the end of anything. you have only started walking."
+          presentation="clearing"
+          imageScale="full"
           cta={{ label: 'continue the descent', href: '/about' }}
         />
 
-        <SiteFooter />
       </main>
     </>
   )

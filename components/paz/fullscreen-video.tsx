@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from 'react'
 import type { ReactNode } from 'react'
 import Image from 'next/image'
+import MuxVideo from '@mux/mux-video-react'
+import { Pause, Play } from 'lucide-react'
 import { useReducedMotion } from 'motion/react'
 import { cn } from '@/lib/utils'
 import { Reveal } from '@/components/paz/reveal'
@@ -16,14 +18,17 @@ import { Reveal } from '@/components/paz/reveal'
  * until it is almost needed.
  */
 export function FullscreenVideo({
-  src,
+  playbackId,
+  mobilePlaybackId,
   poster,
   posterAlt,
   chapter,
   caption,
   align = 'end',
 }: {
-  src: string
+  playbackId: string
+  /** optional portrait playback selected on narrow viewports */
+  mobilePlaybackId?: string
   /** a still frame shown before/while the video loads, and always under reduced-motion */
   poster: string
   posterAlt: string
@@ -35,6 +40,16 @@ export function FullscreenVideo({
   const ref = useRef<HTMLDivElement | null>(null)
   const videoRef = useRef<HTMLVideoElement | null>(null)
   const [active, setActive] = useState(false)
+  const [mobile, setMobile] = useState(false)
+  const [playing, setPlaying] = useState(false)
+
+  useEffect(() => {
+    const media = window.matchMedia('(max-width: 767px)')
+    const update = () => setMobile(media.matches)
+    update()
+    media.addEventListener('change', update)
+    return () => media.removeEventListener('change', update)
+  }, [])
 
   useEffect(() => {
     if (reduce) return
@@ -55,9 +70,25 @@ export function FullscreenVideo({
     return () => observer.disconnect()
   }, [reduce])
 
+  const togglePlayback = async () => {
+    const video = videoRef.current
+    if (!video) {
+      setActive(true)
+      setPlaying(true)
+      return
+    }
+
+    if (video.paused) {
+      await video.play().catch(() => {})
+    } else {
+      video.pause()
+    }
+  }
+
   useEffect(() => {
-    if (active) videoRef.current?.play().catch(() => {})
-  }, [active])
+    if (!active || !playing) return
+    videoRef.current?.play().catch(() => setPlaying(false))
+  }, [active, playing])
 
   return (
     <section ref={ref} className="relative h-svh min-h-[560px] w-full overflow-hidden">
@@ -70,16 +101,18 @@ export function FullscreenVideo({
           className="object-cover"
         />
         {!reduce && active ? (
-          <video
+          <MuxVideo
             ref={videoRef}
             className="absolute inset-0 h-full w-full object-cover"
-            src={src}
+            playbackId={mobile && mobilePlaybackId ? mobilePlaybackId : playbackId}
             poster={poster}
             muted
             loop
             playsInline
-            preload="none"
+            preload="metadata"
             aria-hidden="true"
+            onPlay={() => setPlaying(true)}
+            onPause={() => setPlaying(false)}
           />
         ) : null}
       </div>
@@ -88,6 +121,21 @@ export function FullscreenVideo({
         aria-hidden="true"
         className="absolute inset-0 bg-gradient-to-t from-ink/45 via-transparent to-ink/20"
       />
+
+      {!reduce && active ? (
+        <button
+          type="button"
+          onClick={togglePlayback}
+          className="absolute left-1/2 top-1/2 z-10 flex size-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-bone/50 bg-ink/25 text-bone backdrop-blur-sm transition-colors duration-500 hover:bg-ink/45 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bone focus-visible:ring-offset-2 focus-visible:ring-offset-ink md:size-24"
+          aria-label={playing ? 'Pause film' : 'Play film'}
+        >
+          {playing ? (
+            <Pause aria-hidden="true" className="size-7 md:size-8" strokeWidth={1.5} />
+          ) : (
+            <Play aria-hidden="true" className="ml-1 size-7 md:size-8" strokeWidth={1.5} />
+          )}
+        </button>
+      ) : null}
 
       <div
         className={cn(
