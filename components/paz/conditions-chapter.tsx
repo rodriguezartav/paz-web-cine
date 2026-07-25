@@ -107,16 +107,38 @@ export function ConditionsChapter() {
         </div>
 
         <div className="mx-auto flex min-h-svh max-w-[52ch] items-center justify-center py-[24vh] text-center">
-          <motion.p
-            className="text-balance font-display text-[1.25rem] leading-[1.8] tracking-[0.01em] md:text-[1.375rem]"
-            initial={reduceMotion ? false : { opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, amount: 0.7 }}
-            transition={{ duration: reduceMotion ? 0 : 1.8, ease: EASE_CINEMATIC }}
-          >
-            here, conditions come together to make something that, as far as we know, is the last
-            of its kind.
-          </motion.p>
+          <div className="relative w-full">
+            <motion.p
+              className="text-balance font-display text-[1.25rem] leading-[1.8] tracking-[0.01em] md:text-[1.375rem]"
+              initial={reduceMotion ? false : { opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.7 }}
+              transition={{ duration: reduceMotion ? 0 : 1.8, ease: EASE_CINEMATIC }}
+            >
+              here, conditions come together to make something that, as far as we know, is the last
+              of its kind.
+            </motion.p>
+
+            <div className="absolute bottom-[calc(100%+90px)] left-0 aspect-square w-[42%] overflow-hidden rounded-sm border border-bone md:w-[22%]">
+              <Image
+                src="/images/dropbox/DSCF8925.JPG"
+                alt=""
+                fill
+                sizes="(max-width: 767px) 42vw, 170px"
+                className="object-cover"
+              />
+            </div>
+
+            <div className="absolute right-0 top-[calc(100%+90px)] aspect-square w-[42%] overflow-hidden rounded-sm border border-bone md:w-[22%]">
+              <Image
+                src="/images/dropbox/DSCF9851.webp"
+                alt="A small white seashell resting on weathered wood."
+                fill
+                sizes="(max-width: 767px) 42vw, 170px"
+                className="object-cover"
+              />
+            </div>
+          </div>
         </div>
 
         <div className="mx-auto flex min-h-svh items-center justify-center py-[20vh] text-center">
