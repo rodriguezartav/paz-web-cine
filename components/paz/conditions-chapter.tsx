@@ -276,7 +276,18 @@ export function ConditionsChapter() {
 
       <div className="bg-bone text-ink">
         <div className="mx-auto grid min-h-svh w-full max-w-5xl grid-cols-2 items-center gap-6 px-6 pb-[18vh] pt-[22vh] md:grid-cols-[1fr_1.7fr_1fr] md:gap-12 md:px-10 md:pb-[22vh]">
-          <Reveal className="relative col-start-1 row-start-1 aspect-square w-full overflow-hidden rounded-sm md:-translate-y-6">
+          <Reveal
+            as="p"
+            className="type-lead col-span-2 row-start-1 text-balance md:col-span-1 md:col-start-2 md:row-span-2 md:row-start-1 md:self-center md:text-center"
+          >
+            a costa rican home, lived the old unhurried way ~ tied to the land in ways english has no
+            words for.
+          </Reveal>
+
+          <Reveal
+            delay={0.1}
+            className="relative col-start-1 row-start-2 aspect-square w-full overflow-hidden rounded-sm md:row-start-1 md:-translate-y-6"
+          >
             <Image
               src="/images/dropbox/DSCF8980.webp"
               alt="A person playing a wooden flute beside a rainforest waterfall."
@@ -284,15 +295,6 @@ export function ConditionsChapter() {
               sizes="(max-width: 767px) 44vw, 220px"
               className="object-cover"
             />
-          </Reveal>
-
-          <Reveal
-            as="p"
-            delay={0.1}
-            className="type-lead col-span-2 row-start-2 text-balance md:col-span-1 md:col-start-2 md:row-span-2 md:row-start-1 md:self-center md:text-center"
-          >
-            a costa rican home, lived the old unhurried way ~ tied to the land in ways english has no
-            words for.
           </Reveal>
 
           <Reveal
@@ -310,7 +312,7 @@ export function ConditionsChapter() {
 
           <Reveal
             delay={0.3}
-            className="relative col-start-2 row-start-1 aspect-[2/3] w-full overflow-hidden rounded-sm md:col-start-3 md:row-span-2 md:row-start-1 md:self-center"
+            className="relative col-start-2 row-span-2 row-start-2 min-h-[40vh] w-full self-stretch overflow-hidden rounded-sm md:col-start-3 md:row-span-2 md:row-start-1 md:aspect-[2/3] md:min-h-0 md:self-center"
           >
             <Image
               src="/images/dropbox/DSCF9161.webp"
