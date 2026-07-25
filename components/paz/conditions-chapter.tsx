@@ -181,6 +181,53 @@ export function ConditionsChapter() {
         waves, and no one waiting for a turn ~ you surf more in a morning than most do in a week.
       </ImmersiveCondition>
 
+      <div className="mx-auto grid w-full max-w-5xl items-center gap-6 px-6 py-[18vh] md:grid-cols-[1fr_0.9fr_1fr] md:gap-10 md:px-10 md:py-[22vh]">
+        <Reveal className="relative aspect-[3/2] w-full overflow-hidden rounded-sm md:col-start-1 md:row-start-1 md:-translate-y-5">
+          <Image
+            src="/images/dropbox/DSCF8045.webp"
+            alt="A surfer riding a clean wave below a jungle headland."
+            fill
+            sizes="(max-width: 767px) 88vw, 300px"
+            className="object-cover"
+          />
+        </Reveal>
+
+        <Reveal
+          as="p"
+          delay={0.1}
+          className="text-balance font-display text-[0.9375rem] leading-relaxed tracking-[0.01em] md:col-start-2 md:row-span-2 md:row-start-1 md:self-center md:text-center md:text-base"
+        >
+          three points inside a single bay ~ so the swell always finds somewhere to break, and you
+          always find it empty.
+        </Reveal>
+
+        <Reveal
+          delay={0.2}
+          className="relative aspect-[3/2] w-full overflow-hidden rounded-sm md:col-start-1 md:row-start-2 md:translate-y-5"
+        >
+          <Image
+            src="/images/dropbox/DSCF8063.webp"
+            alt="A surfer deep in the face of a turquoise wave."
+            fill
+            sizes="(max-width: 767px) 88vw, 300px"
+            className="object-cover"
+          />
+        </Reveal>
+
+        <Reveal
+          delay={0.3}
+          className="relative aspect-[3/2] w-full overflow-hidden rounded-sm md:col-start-3 md:row-span-2 md:row-start-1 md:self-center"
+        >
+          <Image
+            src="/images/dropbox/DSCF8103.webp"
+            alt="Someone carrying a surfboard across empty sand toward the water."
+            fill
+            sizes="(max-width: 767px) 88vw, 320px"
+            className="object-cover"
+          />
+        </Reveal>
+      </div>
+
       <ImmersiveCondition
         image="/images/dropbox/DSCF9683.JPG"
         imageAlt="Wildlife observed in the dense rainforest around Paz."
