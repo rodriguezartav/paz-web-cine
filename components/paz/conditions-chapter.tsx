@@ -141,7 +141,7 @@ export function ConditionsChapter() {
           </div>
         </div>
 
-        <div className="mx-auto flex min-h-svh items-end justify-center pb-[14vh] pt-[20vh] text-center">
+        <div className="mx-auto flex min-h-svh items-end justify-center pb-10 pt-[20vh] text-center md:pb-14">
           <motion.p
             className="max-w-[30ch] text-balance font-display text-[1.75rem] uppercase leading-[1.35] tracking-[0.15em] text-bone md:text-[2rem]"
             initial={reduceMotion ? false : { opacity: 0 }}
