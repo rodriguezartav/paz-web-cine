@@ -181,13 +181,13 @@ export function ConditionsChapter() {
         waves, and no one waiting for a turn ~ you surf more in a morning than most do in a week.
       </ImmersiveCondition>
 
-      <div className="mx-auto grid w-full max-w-5xl items-center gap-6 px-6 py-[18vh] md:grid-cols-[1fr_0.9fr_1fr] md:gap-10 md:px-10 md:py-[22vh]">
-        <Reveal className="relative aspect-[3/2] w-full overflow-hidden rounded-sm md:col-start-1 md:row-start-1 md:-translate-y-5">
+      <div className="mx-auto grid w-full max-w-5xl items-center gap-6 px-6 py-[18vh] md:grid-cols-[1.15fr_0.85fr_1fr] md:gap-10 md:px-10 md:py-[22vh]">
+        <Reveal className="relative aspect-[3/2] w-full overflow-hidden rounded-sm md:col-start-1 md:row-span-2 md:row-start-1 md:aspect-[4/5] md:self-center">
           <Image
-            src="/images/dropbox/DSCF8045.webp"
-            alt="A surfer riding a clean wave below a jungle headland."
+            src="/images/dropbox/DSCF8103.webp"
+            alt="Someone carrying a surfboard across empty sand toward the water."
             fill
-            sizes="(max-width: 767px) 88vw, 300px"
+            sizes="(max-width: 767px) 88vw, 340px"
             className="object-cover"
           />
         </Reveal>
@@ -203,7 +203,7 @@ export function ConditionsChapter() {
 
         <Reveal
           delay={0.2}
-          className="relative aspect-[3/2] w-full overflow-hidden rounded-sm md:col-start-1 md:row-start-2 md:translate-y-5"
+          className="relative aspect-[3/2] w-full overflow-hidden rounded-sm md:col-start-3 md:row-start-1 md:aspect-[16/10] md:-translate-y-4"
         >
           <Image
             src="/images/dropbox/DSCF8063.webp"
@@ -216,13 +216,13 @@ export function ConditionsChapter() {
 
         <Reveal
           delay={0.3}
-          className="relative aspect-[3/2] w-full overflow-hidden rounded-sm md:col-start-3 md:row-span-2 md:row-start-1 md:self-center"
+          className="relative aspect-[3/2] w-full overflow-hidden rounded-sm md:col-start-3 md:row-start-2 md:aspect-[16/10] md:translate-y-4"
         >
           <Image
-            src="/images/dropbox/DSCF8103.webp"
-            alt="Someone carrying a surfboard across empty sand toward the water."
+            src="/images/dropbox/DSCF8045.webp"
+            alt="A surfer riding a clean wave below a jungle headland."
             fill
-            sizes="(max-width: 767px) 88vw, 320px"
+            sizes="(max-width: 767px) 88vw, 300px"
             className="object-cover"
           />
         </Reveal>
