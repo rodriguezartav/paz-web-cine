@@ -72,7 +72,7 @@ export function ConditionsChapter() {
   return (
     <section aria-label="the conditions" className="bg-bone text-ink">
       <div className="bg-ink px-6 text-bone md:px-12">
-        <div className="mx-auto flex min-h-svh max-w-3xl items-center justify-center py-[24vh] text-center">
+        <div className="mx-auto flex min-h-svh max-w-3xl items-end justify-center pb-[38vh] pt-[24vh] text-center md:pb-[30vh]">
           <div className="relative w-full">
             <motion.p
               className="mx-auto max-w-[52ch] text-balance font-display text-[1.25rem] leading-[1.8] tracking-[0.01em] md:text-[1.375rem]"
@@ -141,7 +141,7 @@ export function ConditionsChapter() {
           </div>
         </div>
 
-        <div className="mx-auto flex min-h-svh items-center justify-center py-[20vh] text-center">
+        <div className="mx-auto flex min-h-svh items-end justify-center pb-[14vh] pt-[20vh] text-center">
           <motion.p
             className="max-w-[30ch] text-balance font-display text-[1.75rem] uppercase leading-[1.35] tracking-[0.15em] text-bone md:text-[2rem]"
             initial={reduceMotion ? false : { opacity: 0 }}
