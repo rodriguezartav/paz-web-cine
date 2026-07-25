@@ -96,6 +96,14 @@ export default function HomePage() {
           cta={{ label: 'continue the descent', href: '/about' }}
         />
 
+        <div className="flex min-h-svh items-end justify-center bg-ink px-6 pb-10 pt-[20vh] text-center md:px-12 md:pb-14">
+          <Reveal
+            as="p"
+            className="max-w-[30ch] text-balance font-display text-[1.75rem] uppercase leading-[1.35] tracking-[0.15em] text-bone md:text-[2rem]"
+          >
+            raw nature that changes you from within, without words.
+          </Reveal>
+        </div>
       </main>
     </>
   )

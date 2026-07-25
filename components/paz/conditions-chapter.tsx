@@ -106,18 +106,6 @@ export function ConditionsChapter() {
             </div>
           </div>
         </div>
-
-        <div className="mx-auto flex min-h-svh items-end justify-center pb-10 pt-[20vh] text-center md:pb-14">
-          <motion.p
-            className="max-w-[30ch] text-balance font-display text-[1.75rem] uppercase leading-[1.35] tracking-[0.15em] text-bone md:text-[2rem]"
-            initial={reduceMotion ? false : { opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, amount: 0.78 }}
-            transition={{ duration: reduceMotion ? 0 : 2.8, ease: EASE_CINEMATIC }}
-          >
-            raw nature that changes you from within, without words.
-          </motion.p>
-        </div>
       </div>
 
       <div className="mx-auto grid min-h-svh max-w-6xl items-center gap-16 px-6 py-[22vh] md:grid-cols-[1fr_0.82fr] md:gap-20 md:px-10">
