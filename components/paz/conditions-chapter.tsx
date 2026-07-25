@@ -126,6 +126,44 @@ export function ConditionsChapter() {
         </Reveal>
       </div>
 
+      <div className="mx-auto grid w-full max-w-3xl grid-cols-2 items-center gap-6 px-6 pb-[18vh] md:grid-cols-[1fr_1.4fr_1fr] md:gap-10 md:px-0 md:pb-[22vh]">
+        <Reveal className="relative col-start-1 row-start-1 aspect-square w-full overflow-hidden rounded-sm md:-translate-y-8">
+          <Image
+            src="/images/dropbox/DSCF7733.webp"
+            alt="A lone surfer sitting out on flat blue water below a forested headland."
+            fill
+            sizes="(max-width: 767px) 44vw, 200px"
+            className="object-cover"
+          />
+        </Reveal>
+
+        <Reveal
+          delay={0.12}
+          className="relative col-start-2 row-span-2 row-start-1 aspect-[2/3] w-full overflow-hidden rounded-sm md:self-center"
+        >
+          <Image
+            src="/images/dropbox/DSCF8662.webp"
+            alt="A surfer walking into the shorebreak at first light, framed by dark leaves."
+            fill
+            sizes="(max-width: 767px) 44vw, 280px"
+            className="object-cover"
+          />
+        </Reveal>
+
+        <Reveal
+          delay={0.24}
+          className="relative col-start-1 row-start-2 aspect-square w-full overflow-hidden rounded-sm md:col-start-3 md:row-start-1 md:translate-y-8"
+        >
+          <Image
+            src="/images/dropbox/DSCF8617.webp"
+            alt="A figure silhouetted beneath the palms watching a wave peel at dusk."
+            fill
+            sizes="(max-width: 767px) 44vw, 200px"
+            className="object-cover"
+          />
+        </Reveal>
+      </div>
+
       <ImmersiveCondition
         image="/images/dropbox/supporting-shell.webp"
         imageAlt="An empty turquoise Pacific wave framed by the branches of a coastal tree."
