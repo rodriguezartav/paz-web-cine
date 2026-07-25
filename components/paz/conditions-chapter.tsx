@@ -181,55 +181,48 @@ export function ConditionsChapter() {
       </div>
 
       <div className="bg-bone text-ink">
-        <div className="mx-auto grid min-h-svh max-w-6xl items-center gap-16 px-6 pb-[calc(10vh-50px)] pt-[22vh] md:grid-cols-[0.82fr_1fr] md:gap-20 md:px-10 md:pb-[calc(12vh-50px)]">
-          <Reveal
-            delay={0.1}
-            className="relative order-2 aspect-[4/3] w-full overflow-hidden md:order-1"
-          >
-            <div className="grain absolute inset-0">
-              <Image
-                src="/images/dropbox/kitchen3.webp"
-                alt="Two people sharing a candid moment while preparing food in a warmly lit Costa Rican kitchen."
-                fill
-                sizes="(max-width: 767px) 100vw, 45vw"
-                className="object-cover"
-              />
-            </div>
-          </Reveal>
-          <Reveal as="p" className="type-lead order-1 max-w-2xl text-balance md:order-2">
-            a costa rican home, lived the old unhurried way ~ tied to the land in ways english has no
-            words for.
-          </Reveal>
-        </div>
-
-        <div className="mx-auto grid w-full max-w-3xl grid-cols-[1fr_1fr_1.4fr] items-center gap-6 px-6 pb-[18vh] md:gap-10 md:px-0 md:pb-[22vh]">
-          <Reveal className="relative aspect-square w-full -translate-y-5 overflow-hidden rounded-sm md:-translate-y-8">
+        <div className="mx-auto grid min-h-svh w-full max-w-5xl grid-cols-2 items-center gap-6 px-6 pb-[18vh] pt-[22vh] md:grid-cols-[1fr_1.7fr_1fr] md:gap-12 md:px-10 md:pb-[22vh]">
+          <Reveal className="relative col-start-1 row-start-1 aspect-square w-full overflow-hidden rounded-sm md:-translate-y-6">
             <Image
               src="/images/dropbox/DSCF8980.webp"
               alt="A person playing a wooden flute beside a rainforest waterfall."
               fill
-              sizes="(max-width: 767px) 28vw, 220px"
+              sizes="(max-width: 767px) 44vw, 220px"
               className="object-cover"
             />
           </Reveal>
+
           <Reveal
-            delay={0.12}
-            className="relative aspect-square w-full translate-y-5 overflow-hidden rounded-sm md:translate-y-8"
+            as="p"
+            delay={0.1}
+            className="type-lead col-span-2 row-start-2 text-balance md:col-span-1 md:col-start-2 md:row-span-2 md:row-start-1 md:self-center md:text-center"
+          >
+            a costa rican home, lived the old unhurried way ~ tied to the land in ways english has no
+            words for.
+          </Reveal>
+
+          <Reveal
+            delay={0.2}
+            className="relative col-start-1 row-start-3 aspect-square w-full overflow-hidden rounded-sm md:row-start-2 md:translate-y-6"
           >
             <Image
               src="/images/dropbox/DSCF9144.webp"
               alt="Hands working with wet earth on the rainforest floor."
               fill
-              sizes="(max-width: 767px) 28vw, 220px"
+              sizes="(max-width: 767px) 44vw, 220px"
               className="object-cover"
             />
           </Reveal>
-          <Reveal delay={0.24} className="relative aspect-[2/3] w-full overflow-hidden rounded-sm">
+
+          <Reveal
+            delay={0.3}
+            className="relative col-start-2 row-start-1 aspect-[2/3] w-full overflow-hidden rounded-sm md:col-start-3 md:row-span-2 md:row-start-1 md:self-center"
+          >
             <Image
               src="/images/dropbox/DSCF9161.webp"
               alt="People bathing beneath a narrow waterfall in the rainforest."
               fill
-              sizes="(max-width: 767px) 38vw, 285px"
+              sizes="(max-width: 767px) 44vw, 250px"
               className="object-cover"
             />
           </Reveal>
