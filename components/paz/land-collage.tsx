@@ -16,7 +16,7 @@ export function LandCollage() {
             this is an invitation to an authentic experience
           </h2>
           <p className="text-pretty font-display text-[1.0625rem] leading-[1.55] md:text-[1.125rem]">
-            lived on costa rican land, the authentic old way ~ unhurried. tied to life in ways
+            live 7 to 21 days on costa rican land, the old way ~ unhurried. tied to nature in ways
             english has no words for.
           </p>
         </Reveal>
