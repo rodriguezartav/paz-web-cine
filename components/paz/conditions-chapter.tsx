@@ -196,8 +196,8 @@ export function ConditionsChapter() {
           delay={0.1}
           className="text-balance font-display text-[0.9375rem] leading-relaxed tracking-[0.01em] md:col-start-2 md:row-span-2 md:row-start-1 md:self-center md:text-center md:text-base"
         >
-          three points inside a single bay ~ so the swell always finds somewhere to break, and you
-          always find it empty.
+          minute long rides, the most biodiverse jungle in the world in the background. the spot is
+          right out front ~ grab a board any time and jump out to sea.
         </Reveal>
 
         <Reveal
