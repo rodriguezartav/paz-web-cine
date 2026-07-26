@@ -357,8 +357,8 @@ export function ConditionsChapter() {
             viewport={{ once: true, amount: 0.65 }}
             transition={{ duration: reduceMotion ? 0 : 1.8, ease: EASE_CINEMATIC }}
           >
-            we didn&apos;t create any of this, and run no programs. we only open the door, and let
-            nature do the rest.
+            we didn&apos;t create it, and don&apos;t claim to understand it. so, there can&apos;t be a
+            program ~ we only open the door, and let nature do the rest.
           </motion.p>
           <motion.p
             className="mt-[9vh] text-balance"
