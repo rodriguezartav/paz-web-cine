@@ -11,12 +11,14 @@ export function LandCollage() {
   return (
     <section aria-label="the old way" className="bg-bone text-ink">
       <div className="mx-auto grid min-h-svh w-full max-w-5xl grid-cols-2 items-center gap-6 px-6 pb-[18vh] pt-[22vh] md:grid-cols-[1fr_1.7fr_1fr] md:gap-12 md:px-10 md:pb-[22vh]">
-        <Reveal
-          as="p"
-          className="type-lead col-span-2 row-start-1 text-balance md:col-span-1 md:col-start-2 md:row-span-2 md:row-start-1 md:self-center md:text-center"
-        >
-          lived on costa rican land, the authentic old way ~ unhurried. tied to life in ways english
-          has no words for.
+        <Reveal className="col-span-2 row-start-1 flex flex-col gap-5 md:col-span-1 md:col-start-2 md:row-span-2 md:row-start-1 md:gap-6 md:self-center md:text-center">
+          <h2 className="type-lead text-balance">
+            this is an invitation to an authentic nature-led experience
+          </h2>
+          <p className="text-pretty font-display text-[1.0625rem] leading-[1.55] md:text-[1.125rem]">
+            lived on costa rican land, the authentic old way ~ unhurried. tied to life in ways
+            english has no words for.
+          </p>
         </Reveal>
 
         <Reveal
