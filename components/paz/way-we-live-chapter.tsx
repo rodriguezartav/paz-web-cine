@@ -12,6 +12,8 @@ type Passage = {
   /** Optional second photograph, paired with the first as an upright diptych. */
   secondImage?: string
   secondImageAlt?: string
+  /** Pulls the block up so it reads as attached to the passage above it. */
+  attached?: boolean
   side: 'left' | 'right'
 }
 
@@ -29,6 +31,7 @@ const passages: Passage[] = [
     imageAlt: 'A glass-walled room open to the rainforest, someone reading on a low daybed.',
     secondImage: '/images/dropbox/DSCF9878.webp',
     secondImageAlt: 'Someone resting on a bed beside a window that opens onto the palms at dusk.',
+    attached: true,
     side: 'left',
   },
   {
@@ -60,7 +63,13 @@ export function WayWeLiveChapter() {
     <Section space="none" className="overflow-hidden">
       <Container width="measure" className="flex flex-col gap-40 md:gap-48">
         {passages.map((passage, index) => (
-          <div key={passage.image} className="flex flex-col gap-20 md:gap-24">
+          <div
+            key={passage.image}
+            className={cn(
+              'flex flex-col gap-20 md:gap-24',
+              passage.attached && '-mt-28 md:-mt-36',
+            )}
+          >
             <Reveal
               className={cn(
                 passage.secondImage
