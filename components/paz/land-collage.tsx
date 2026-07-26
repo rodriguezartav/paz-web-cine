@@ -21,11 +21,14 @@ export function LandCollage() {
           </p>
 
           <div className="mt-2 flex flex-col items-start gap-4 md:mt-3 md:items-center">
-            <p className="font-sans text-sm uppercase tracking-[0.22em] text-ink/55">
-              starting at{' '}
-              <span className="font-display text-base normal-case tracking-normal text-ink">
-                $180 / night
+            <p className="flex flex-col gap-1.5 font-sans text-sm uppercase tracking-[0.22em] text-ink/55 md:items-center">
+              <span>
+                starting at{' '}
+                <span className="font-display text-base normal-case tracking-normal text-ink">
+                  $180 / night
+                </span>
               </span>
+              <span className="text-xs tracking-[0.2em] text-ink/45">food, bed + activities</span>
             </p>
             <a
               href="#apply"
