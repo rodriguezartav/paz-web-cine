@@ -291,8 +291,8 @@ export function ConditionsChapter() {
             as="p"
             className="type-lead col-span-2 row-start-1 text-balance md:col-span-1 md:col-start-2 md:row-span-2 md:row-start-1 md:self-center md:text-center"
           >
-            a costa rican land, lived the old way ~ unhurried. tied to the land in ways english has
-            no words for.
+            lived on costa rican land, the authentic old way ~ unhurried. tied to the land in ways
+            english has no words for.
           </Reveal>
 
           <Reveal
