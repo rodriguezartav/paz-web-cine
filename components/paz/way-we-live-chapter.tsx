@@ -14,6 +14,10 @@ type Passage = {
   secondImageAlt?: string
   /** Pulls the block up so it reads as attached to the passage above it. */
   attached?: boolean
+  /** Sets the words above the photograph instead of beneath it. */
+  textFirst?: boolean
+  /** A trio of smaller photographs, collaged beneath the block. */
+  supportImages?: { src: string; alt: string }[]
   side: 'left' | 'right'
 }
 
@@ -38,6 +42,21 @@ const passages: Passage[] = [
     text: "there are no guests at the table ~ only people who were strangers on monday, and aren't by friday.",
     image: '/images/dropbox/family-fire.webp',
     imageAlt: 'Friends gathered around a shared table and fire beneath the palms at night.',
+    textFirst: true,
+    supportImages: [
+      {
+        src: '/images/dropbox/kitchen2.webp',
+        alt: 'Two people cooking together at the stove in the open kitchen.',
+      },
+      {
+        src: '/images/dropbox/live-shared-fire.webp',
+        alt: 'A guitar and a wooden flute played together under the palm roof at night.',
+      },
+      {
+        src: '/images/dropbox/kitchen3.webp',
+        alt: 'Laughter over pots on the stove while dinner comes together.',
+      },
+    ],
     side: 'right',
   },
   {
@@ -120,7 +139,12 @@ export function WayWeLiveChapter() {
               )}
             </Reveal>
             {(passage.text || passage.subtext) && (
-              <Reveal className="flex flex-col gap-6 md:gap-7">
+              <Reveal
+                className={cn(
+                  'flex flex-col gap-6 md:gap-7',
+                  passage.textFirst && 'order-first',
+                )}
+              >
                 {passage.text && (
                   <p className="max-w-2xl text-pretty font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2] text-ink">
                     {passage.text}
@@ -131,6 +155,35 @@ export function WayWeLiveChapter() {
                     {passage.subtext}
                   </p>
                 )}
+              </Reveal>
+            )}
+            {passage.supportImages && (
+              <Reveal
+                className={cn(
+                  '-mt-10 flex items-start gap-3 md:-mt-12 md:gap-5',
+                  passage.side === 'right' ? 'self-end' : 'self-start',
+                  'w-[72%] md:w-[86%]',
+                )}
+              >
+                {passage.supportImages.map((support, supportIndex) => (
+                  <figure
+                    key={support.src}
+                    className={cn(
+                      'film-grain flex-1 overflow-hidden rounded-sm',
+                      supportIndex === 1 ? 'md:mt-10' : supportIndex === 2 ? 'md:mt-4' : '',
+                    )}
+                  >
+                    <div className="relative aspect-[4/3]">
+                      <Image
+                        src={support.src}
+                        alt={support.alt}
+                        fill
+                        sizes="(max-width: 767px) 31vw, 18rem"
+                        className="object-cover"
+                      />
+                    </div>
+                  </figure>
+                ))}
               </Reveal>
             )}
           </div>
