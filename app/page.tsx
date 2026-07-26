@@ -8,6 +8,7 @@ import {
   CinematicChapter,
   ConditionsChapter,
   FullscreenVideo,
+  LandCollage,
   WayWeLiveChapter,
 } from '@/components/paz'
 
@@ -59,6 +60,8 @@ export default function HomePage() {
           caption="this is paz in corcovado"
           align="end"
         />
+
+        <LandCollage />
 
         <WayWeLiveChapter />
 
