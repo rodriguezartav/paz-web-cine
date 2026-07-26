@@ -193,12 +193,16 @@ export function ConditionsChapter() {
         </Reveal>
 
         <Reveal
-          as="p"
           delay={0.1}
-          className="text-balance font-display text-[0.9375rem] leading-relaxed tracking-[0.01em] md:col-start-2 md:row-span-2 md:row-start-1 md:self-center md:text-center md:text-base"
+          className="flex flex-col gap-5 md:col-start-2 md:row-span-2 md:row-start-1 md:self-center md:text-center"
         >
-          minute long rides, the most biodiverse jungle in the world in the background. the spot is
-          right out front ~ grab a board any time and jump out to sea.
+          <p className="text-balance font-display text-[0.9375rem] leading-relaxed tracking-[0.01em] md:text-base">
+            grab a board any time of the day and jump out to sea ~ the spot is right out front.
+          </p>
+          <p className="text-balance font-display text-[0.9375rem] leading-relaxed tracking-[0.01em] md:text-base">
+            a minute long ride with the most biodiverse jungle in the world in the background. alone.
+            at sunset. is just a different sport.
+          </p>
         </Reveal>
 
         <Reveal
