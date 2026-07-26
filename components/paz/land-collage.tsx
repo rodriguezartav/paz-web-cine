@@ -19,6 +19,21 @@ export function LandCollage() {
             live 7 to 21 days on costa rican land, the old way ~ unhurried. tied to nature in ways
             english has no words for.
           </p>
+
+          <div className="mt-2 flex flex-col items-start gap-4 md:mt-3 md:items-center">
+            <p className="font-sans text-sm uppercase tracking-[0.22em] text-ink/55">
+              starting at{' '}
+              <span className="font-display text-base normal-case tracking-normal text-ink">
+                $180 / night
+              </span>
+            </p>
+            <a
+              href="#apply"
+              className="inline-flex items-center rounded-sm bg-sage px-7 py-3 font-sans text-xs uppercase tracking-[0.24em] text-bone transition-colors hover:bg-ink"
+            >
+              request to arrive
+            </a>
+          </div>
         </Reveal>
 
         <Reveal
