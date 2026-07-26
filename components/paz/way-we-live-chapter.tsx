@@ -114,13 +114,15 @@ export function WayWeLiveChapter() {
               )}
             </Reveal>
             <Reveal>
-              <p className="type-lead max-w-2xl text-pretty text-ink">{passage.text}</p>
+              <p className="max-w-2xl text-pretty font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2] text-ink">
+                {passage.text}
+              </p>
             </Reveal>
           </div>
         ))}
 
         <Reveal className="py-10 text-center md:py-16">
-          <p className="type-lead mx-auto max-w-2xl text-balance text-ink">
+          <p className="mx-auto max-w-2xl text-balance font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2] text-ink">
             we open it to a few at a time ~ with faith that it gives them what they need.
           </p>
         </Reveal>
