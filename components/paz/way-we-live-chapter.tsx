@@ -4,27 +4,27 @@ import { Reveal } from './reveal'
 import { cn } from '@/lib/utils'
 
 type Passage = {
-  text: string
+  text?: string
+  /** A quieter line set directly beneath the passage's leading voice. */
+  subtext?: string
   image: string
   imageAlt: string
   /** Optional second photograph, paired with the first as an upright diptych. */
   secondImage?: string
   secondImageAlt?: string
-  /** Renders the passage a step down from the chapter's leading voice. */
-  quiet?: boolean
   side: 'left' | 'right'
 }
 
 const passages: Passage[] = [
   {
     text: 'the forest walks in with you. it moves through the house while you sleep, and still you stay warm.',
+    subtext:
+      'an architecture that makes you feel inside while being outside ~ as if you are always on a nature hike.',
     image: '/images/dropbox/DSCF9708.webp',
     imageAlt: 'An open screened living room looking directly into dense rainforest.',
     side: 'right',
   },
   {
-    text: 'an architecture that makes you feel inside while being outside ~ as if you are always on a nature hike.',
-    quiet: true,
     image: '/images/dropbox/DSCF9734.webp',
     imageAlt: 'A glass-walled room open to the rainforest, someone reading on a low daybed.',
     secondImage: '/images/dropbox/DSCF9878.webp',
@@ -66,7 +66,7 @@ export function WayWeLiveChapter() {
         </Reveal>
 
         {passages.map((passage, index) => (
-          <div key={passage.text} className="flex flex-col gap-20 md:gap-24">
+          <div key={passage.image} className="flex flex-col gap-20 md:gap-24">
             <Reveal
               className={cn(
                 passage.secondImage
@@ -116,18 +116,20 @@ export function WayWeLiveChapter() {
                 </figure>
               )}
             </Reveal>
-            <Reveal>
-              <p
-                className={cn(
-                  'text-pretty font-display text-ink',
-                  passage.quiet
-                    ? 'max-w-xl text-[1.0625rem] leading-[1.55] md:text-[1.125rem]'
-                    : 'max-w-2xl text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2]',
+            {(passage.text || passage.subtext) && (
+              <Reveal className="flex flex-col gap-6 md:gap-7">
+                {passage.text && (
+                  <p className="max-w-2xl text-pretty font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2] text-ink">
+                    {passage.text}
+                  </p>
                 )}
-              >
-                {passage.text}
-              </p>
-            </Reveal>
+                {passage.subtext && (
+                  <p className="max-w-xl text-pretty font-display text-[1.0625rem] leading-[1.55] text-ink md:text-[1.125rem]">
+                    {passage.subtext}
+                  </p>
+                )}
+              </Reveal>
+            )}
           </div>
         ))}
 
