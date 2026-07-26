@@ -10,21 +10,18 @@ type Passage = {
   /** Optional second photograph, paired with the first as an upright diptych. */
   secondImage?: string
   secondImageAlt?: string
-  /** Renders the passage a step down from the chapter's leading voice. */
-  quiet?: boolean
   side: 'left' | 'right'
 }
 
 const passages: Passage[] = [
   {
-    text: 'the forest walks in with you. it moves through the house while you sleep, and still you stay warm.',
+    text: "so this was never a business. it's our home ~ and we just leave the door open.",
     image: '/images/dropbox/DSCF9708.webp',
     imageAlt: 'An open screened living room looking directly into dense rainforest.',
     side: 'right',
   },
   {
-    text: 'an architecture that makes you feel inside while being outside ~ as if you are always on a nature hike.',
-    quiet: true,
+    text: 'the forest walks in with you. it moves through the house while you sleep, and still you stay warm.',
     image: '/images/dropbox/DSCF9734.webp',
     imageAlt: 'A glass-walled room open to the rainforest, someone reading on a low daybed.',
     secondImage: '/images/dropbox/DSCF9878.webp',
@@ -117,14 +114,7 @@ export function WayWeLiveChapter() {
               )}
             </Reveal>
             <Reveal>
-              <p
-                className={cn(
-                  'text-pretty font-display text-ink',
-                  passage.quiet
-                    ? 'max-w-xl text-[1.0625rem] leading-[1.55] md:text-[1.125rem]'
-                    : 'max-w-2xl text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2]',
-                )}
-              >
+              <p className="max-w-2xl text-pretty font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2] text-ink">
                 {passage.text}
               </p>
             </Reveal>
