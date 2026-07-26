@@ -357,8 +357,8 @@ export function ConditionsChapter() {
             viewport={{ once: true, amount: 0.65 }}
             transition={{ duration: reduceMotion ? 0 : 1.8, ease: EASE_CINEMATIC }}
           >
-            we didn&apos;t create it, and don&apos;t claim to understand it. so, there can&apos;t be a
-            program ~ we only open the door, and let nature do the rest.
+            then one afternoon ~ a wave you didn&apos;t expect to make, or an animal that stops and
+            looks back ~ and something in you lights up in a way it hasn&apos;t in years.
           </motion.p>
           <motion.p
             className="mt-[9vh] text-balance"
@@ -367,8 +367,8 @@ export function ConditionsChapter() {
             viewport={{ once: true, amount: 0.65 }}
             transition={{ duration: reduceMotion ? 0 : 1.8, ease: EASE_CINEMATIC }}
           >
-            then one afternoon ~ a wave you didn&apos;t expect to make, or an animal that stops and
-            looks back ~ and something in you lights up in a way it hasn&apos;t in years.
+            we didn&apos;t create it, and don&apos;t claim to understand it. so, there can&apos;t be a
+            program ~ we only open the door, and let nature do the rest.
           </motion.p>
         </div>
       </div>
