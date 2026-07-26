@@ -57,14 +57,8 @@ const passages: Passage[] = [
  */
 export function WayWeLiveChapter() {
   return (
-    <Section className="overflow-hidden">
+    <Section space="none" className="overflow-hidden">
       <Container width="measure" className="flex flex-col gap-40 md:gap-48">
-        <Reveal>
-          <p className="type-lead max-w-xl text-balance text-sage">
-            what opens people here isn&apos;t anything we built ~ it&apos;s the way we live.
-          </p>
-        </Reveal>
-
         {passages.map((passage, index) => (
           <div key={passage.image} className="flex flex-col gap-20 md:gap-24">
             <Reveal
