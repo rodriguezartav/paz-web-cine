@@ -18,9 +18,9 @@ const supportFrames = [
 ]
 
 /**
- * The cave sauna — the training-centre statement, a wide photograph, and an
- * upright triptych of the same person moving through the heat. Sits on the
- * bone surface so it reads as a continuation of the wildlife collage above it.
+ * The cave sauna — the training-centre statement, an upright triptych of the
+ * same person moving through the heat, then a wide photograph and the closing
+ * line. Sits on the bone surface, continuing the surf movement above it.
  */
 export function SpaChapter() {
   return (
@@ -43,22 +43,7 @@ export function SpaChapter() {
         </Reveal>
       </div>
 
-      <Reveal className="px-[4vw] md:px-[5vw]">
-        <figure className="film-grain overflow-hidden rounded-sm">
-          <div className="relative aspect-[4/3] md:aspect-[16/9]">
-            <Image
-              src="/images/dropbox/DSCF9588.webp"
-              alt="People resting outside a domed earthen cave sauna in the rainforest."
-              fill
-              loading="lazy"
-              sizes="(max-width: 767px) 92vw, 90vw"
-              className="object-cover"
-            />
-          </div>
-        </figure>
-      </Reveal>
-
-      <div className="measure mx-auto flex w-full flex-col gap-20 px-6 pt-20 md:gap-24 md:px-10 md:pt-24">
+      <div className="measure mx-auto flex w-full flex-col px-6 pb-20 md:px-10 md:pb-24">
         <Reveal className="flex w-full items-start gap-3 md:gap-5">
           {supportFrames.map((frame, index) => (
             <figure
@@ -81,7 +66,24 @@ export function SpaChapter() {
             </figure>
           ))}
         </Reveal>
+      </div>
 
+      <Reveal className="px-[4vw] md:px-[5vw]">
+        <figure className="film-grain overflow-hidden rounded-sm">
+          <div className="relative aspect-[4/3] md:aspect-[16/9]">
+            <Image
+              src="/images/dropbox/DSCF9588.webp"
+              alt="People resting outside a domed earthen cave sauna in the rainforest."
+              fill
+              loading="lazy"
+              sizes="(max-width: 767px) 92vw, 90vw"
+              className="object-cover"
+            />
+          </div>
+        </figure>
+      </Reveal>
+
+      <div className="measure mx-auto flex w-full flex-col px-6 pt-20 md:px-10 md:pt-24">
         <Reveal
           as="p"
           className="max-w-xl text-pretty font-display text-[1.0625rem] leading-[1.55] md:text-[1.125rem]"
