@@ -82,6 +82,7 @@ const passages: Passage[] = [
     text: 'a different kind of spa ~ focused on presence ~ using natural elements for emotional release and training.',
     image: '/images/dropbox/DSCF9588.webp',
     imageAlt: 'People resting outside a domed earthen cave sauna in the rainforest.',
+    wide: true,
     supportImages: [
       {
         src: '/images/dropbox/live-threshold.webp',
