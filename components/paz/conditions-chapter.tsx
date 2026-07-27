@@ -229,6 +229,8 @@ export function ConditionsChapter() {
         </Reveal>
       </div>
 
+      <SpaChapter />
+
       <ImmersiveCondition
         image="/images/dropbox/DSCF9683.JPG"
         imageAlt="Wildlife observed in the dense rainforest around Paz."
@@ -281,8 +283,6 @@ export function ConditionsChapter() {
           ))}
         </div>
       </div>
-
-      <SpaChapter />
 
       <div className="bg-bone px-6 text-ink md:px-12">
         <div className="mx-auto flex min-h-svh max-w-2xl items-center justify-center py-[24vh] text-center">
