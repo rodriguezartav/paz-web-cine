@@ -27,7 +27,7 @@ const passages: Passage[] = [
   {
     text: 'an architecture that makes you feel inside while being outside ~ as if you are always on a nature hike ~ in the place with the most wildlife on earth.',
     subtext:
-      'the forest walks in with you. it moves through the house while you sleep, and still you stay warm.',
+      'the forest walks in with you. it moves through the house while you sleep, and still you stay safe and fresh ~ medicine for your nervous system.',
     image: '/images/dropbox/DSCF9708.webp',
     imageAlt: 'An open screened living room looking directly into dense rainforest.',
     side: 'right',
