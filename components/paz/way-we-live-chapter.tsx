@@ -25,7 +25,7 @@ type Passage = {
 
 const passages: Passage[] = [
   {
-    text: 'an architecture that makes you feel inside while being outside ~ as if you are always on a nature hike.',
+    text: 'an architecture that makes you feel inside while being outside ~ as if you are always on a nature hike ~ in the place with the most wildlife on earth.',
     subtext:
       'the forest walks in with you. it moves through the house while you sleep, and still you stay warm.',
     image: '/images/dropbox/DSCF9708.webp',
