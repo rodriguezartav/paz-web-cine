@@ -18,13 +18,31 @@ const supportFrames = [
 ]
 
 /**
- * The cave sauna — a single wide photograph, one statement, and an upright
- * triptych of the same person moving through the heat. Sits on the bone
- * surface so it reads as a continuation of the wildlife collage above it.
+ * The cave sauna — the training-centre statement, a wide photograph, and an
+ * upright triptych of the same person moving through the heat. Sits on the
+ * bone surface so it reads as a continuation of the wildlife collage above it.
  */
 export function SpaChapter() {
   return (
     <div className="bg-bone text-ink">
+      <div className="measure mx-auto flex w-full flex-col gap-6 px-6 pb-16 md:gap-7 md:px-10 md:pb-20">
+        <Reveal
+          as="p"
+          className="max-w-2xl text-pretty font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2]"
+        >
+          for 20 years we have studied natural meditation, presence and emotional release with
+          natural elements.
+        </Reveal>
+        <Reveal
+          as="p"
+          delay={0.1}
+          className="max-w-xl text-pretty font-display text-[1.0625rem] leading-[1.55] md:text-[1.125rem]"
+        >
+          our training center looks like a spa, and supports us physically, emotionally and
+          spiritually.
+        </Reveal>
+      </div>
+
       <Reveal className="px-[4vw] md:px-[5vw]">
         <figure className="film-grain overflow-hidden rounded-sm">
           <div className="relative aspect-[4/3] md:aspect-[16/9]">
@@ -41,14 +59,6 @@ export function SpaChapter() {
       </Reveal>
 
       <div className="measure mx-auto flex w-full flex-col gap-20 px-6 pt-20 md:gap-24 md:px-10 md:pt-24">
-        <Reveal
-          as="p"
-          className="max-w-2xl text-pretty font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2]"
-        >
-          a different kind of spa ~ focused on presence ~ using natural elements for emotional
-          release and training.
-        </Reveal>
-
         <Reveal className="flex w-full items-start gap-3 md:gap-5">
           {supportFrames.map((frame, index) => (
             <figure
