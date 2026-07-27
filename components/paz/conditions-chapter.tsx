@@ -172,7 +172,6 @@ export function ConditionsChapter() {
         image="/images/dropbox/supporting-shell.webp"
         imageAlt="An empty turquoise Pacific wave framed by the branches of a coastal tree."
         above
-        overlay="catch more waves in a morning than most do in a week ~ with up to 1-minute rides."
       >
         waves, and no one waiting for a turn ~ long mellow rides to finally reach the surf you dream
         of.
@@ -197,8 +196,10 @@ export function ConditionsChapter() {
             grab a board any time of the day and jump out to sea ~ the spot is right out front.
           </p>
           <p className="text-balance font-display text-[0.9375rem] leading-relaxed tracking-[0.01em] md:text-base">
-            a minute long ride with the most biodiverse jungle in the world in the background. alone.
-            at sunset. is just a different sport.
+            catch more waves in a morning than most do in a week ~ with up to 1-minute rides.
+          </p>
+          <p className="text-balance font-display text-[0.9375rem] leading-relaxed tracking-[0.01em] md:text-base">
+            our founder roberto shows you the spots, with local partners for lessons.
           </p>
         </Reveal>
 
