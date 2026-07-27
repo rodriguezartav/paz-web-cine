@@ -165,7 +165,7 @@ export function WayWeLiveChapter() {
             )}
             {passage.aside && (
               <Reveal className="-mt-10 flex flex-col items-center gap-6 text-center md:-mt-12">
-                <p className="max-w-[34ch] text-balance font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2] text-ink">
+                <p className="max-w-[46ch] text-balance font-display text-[1.0625rem] leading-[1.55] text-ink md:text-[1.125rem]">
                   {passage.aside.text}
                 </p>
                 {passage.aside.note && (
