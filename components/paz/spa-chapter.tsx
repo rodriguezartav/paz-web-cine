@@ -30,8 +30,8 @@ export function SpaChapter() {
           as="p"
           className="max-w-2xl text-pretty font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2]"
         >
-          for 20 years we have studied natural meditation, presence and emotional release with
-          natural elements.
+          for 20 years we have studied natural meditation in presence, in the rainforest with the most
+          life on earth.
         </Reveal>
         <Reveal
           as="p"
