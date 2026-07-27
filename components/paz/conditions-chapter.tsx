@@ -72,10 +72,10 @@ export function ConditionsChapter() {
   return (
     <section aria-label="the conditions" className="bg-bone text-ink">
       <div className="bg-ink px-6 text-bone md:px-12">
-        <div className="mx-auto flex min-h-svh max-w-[52ch] items-center justify-center py-[24vh] text-center">
+        <div className="mx-auto flex min-h-svh max-w-3xl items-center justify-center py-[24vh] text-center">
           <div className="relative w-full">
             <motion.p
-              className="text-balance font-display text-[1.25rem] leading-[1.8] tracking-[0.01em] md:text-[1.375rem]"
+              className="type-lead text-balance"
               initial={reduceMotion ? false : { opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.7 }}
