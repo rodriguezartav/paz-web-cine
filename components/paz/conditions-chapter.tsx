@@ -74,8 +74,8 @@ export function ConditionsChapter() {
     <section aria-label="the conditions" className="bg-bone text-ink">
       <div className="mx-auto grid min-h-svh max-w-6xl items-center gap-16 px-6 py-[22vh] md:grid-cols-[1fr_0.82fr] md:gap-20 md:px-10">
         <Reveal as="p" className="type-lead max-w-2xl text-balance">
-          far enough from the world, and quiet enough that there is nothing left to follow but the
-          tides, the sun, the birds.
+          far enough from the world that there is nothing left to follow but the tides, the sun and
+          the birds.
         </Reveal>
         <Reveal delay={0.1} className="relative aspect-[4/3] w-full overflow-hidden">
           <div className="grain absolute inset-0">
