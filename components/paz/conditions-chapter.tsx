@@ -26,6 +26,7 @@ function ImmersiveCondition({
   calm = false,
   topOnMobile = false,
   above = false,
+  overlay,
 }: {
   image: string
   imageAlt: string
@@ -35,6 +36,8 @@ function ImmersiveCondition({
   topOnMobile?: boolean
   /** Sets the copy on the bone surface above the frame, leaving the photograph clean. */
   above?: boolean
+  /** A line set inside the photograph itself, beneath copy placed above it. */
+  overlay?: React.ReactNode
 }) {
   return (
     <div className="bg-bone px-[4vw] py-[6vh] md:px-[5vw] md:py-[7vh]">
@@ -73,6 +76,19 @@ function ImmersiveCondition({
             >
               <Reveal as="p" className="type-lead max-w-4xl text-balance text-center text-bone">
                 {children}
+              </Reveal>
+            </div>
+          </>
+        )}
+        {overlay && (
+          <>
+            <div
+              className="absolute inset-0 bg-gradient-to-t from-ink/55 via-ink/10 to-transparent"
+              aria-hidden="true"
+            />
+            <div className="relative flex h-full items-end justify-center px-6 pb-16 md:px-12 md:pb-20">
+              <Reveal as="p" className="type-lead max-w-3xl text-balance text-center text-bone">
+                {overlay}
               </Reveal>
             </div>
           </>
@@ -156,6 +172,7 @@ export function ConditionsChapter() {
         image="/images/dropbox/supporting-shell.webp"
         imageAlt="An empty turquoise Pacific wave framed by the branches of a coastal tree."
         above
+        overlay="catch more waves in a morning than most do in a week ~ with up to 1-minute rides."
       >
         waves, and no one waiting for a turn ~ long mellow rides to finally reach the surf you dream
         of.
