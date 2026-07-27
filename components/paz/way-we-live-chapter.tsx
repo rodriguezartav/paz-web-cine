@@ -18,6 +18,8 @@ type Passage = {
   textFirst?: boolean
   /** A trio of smaller photographs, collaged beneath the block. */
   supportImages?: { src: string; alt: string }[]
+  /** A centred statement that closes the block, with an optional house note. */
+  aside?: { text: string; note?: string }
   side: 'left' | 'right'
 }
 
@@ -57,6 +59,10 @@ const passages: Passage[] = [
         alt: 'Laughter over pots on the stove while dinner comes together.',
       },
     ],
+    aside: {
+      text: 'we give you the chance to rest from all spiritual, social, and economic performances ~ be yourself.',
+      note: 'this is a drug free residence',
+    },
     side: 'right',
   },
   {
@@ -184,6 +190,18 @@ export function WayWeLiveChapter() {
                     </div>
                   </figure>
                 ))}
+              </Reveal>
+            )}
+            {passage.aside && (
+              <Reveal className="flex flex-col items-center gap-6 pt-[6vh] text-center md:pt-[9vh]">
+                <p className="max-w-[34ch] text-balance font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2] text-ink">
+                  {passage.aside.text}
+                </p>
+                {passage.aside.note && (
+                  <p className="font-sans text-xs uppercase tracking-[0.24em] text-ink/50">
+                    {passage.aside.note}
+                  </p>
+                )}
               </Reveal>
             )}
           </div>
