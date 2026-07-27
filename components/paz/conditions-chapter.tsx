@@ -83,10 +83,10 @@ function ImmersiveCondition({
         {overlay && (
           <>
             <div
-              className="absolute inset-0 bg-gradient-to-t from-ink/55 via-ink/10 to-transparent"
+              className="absolute inset-0 bg-gradient-to-b from-ink/55 via-ink/10 to-transparent"
               aria-hidden="true"
             />
-            <div className="relative flex h-full items-end justify-center px-6 pb-16 md:px-12 md:pb-20">
+            <div className="relative flex h-full items-start justify-center px-6 pt-16 md:px-12 md:pt-20">
               <Reveal as="p" className="type-lead max-w-3xl text-balance text-center text-bone">
                 {overlay}
               </Reveal>
