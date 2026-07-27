@@ -25,6 +25,7 @@ function ImmersiveCondition({
   children,
   calm = false,
   topOnMobile = false,
+  above = false,
 }: {
   image: string
   imageAlt: string
@@ -32,9 +33,19 @@ function ImmersiveCondition({
   calm?: boolean
   /** On mobile, sit the copy at the top of the frame instead of centring it. */
   topOnMobile?: boolean
+  /** Sets the copy on the bone surface above the frame, leaving the photograph clean. */
+  above?: boolean
 }) {
   return (
     <div className="bg-bone px-[4vw] py-[6vh] md:px-[5vw] md:py-[7vh]">
+      {above && (
+        <Reveal
+          as="p"
+          className="type-lead mx-auto max-w-4xl text-balance pb-[7vh] text-center text-ink md:pb-[8vh]"
+        >
+          {children}
+        </Reveal>
+      )}
       <div className="grain relative h-[84svh] min-h-[520px] w-full overflow-hidden rounded-sm text-bone md:h-[82svh]">
         <Image
           src={image}
@@ -43,25 +54,29 @@ function ImmersiveCondition({
           sizes="(max-width: 767px) 92vw, 90vw"
           className="object-cover"
         />
-        <div
-          className={`absolute inset-0 ${
-            calm
-              ? 'bg-ink/20'
-              : topOnMobile
-                ? 'bg-gradient-to-b from-ink/60 via-ink/10 to-transparent md:bg-gradient-to-t md:from-ink/55'
-                : 'bg-gradient-to-t from-ink/55 via-ink/10 to-transparent'
-          }`}
-          aria-hidden="true"
-        />
-        <div
-          className={`relative flex h-full justify-center px-6 md:items-center md:px-12 md:py-24 ${
-            topOnMobile ? 'items-start pb-24 pt-12' : 'items-center py-24'
-          }`}
-        >
-          <Reveal as="p" className="type-lead max-w-4xl text-center text-balance text-bone">
-            {children}
-          </Reveal>
-        </div>
+        {!above && (
+          <>
+            <div
+              className={`absolute inset-0 ${
+                calm
+                  ? 'bg-ink/20'
+                  : topOnMobile
+                    ? 'bg-gradient-to-b from-ink/60 via-ink/10 to-transparent md:bg-gradient-to-t md:from-ink/55'
+                    : 'bg-gradient-to-t from-ink/55 via-ink/10 to-transparent'
+              }`}
+              aria-hidden="true"
+            />
+            <div
+              className={`relative flex h-full justify-center px-6 md:items-center md:px-12 md:py-24 ${
+                topOnMobile ? 'items-start pb-24 pt-12' : 'items-center py-24'
+              }`}
+            >
+              <Reveal as="p" className="type-lead max-w-4xl text-balance text-center text-bone">
+                {children}
+              </Reveal>
+            </div>
+          </>
+        )}
       </div>
     </div>
   )
@@ -140,10 +155,10 @@ export function ConditionsChapter() {
       <ImmersiveCondition
         image="/images/dropbox/supporting-shell.webp"
         imageAlt="An empty turquoise Pacific wave framed by the branches of a coastal tree."
-        topOnMobile
+        above
       >
-        waves, and no one waiting for a turn ~ perfect to improve your surf, catching more waves in a
-        morning than most do in a week.
+        waves, and no one waiting for a turn ~ impossible 1-minute rides to finally reach the surf you
+        dream of.
       </ImmersiveCondition>
 
       <div className="mx-auto grid w-full max-w-5xl items-center gap-6 px-6 py-[18vh] md:grid-cols-[1.15fr_0.85fr_1fr] md:gap-10 md:px-10 md:py-[22vh]">
