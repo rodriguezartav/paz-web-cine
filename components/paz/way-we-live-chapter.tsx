@@ -84,6 +84,17 @@ export function WayWeLiveChapter() {
   return (
     <Section space="none" className="overflow-hidden">
       <Container width="measure" className="flex flex-col gap-40 md:gap-48">
+        <div className="mx-auto flex max-w-[52ch] flex-col items-center py-[24vh] text-center font-display text-[1.25rem] leading-[1.8] tracking-[0.01em] text-ink md:text-[1.375rem]">
+          <Reveal as="p" className="text-balance">
+            we didn&apos;t create it, and don&apos;t claim to understand it ~ years ago, our founder
+            came here with nothing left ~ and the land gave him back to himself.
+          </Reveal>
+          <Reveal as="p" delay={0.1} className="mt-[9vh] text-balance">
+            we can&apos;t hand you what happened to him. we can only bring you to the same place, open
+            the door, and let nature do the rest.
+          </Reveal>
+        </div>
+
         {passages.map((passage, index) => (
           <div
             key={passage.image}
