@@ -2,9 +2,7 @@ import type { Metadata } from 'next'
 import {
   Navigation,
   Hero,
-  Container,
   Reveal,
-  Section,
   CinematicChapter,
   ConditionsChapter,
   FullscreenVideo,
@@ -64,28 +62,6 @@ export default function HomePage() {
         <LandCollage />
 
         <WayWeLiveChapter />
-
-        <Section aria-label="roberto" className="overflow-hidden">
-          <Container width="measure" className="flex flex-col">
-            <div className="flex items-end pt-[28vh]">
-              <Reveal>
-                <p className="type-lead max-w-xl text-balance text-ink">
-                  years ago, roberto came here with nothing left ~ and the land gave him back to
-                  himself.
-                </p>
-              </Reveal>
-            </div>
-
-            <div className="flex items-start justify-end pb-[28vh] pt-8 md:pt-10">
-              <Reveal delay={0.1} className="max-w-xl">
-                <p className="type-body text-pretty text-ink/85">
-                  that&apos;s the only reason the door is open. we can&apos;t hand you what happened to
-                  him. we can only bring you to the same place, and let it do what it does.
-                </p>
-              </Reveal>
-            </div>
-          </Container>
-        </Section>
 
         <CinematicChapter
           image="/images/dropbox/closing-waterfall.webp"
