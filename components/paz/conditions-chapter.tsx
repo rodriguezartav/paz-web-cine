@@ -72,43 +72,6 @@ export function ConditionsChapter() {
 
   return (
     <section aria-label="the conditions" className="bg-bone text-ink">
-      <div className="bg-ink px-6 text-bone md:px-12">
-        <div className="mx-auto flex min-h-svh max-w-3xl items-center justify-center py-[24vh] text-center">
-          <div className="relative w-full">
-            <motion.p
-              className="type-lead text-balance"
-              initial={reduceMotion ? false : { opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, amount: 0.7 }}
-              transition={{ duration: reduceMotion ? 0 : 1.8, ease: EASE_CINEMATIC }}
-            >
-              here, conditions come together to make something that, as far as we know, is the last
-              of its kind.
-            </motion.p>
-
-            <div className="absolute bottom-[calc(100%+90px)] left-0 aspect-square w-[42%] overflow-hidden rounded-sm border border-bone md:w-[22%]">
-              <Image
-                src="/images/dropbox/DSCF8925.JPG"
-                alt=""
-                fill
-                sizes="(max-width: 767px) 42vw, 170px"
-                className="object-cover"
-              />
-            </div>
-
-            <div className="absolute right-0 top-[calc(100%+90px)] aspect-square w-[42%] overflow-hidden rounded-sm border border-bone md:w-[22%]">
-              <Image
-                src="/images/dropbox/DSCF9851.webp"
-                alt="A small white seashell resting on weathered wood."
-                fill
-                sizes="(max-width: 767px) 42vw, 170px"
-                className="object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div className="mx-auto grid min-h-svh max-w-6xl items-center gap-16 px-6 py-[22vh] md:grid-cols-[1fr_0.82fr] md:gap-20 md:px-10">
         <Reveal as="p" className="type-lead max-w-2xl text-balance">
           far enough from the world, and quiet enough that there is nothing left to follow but the
