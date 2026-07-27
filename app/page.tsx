@@ -76,7 +76,7 @@ export default function HomePage() {
               </Reveal>
             </div>
 
-            <div className="flex items-start justify-end pb-[28vh] pt-8 md:pt-10">
+            <div className="flex items-start justify-end pt-8 md:pt-10">
               <Reveal delay={0.1} className="max-w-xl">
                 <p className="type-body text-pretty text-ink/85">
                   that&apos;s the only reason the door is open. we can&apos;t hand you what happened to
@@ -84,8 +84,21 @@ export default function HomePage() {
                 </p>
               </Reveal>
             </div>
-          </Container>
 
+            <div className="flex flex-col items-center gap-7 pb-[28vh] pt-[22vh] text-center">
+              <Reveal as="p" className="type-lead max-w-[34ch] text-balance text-ink">
+                we give you the chance to rest from all spiritual, social, and economic performances ~
+                be yourself.
+              </Reveal>
+              <Reveal
+                as="p"
+                delay={0.1}
+                className="font-sans text-xs uppercase tracking-[0.24em] text-ink/50"
+              >
+                this is a drug free residence
+              </Reveal>
+            </div>
+          </Container>
         </Section>
 
         <CinematicChapter
