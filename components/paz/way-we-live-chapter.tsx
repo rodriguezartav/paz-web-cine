@@ -163,10 +163,22 @@ export function WayWeLiveChapter() {
                 )}
               </Reveal>
             )}
+            {passage.aside && (
+              <Reveal className="-mt-10 flex flex-col items-center gap-6 text-center md:-mt-12">
+                <p className="max-w-[34ch] text-balance font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2] text-ink">
+                  {passage.aside.text}
+                </p>
+                {passage.aside.note && (
+                  <p className="font-sans text-xs uppercase tracking-[0.24em] text-ink/50">
+                    {passage.aside.note}
+                  </p>
+                )}
+              </Reveal>
+            )}
             {passage.supportImages && (
               <Reveal
                 className={cn(
-                  '-mt-10 flex items-start gap-3 md:-mt-12 md:gap-5',
+                  'flex items-start gap-3 md:gap-5',
                   passage.side === 'right' ? 'self-end' : 'self-start',
                   'w-[72%] md:w-[86%]',
                 )}
@@ -190,18 +202,6 @@ export function WayWeLiveChapter() {
                     </div>
                   </figure>
                 ))}
-              </Reveal>
-            )}
-            {passage.aside && (
-              <Reveal className="flex flex-col items-center gap-6 pt-[6vh] text-center md:pt-[9vh]">
-                <p className="max-w-[34ch] text-balance font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2] text-ink">
-                  {passage.aside.text}
-                </p>
-                {passage.aside.note && (
-                  <p className="font-sans text-xs uppercase tracking-[0.24em] text-ink/50">
-                    {passage.aside.note}
-                  </p>
-                )}
               </Reveal>
             )}
           </div>
