@@ -20,6 +20,8 @@ type Passage = {
   supportImages?: { src: string; alt: string }[]
   /** A centred statement that closes the block, with an optional house note. */
   aside?: { text: string; note?: string }
+  /** Lets the photograph run wider than the chapter's alternating rhythm. */
+  wide?: boolean
   side: 'left' | 'right'
 }
 
@@ -69,6 +71,7 @@ const passages: Passage[] = [
     text: "nobody's guiding you. we just take you ~ to the waterfall when it's running, the beach when the light's right, the wave when it turns on. and after that, you go back on your own, whenever you want.",
     image: '/images/dropbox/DSCF9026.webp',
     imageAlt: 'Two people beside a tall rainforest waterfall falling into a dark pool.',
+    wide: true,
     side: 'left',
   },
   {
@@ -99,9 +102,11 @@ export function WayWeLiveChapter() {
               className={cn(
                 passage.secondImage
                   ? 'w-[88%] md:w-[80%]'
-                  : index % 2 === 0
-                    ? 'w-[72%] md:w-[86%]'
-                    : 'w-[62%] md:w-[72%]',
+                  : passage.wide
+                    ? 'w-[86%] md:w-full'
+                    : index % 2 === 0
+                      ? 'w-[72%] md:w-[86%]'
+                      : 'w-[62%] md:w-[72%]',
                 passage.side === 'right' ? 'self-end' : 'self-start',
               )}
             >
