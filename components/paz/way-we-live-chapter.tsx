@@ -103,11 +103,15 @@ export function WayWeLiveChapter() {
                 passage.secondImage
                   ? 'w-[88%] md:w-[80%]'
                   : passage.wide
-                    ? 'w-[86%] md:w-full'
+                    ? 'w-full md:relative md:left-1/2 md:w-[min(94vw,84rem)] md:max-w-none md:-translate-x-1/2'
                     : index % 2 === 0
                       ? 'w-[72%] md:w-[86%]'
                       : 'w-[62%] md:w-[72%]',
-                passage.side === 'right' ? 'self-end' : 'self-start',
+                passage.wide
+                  ? 'self-stretch'
+                  : passage.side === 'right'
+                    ? 'self-end'
+                    : 'self-start',
               )}
             >
               {passage.secondImage ? (
@@ -142,7 +146,11 @@ export function WayWeLiveChapter() {
                       src={passage.image}
                       alt={passage.imageAlt}
                       fill
-                      sizes="(max-width: 767px) 55vw, (max-width: 1023px) 52rem, 58rem"
+                      sizes={
+                        passage.wide
+                          ? '(max-width: 767px) 90vw, 94vw'
+                          : '(max-width: 767px) 55vw, (max-width: 1023px) 52rem, 58rem'
+                      }
                       className="object-cover"
                     />
                   </div>
