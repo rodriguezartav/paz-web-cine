@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { motion, useReducedMotion } from 'motion/react'
 import { Reveal } from '@/components/paz/reveal'
+import { SpaChapter } from '@/components/paz/spa-chapter'
 import { EASE_CINEMATIC } from '@/lib/motion'
 
 const wildlifeImages = [
@@ -284,6 +285,8 @@ export function ConditionsChapter() {
           ))}
         </div>
       </div>
+
+      <SpaChapter />
 
       <div className="bg-bone px-6 text-ink md:px-12">
         <div className="mx-auto flex min-h-svh max-w-2xl items-center justify-center py-[24vh] text-center">

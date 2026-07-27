@@ -18,10 +18,6 @@ type Passage = {
   textFirst?: boolean
   /** A trio of smaller photographs, collaged beneath the block. */
   supportImages?: { src: string; alt: string }[]
-  /** Sets the support collage upright, for portrait frames. */
-  supportPortrait?: boolean
-  /** A quieter line that closes the block, after the support collage. */
-  closing?: string
   /** A centred statement that closes the block, with an optional house note. */
   aside?: { text: string; note?: string }
   /** Lets the photograph run wider than the chapter's alternating rhythm. */
@@ -77,30 +73,6 @@ const passages: Passage[] = [
     imageAlt: 'Two people beside a tall rainforest waterfall falling into a dark pool.',
     wide: true,
     side: 'left',
-  },
-  {
-    text: 'a different kind of spa ~ focused on presence ~ using natural elements for emotional release and training.',
-    image: '/images/dropbox/DSCF9588.webp',
-    imageAlt: 'People resting outside a domed earthen cave sauna in the rainforest.',
-    wide: true,
-    supportImages: [
-      {
-        src: '/images/dropbox/live-threshold.webp',
-        alt: 'Someone with eyes closed and a hand over the heart, wrapped in cloth after the heat.',
-      },
-      {
-        src: '/images/dropbox/wildlife-leaves.webp',
-        alt: 'A hand held to the collarbone, breathing slowly beneath a wrap of cloth.',
-      },
-      {
-        src: '/images/dropbox/supporting-flower.webp',
-        alt: 'A quiet gaze away from the camera, shoulders wrapped in ochre cloth.',
-      },
-    ],
-    supportPortrait: true,
-    closing:
-      'the cave sauna is a portal only available at paz. the womb of creation ~ in service of the spirit of the most mystical rainforest on earth.',
-    side: 'right',
   },
 ]
 
@@ -226,12 +198,7 @@ export function WayWeLiveChapter() {
                       supportIndex === 1 ? 'md:mt-10' : supportIndex === 2 ? 'md:mt-4' : '',
                     )}
                   >
-                    <div
-                      className={cn(
-                        'relative',
-                        passage.supportPortrait ? 'aspect-[3/4]' : 'aspect-[4/3]',
-                      )}
-                    >
+                    <div className="relative aspect-[4/3]">
                       <Image
                         src={support.src}
                         alt={support.alt}
@@ -242,14 +209,6 @@ export function WayWeLiveChapter() {
                     </div>
                   </figure>
                 ))}
-              </Reveal>
-            )}
-            {passage.closing && (
-              <Reveal
-                as="p"
-                className="max-w-xl text-pretty font-display text-[1.0625rem] leading-[1.55] text-ink md:text-[1.125rem]"
-              >
-                {passage.closing}
               </Reveal>
             )}
           </div>
