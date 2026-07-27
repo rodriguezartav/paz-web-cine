@@ -72,7 +72,7 @@ export function ConditionsChapter() {
 
   return (
     <section aria-label="the conditions" className="bg-bone text-ink">
-      <div className="mx-auto grid min-h-svh max-w-6xl items-center gap-16 px-6 py-[22vh] md:grid-cols-[1fr_0.82fr] md:gap-20 md:px-10">
+      <div className="mx-auto grid max-w-6xl items-center gap-16 px-6 pb-[6vh] pt-[24vh] md:grid-cols-[1fr_0.82fr] md:gap-20 md:px-10">
         <Reveal as="p" className="type-lead max-w-2xl text-balance">
           far enough from the world that there is nothing left to follow but the tides, the sun and
           the birds.
@@ -90,7 +90,7 @@ export function ConditionsChapter() {
         </Reveal>
       </div>
 
-      <div className="mx-auto grid w-full max-w-5xl grid-cols-2 items-center gap-6 px-6 pb-[18vh] md:grid-cols-[1fr_1.7fr_1fr] md:gap-12 md:px-10 md:pb-[22vh]">
+      <div className="mx-auto grid w-full max-w-5xl grid-cols-2 items-center gap-6 px-6 pb-[18vh] md:grid-cols-[1fr_1.7fr_1fr] md:gap-12 md:px-10 md:pb-[22vh] md:pt-0">
         <Reveal className="relative col-start-1 row-start-1 aspect-square w-full overflow-hidden rounded-sm md:-translate-y-6">
           <Image
             src="/images/dropbox/DSCF7733.webp"
