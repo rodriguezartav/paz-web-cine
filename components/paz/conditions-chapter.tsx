@@ -329,6 +329,25 @@ export function ConditionsChapter() {
             we can&apos;t hand you what happened to him. we can only bring you to the same place, open
             the door, and let nature do the rest.
           </motion.p>
+          <motion.p
+            className="mt-[9vh] text-balance"
+            initial={reduceMotion ? false : { opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.65 }}
+            transition={{ duration: reduceMotion ? 0 : 1.8, ease: EASE_CINEMATIC }}
+          >
+            we give you the chance to rest from all spiritual, social, and economic performances ~ be
+            yourself.
+          </motion.p>
+          <motion.p
+            className="mt-8 font-sans text-xs uppercase tracking-[0.24em] text-ink/50"
+            initial={reduceMotion ? false : { opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.65 }}
+            transition={{ duration: reduceMotion ? 0 : 1.8, ease: EASE_CINEMATIC }}
+          >
+            this is a drug free residence
+          </motion.p>
         </div>
       </div>
     </section>
