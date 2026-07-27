@@ -157,8 +157,8 @@ export function ConditionsChapter() {
         imageAlt="An empty turquoise Pacific wave framed by the branches of a coastal tree."
         above
       >
-        waves, and no one waiting for a turn ~ impossible 1-minute rides to finally reach the surf you
-        dream of.
+        waves, and no one waiting for a turn ~ long mellow rides to finally reach the surf you dream
+        of.
       </ImmersiveCondition>
 
       <div className="mx-auto grid w-full max-w-5xl items-center gap-6 px-6 py-[18vh] md:grid-cols-[1.15fr_0.85fr_1fr] md:gap-10 md:px-10 md:py-[22vh]">
