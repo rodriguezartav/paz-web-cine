@@ -316,8 +316,18 @@ export function ConditionsChapter() {
             viewport={{ once: true, amount: 0.65 }}
             transition={{ duration: reduceMotion ? 0 : 1.8, ease: EASE_CINEMATIC }}
           >
-            we didn&apos;t create it, and don&apos;t claim to understand it. so, there can&apos;t be a
-            program ~ we only open the door, and let nature do the rest.
+            we didn&apos;t create it, and don&apos;t claim to understand it ~ years ago, our founder
+            came here with nothing left ~ and the land gave him back to himself.
+          </motion.p>
+          <motion.p
+            className="mt-[9vh] text-balance"
+            initial={reduceMotion ? false : { opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.65 }}
+            transition={{ duration: reduceMotion ? 0 : 1.8, ease: EASE_CINEMATIC }}
+          >
+            we can&apos;t hand you what happened to him. we can only bring you to the same place, open
+            the door, and let nature do the rest.
           </motion.p>
         </div>
       </div>
