@@ -18,9 +18,9 @@ const supportFrames = [
 ]
 
 /**
- * The cave sauna — the training-centre statement and an upright triptych on
- * bone, then a sage-green movement that names the cave sauna and closes on a
- * wide photograph of it.
+ * The cave sauna — the training-centre statement and an upright triptych, then
+ * a wide photograph of the sauna carrying its title and portal line within the
+ * frame. All on the bone surface.
  */
 export function SpaChapter() {
   return (
@@ -65,38 +65,32 @@ export function SpaChapter() {
         </Reveal>
       </div>
 
-      <section className="bg-sage text-bone">
-        <div className="measure mx-auto flex w-full flex-col gap-8 px-6 py-[18vh] md:gap-10 md:px-10 md:py-[20vh]">
-          <Reveal as="h2" className="type-eyebrow text-bone/80">
-            cave sauna
-          </Reveal>
-          <Reveal as="p" delay={0.1} className="type-lead max-w-3xl text-balance">
-            the womb of creation
-          </Reveal>
-          <Reveal
-            as="p"
-            delay={0.2}
-            className="max-w-xl text-pretty font-display text-[1.0625rem] leading-[1.55] md:text-[1.125rem]"
-          >
-            a portal unique to paz, in service of the most mystical rainforest on earth.
-          </Reveal>
-        </div>
-
-        <Reveal className="px-[4vw] pb-[10vh] md:px-[5vw] md:pb-[12vh]">
-          <figure className="film-grain overflow-hidden rounded-sm">
-            <div className="relative aspect-[4/3] md:aspect-[16/9]">
-              <Image
-                src="/images/dropbox/DSCF9588.webp"
-                alt="People resting outside a domed earthen cave sauna in the rainforest."
-                fill
-                loading="lazy"
-                sizes="(max-width: 767px) 92vw, 90vw"
-                className="object-cover"
-              />
-            </div>
-          </figure>
-        </Reveal>
-      </section>
+      <Reveal className="px-[4vw] pb-[10vh] md:px-[5vw] md:pb-[12vh]">
+        <figure className="film-grain relative overflow-hidden rounded-sm text-bone">
+          <div className="relative aspect-[4/3] md:aspect-[16/9]">
+            <Image
+              src="/images/dropbox/DSCF9588.webp"
+              alt="People resting outside a domed earthen cave sauna in the rainforest."
+              fill
+              loading="lazy"
+              sizes="(max-width: 767px) 92vw, 90vw"
+              className="object-cover"
+            />
+            <div
+              className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/25 to-transparent"
+              aria-hidden="true"
+            />
+            <figcaption className="absolute inset-x-0 bottom-0 flex flex-col gap-4 px-6 pb-10 md:gap-5 md:px-12 md:pb-14">
+              <h2 className="type-lead max-w-3xl text-balance">
+                cave sauna: the womb of creation
+              </h2>
+              <p className="max-w-xl text-pretty font-display text-[1.0625rem] leading-[1.55] md:text-[1.125rem]">
+                a portal unique to paz, in service of the most mystical rainforest on earth.
+              </p>
+            </figcaption>
+          </div>
+        </figure>
+      </Reveal>
     </div>
   )
 }
