@@ -36,7 +36,7 @@ function ImmersiveCondition({
   topOnMobile?: boolean
   /** Sets the copy on the bone surface above the frame, leaving the photograph clean. */
   above?: boolean
-  /** A line set in a narrow column beside the photograph, leaving the frame clean. */
+  /** A line set inside the photograph, in a narrow column against its left edge. */
   overlay?: React.ReactNode
 }) {
   return (
@@ -49,50 +49,47 @@ function ImmersiveCondition({
           {children}
         </Reveal>
       )}
-      <div className="flex flex-col gap-8 md:flex-row md:items-center md:gap-12">
-        {overlay && (
-          <Reveal as="p" className="type-lead max-w-md text-pretty text-ink md:w-[26%] md:shrink-0">
-            {overlay}
-          </Reveal>
+      <div className="grain relative h-[84svh] min-h-[520px] w-full overflow-hidden rounded-sm text-bone md:h-[82svh]">
+        <Image
+          src={image}
+          alt={imageAlt}
+          fill
+          sizes="(max-width: 767px) 92vw, 90vw"
+          className="object-cover"
+        />
+        {!above && (
+          <>
+            <div
+              className={`absolute inset-0 ${
+                calm
+                  ? 'bg-ink/20'
+                  : topOnMobile
+                    ? 'bg-gradient-to-b from-ink/60 via-ink/10 to-transparent md:bg-gradient-to-t md:from-ink/55'
+                    : 'bg-gradient-to-t from-ink/55 via-ink/10 to-transparent'
+              }`}
+              aria-hidden="true"
+            />
+            <div
+              className={`relative flex h-full justify-center px-6 md:items-center md:px-12 md:py-24 ${
+                topOnMobile ? 'items-start pb-24 pt-12' : 'items-center py-24'
+              }`}
+            >
+              <Reveal as="p" className="type-lead max-w-4xl text-balance text-center text-bone">
+                {children}
+              </Reveal>
+            </div>
+          </>
         )}
-        <div
-          className={`grain relative w-full overflow-hidden rounded-sm text-bone ${
-            overlay
-              ? 'h-[70svh] min-h-[420px] md:h-[76svh] md:flex-1'
-              : 'h-[84svh] min-h-[520px] md:h-[82svh]'
-          }`}
-        >
-          <Image
-            src={image}
-            alt={imageAlt}
-            fill
-            sizes={overlay ? '(max-width: 767px) 92vw, 66vw' : '(max-width: 767px) 92vw, 90vw'}
-            className="object-cover"
-          />
-          {!above && !overlay && (
-            <>
-              <div
-                className={`absolute inset-0 ${
-                  calm
-                    ? 'bg-ink/20'
-                    : topOnMobile
-                      ? 'bg-gradient-to-b from-ink/60 via-ink/10 to-transparent md:bg-gradient-to-t md:from-ink/55'
-                      : 'bg-gradient-to-t from-ink/55 via-ink/10 to-transparent'
-                }`}
-                aria-hidden="true"
-              />
-              <div
-                className={`relative flex h-full justify-center px-6 md:items-center md:px-12 md:py-24 ${
-                  topOnMobile ? 'items-start pb-24 pt-12' : 'items-center py-24'
-                }`}
-              >
-                <Reveal as="p" className="type-lead max-w-4xl text-balance text-center text-bone">
-                  {children}
-                </Reveal>
-              </div>
-            </>
-          )}
-        </div>
+        {overlay && (
+          <div className="relative flex h-full items-end px-6 pb-12 md:items-center md:justify-start md:px-12 md:pb-0">
+            <Reveal
+              as="p"
+              className="type-lead max-w-md text-pretty text-ink md:w-[30%] md:max-w-none"
+            >
+              {overlay}
+            </Reveal>
+          </div>
+        )}
       </div>
     </div>
   )
