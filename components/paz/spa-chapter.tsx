@@ -70,7 +70,7 @@ export function SpaChapter() {
         </Reveal>
       </div>
 
-      <div className="measure mx-auto flex w-full flex-col items-center gap-5 px-6 pb-10 md:gap-6 md:px-10 md:pb-12">
+      <div className="measure mx-auto flex w-full flex-col items-center gap-5 px-6 pb-10 pt-[12vh] md:gap-6 md:px-10 md:pb-12 md:pt-[16vh]">
         <Reveal as="h2" className="type-lead mx-auto max-w-3xl text-balance text-center">
           <span className="inline-block rounded-sm bg-sage px-4 py-1.5 text-bone">cave sauna</span>
           <span className="mt-5 block md:mt-6">the womb of creation</span>
