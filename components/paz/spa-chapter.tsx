@@ -30,8 +30,8 @@ export function SpaChapter() {
           as="p"
           className="max-w-2xl text-pretty font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2]"
         >
-          built a training center guided by nature to support easing the mind and returning to the
-          body.
+          an emotional training center guided by nature to support easing the mind and returning to
+          the body.
         </Reveal>
       </div>
 
