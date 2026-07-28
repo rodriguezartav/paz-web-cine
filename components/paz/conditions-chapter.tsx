@@ -134,7 +134,7 @@ export function ConditionsChapter() {
 
         <Reveal
           delay={0.1}
-          className="col-span-2 row-start-2 flex flex-col gap-5 text-balance font-display text-[0.9375rem] leading-relaxed tracking-[0.01em] md:col-span-1 md:col-start-2 md:row-span-2 md:row-start-1 md:self-center md:text-center md:text-base"
+          className="col-span-2 row-start-2 flex flex-col gap-5 text-balance font-display text-[1.0625rem] leading-relaxed tracking-[0.01em] md:col-span-1 md:col-start-2 md:row-span-2 md:row-start-1 md:self-center md:text-center md:text-[1.125rem]"
         >
           <p>
             something remarkable happens when you truly step away from the world into raw, untamed
@@ -197,10 +197,10 @@ export function ConditionsChapter() {
           delay={0.1}
           className="flex flex-col gap-5 md:col-start-2 md:row-span-2 md:row-start-1 md:self-center md:text-center"
         >
-          <p className="text-balance font-display text-[0.9375rem] leading-relaxed tracking-[0.01em] md:text-base">
+          <p className="text-balance font-display text-[1.0625rem] leading-relaxed tracking-[0.01em] md:text-[1.125rem]">
             grab a board any time of the day and jump out to sea ~ the spot is right out front.
           </p>
-          <p className="text-balance font-display text-[0.9375rem] leading-relaxed tracking-[0.01em] md:text-base">
+          <p className="text-balance font-display text-[1.0625rem] leading-relaxed tracking-[0.01em] md:text-[1.125rem]">
             our founder roberto shows you the spots, with local partners for lessons.
           </p>
         </Reveal>
