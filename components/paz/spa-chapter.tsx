@@ -38,8 +38,8 @@ export function SpaChapter() {
           delay={0.1}
           className="max-w-xl text-pretty font-display text-[1.0625rem] leading-[1.55] md:text-[1.125rem]"
         >
-          our training center looks like a spa, and supports us physically, emotionally and
-          spiritually.
+          our training center looks like a spa, uniquely created by listening to nature, asking this
+          mystic rainforest to help ease the mind and return to the body.
         </Reveal>
       </div>
 
