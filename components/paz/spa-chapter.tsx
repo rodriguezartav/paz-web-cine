@@ -25,13 +25,12 @@ const supportFrames = [
 export function SpaChapter() {
   return (
     <div className="bg-bone text-ink">
-      <div className="measure mx-auto flex w-full flex-col gap-6 px-6 pb-16 md:gap-7 md:px-10 md:pb-20">
+      <div className="measure mx-auto flex w-full flex-col gap-6 px-6 pb-16 pt-[14vh] md:gap-7 md:px-10 md:pb-20 md:pt-[18vh]">
         <Reveal
           as="p"
           className="max-w-2xl text-pretty font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2]"
         >
-          an emotional training center guided by nature to support easing the mind and returning to
-          the body.
+          a training center guided by nature to support easing the mind and returning to the body.
         </Reveal>
       </div>
 
