@@ -77,7 +77,7 @@ export function SpaChapter() {
         </Reveal>
       </div>
 
-      <Reveal className="px-[4vw] pb-[10vh] md:px-[5vw] md:pb-[12vh]">
+      <Reveal className="px-[4vw] md:px-[5vw]">
         <figure className="film-grain relative overflow-hidden rounded-sm text-bone">
           <div className="relative aspect-[4/3] md:aspect-[16/9]">
             <Image
@@ -100,6 +100,16 @@ export function SpaChapter() {
           </div>
         </figure>
       </Reveal>
+
+      <div className="measure mx-auto w-full px-6 pb-[12vh] pt-10 md:px-10 md:pb-[14vh] md:pt-12">
+        <Reveal
+          as="p"
+          className="mx-auto max-w-2xl text-pretty text-center font-display text-[1.0625rem] leading-[1.55] md:text-[1.125rem]"
+        >
+          born in paz ~ came out of thin air ~ to help us detach from our construction of reality,
+          enough, for nature to show us hers.
+        </Reveal>
+      </div>
     </div>
   )
 }
