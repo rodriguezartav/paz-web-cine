@@ -30,7 +30,7 @@ export function SpaChapter() {
           as="p"
           className="max-w-2xl text-pretty font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2]"
         >
-          our founder has studied natural presence meditation for 20 years, in the rainforest with the
+          roberto has studied natural presence meditation for 20 years, here in the rainforest with the
           most life on earth.
         </Reveal>
       </div>
