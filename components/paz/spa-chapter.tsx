@@ -65,9 +65,10 @@ export function SpaChapter() {
         </Reveal>
       </div>
 
-      <div className="measure mx-auto w-full px-6 pb-10 md:px-10 md:pb-12">
+      <div className="measure mx-auto flex w-full flex-col items-start gap-5 px-6 pb-10 md:gap-6 md:px-10 md:pb-12">
         <Reveal as="h2" className="type-lead max-w-3xl text-balance">
-          cave sauna: the womb of creation
+          <span className="inline-block rounded-sm bg-sage px-4 py-1.5 text-bone">cave sauna</span>
+          <span className="mt-5 block md:mt-6">the womb of creation</span>
         </Reveal>
       </div>
 
