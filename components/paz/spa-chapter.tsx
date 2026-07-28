@@ -65,6 +65,12 @@ export function SpaChapter() {
         </Reveal>
       </div>
 
+      <div className="measure mx-auto w-full px-6 pb-10 md:px-10 md:pb-12">
+        <Reveal as="h2" className="type-lead max-w-3xl text-balance">
+          cave sauna: the womb of creation
+        </Reveal>
+      </div>
+
       <Reveal className="px-[4vw] pb-[10vh] md:px-[5vw] md:pb-[12vh]">
         <figure className="film-grain relative overflow-hidden rounded-sm text-bone">
           <div className="relative aspect-[4/3] md:aspect-[16/9]">
@@ -80,10 +86,7 @@ export function SpaChapter() {
               className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/25 to-transparent"
               aria-hidden="true"
             />
-            <figcaption className="absolute inset-x-0 bottom-0 flex flex-col gap-4 px-6 pb-10 md:gap-5 md:px-12 md:pb-14">
-              <h2 className="type-lead max-w-3xl text-balance">
-                cave sauna: the womb of creation
-              </h2>
+            <figcaption className="absolute inset-x-0 bottom-0 px-6 pb-10 md:px-12 md:pb-14">
               <p className="max-w-xl text-pretty font-display text-[1.0625rem] leading-[1.55] md:text-[1.125rem]">
                 a portal unique to paz, in service of the most mystical rainforest on earth.
               </p>
