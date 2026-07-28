@@ -133,12 +133,17 @@ export function ConditionsChapter() {
         </Reveal>
 
         <Reveal
-          as="p"
           delay={0.1}
-          className="col-span-2 row-start-2 text-balance font-display text-[0.9375rem] leading-relaxed tracking-[0.01em] md:col-span-1 md:col-start-2 md:row-span-2 md:row-start-1 md:self-center md:text-center md:text-base"
+          className="col-span-2 row-start-2 flex flex-col gap-5 text-balance font-display text-[0.9375rem] leading-relaxed tracking-[0.01em] md:col-span-1 md:col-start-2 md:row-span-2 md:row-start-1 md:self-center md:text-center md:text-base"
         >
-          something remarkable happens when you truly step away from the world into raw, untamed
-          nature.
+          <p>
+            something remarkable happens when you truly step away from the world into raw, untamed
+            nature.
+          </p>
+          <p>
+            without any effort the body changes, the mind eases, the nervous system finally gets some
+            rest.
+          </p>
         </Reveal>
 
         <Reveal
