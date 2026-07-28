@@ -138,7 +138,7 @@ export function ConditionsChapter() {
           className="col-span-2 row-start-2 text-balance font-display text-[0.9375rem] leading-relaxed tracking-[0.01em] md:col-span-1 md:col-start-2 md:row-span-2 md:row-start-1 md:self-center md:text-center md:text-base"
         >
           something remarkable happens when you truly step away from the world into raw, untamed
-          nature ~ yet so few places left to do it.
+          nature.
         </Reveal>
 
         <Reveal
