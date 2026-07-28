@@ -18,9 +18,9 @@ const supportFrames = [
 ]
 
 /**
- * The cave sauna — the training-centre statement, an upright triptych of the
- * same person moving through the heat, then a wide photograph and the closing
- * line. Sits on the bone surface, continuing the surf movement above it.
+ * The cave sauna — the training-centre statement and an upright triptych on
+ * bone, then a sage-green movement that names the cave sauna and closes on a
+ * wide photograph of it.
  */
 export function SpaChapter() {
   return (
@@ -65,30 +65,38 @@ export function SpaChapter() {
         </Reveal>
       </div>
 
-      <Reveal className="px-[4vw] md:px-[5vw]">
-        <figure className="film-grain overflow-hidden rounded-sm">
-          <div className="relative aspect-[4/3] md:aspect-[16/9]">
-            <Image
-              src="/images/dropbox/DSCF9588.webp"
-              alt="People resting outside a domed earthen cave sauna in the rainforest."
-              fill
-              loading="lazy"
-              sizes="(max-width: 767px) 92vw, 90vw"
-              className="object-cover"
-            />
-          </div>
-        </figure>
-      </Reveal>
+      <section className="bg-sage text-bone">
+        <div className="measure mx-auto flex w-full flex-col gap-8 px-6 py-[18vh] md:gap-10 md:px-10 md:py-[20vh]">
+          <Reveal as="h2" className="type-eyebrow text-bone/80">
+            cave sauna
+          </Reveal>
+          <Reveal as="p" delay={0.1} className="type-lead max-w-3xl text-balance">
+            the womb of creation
+          </Reveal>
+          <Reveal
+            as="p"
+            delay={0.2}
+            className="max-w-xl text-pretty font-display text-[1.0625rem] leading-[1.55] md:text-[1.125rem]"
+          >
+            a portal unique to paz, in service of the most mystical rainforest on earth.
+          </Reveal>
+        </div>
 
-      <div className="measure mx-auto flex w-full flex-col px-6 pt-20 md:px-10 md:pt-24">
-        <Reveal
-          as="p"
-          className="max-w-xl text-pretty font-display text-[1.0625rem] leading-[1.55] md:text-[1.125rem]"
-        >
-          the cave sauna is a portal only available at paz. the womb of creation ~ in service of the
-          spirit of the most mystical rainforest on earth.
+        <Reveal className="px-[4vw] pb-[10vh] md:px-[5vw] md:pb-[12vh]">
+          <figure className="film-grain overflow-hidden rounded-sm">
+            <div className="relative aspect-[4/3] md:aspect-[16/9]">
+              <Image
+                src="/images/dropbox/DSCF9588.webp"
+                alt="People resting outside a domed earthen cave sauna in the rainforest."
+                fill
+                loading="lazy"
+                sizes="(max-width: 767px) 92vw, 90vw"
+                className="object-cover"
+              />
+            </div>
+          </figure>
         </Reveal>
-      </div>
+      </section>
     </div>
   )
 }
