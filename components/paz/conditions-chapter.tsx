@@ -177,6 +177,7 @@ export function ConditionsChapter() {
         image="/images/dropbox/supporting-shell.webp"
         imageAlt="An empty turquoise Pacific wave framed by the branches of a coastal tree."
         above
+        overlay="catch more waves in a morning than most do in a week ~ in the longest rides of your life."
       >
         waves, and no one waiting for a turn ~ long mellow rides to finally surf like you dream.
       </ImmersiveCondition>
@@ -198,9 +199,6 @@ export function ConditionsChapter() {
         >
           <p className="text-balance font-display text-[0.9375rem] leading-relaxed tracking-[0.01em] md:text-base">
             grab a board any time of the day and jump out to sea ~ the spot is right out front.
-          </p>
-          <p className="text-balance font-display text-[0.9375rem] leading-relaxed tracking-[0.01em] md:text-base">
-            catch more waves in a morning than most do in a week ~ with up to 1-minute rides.
           </p>
           <p className="text-balance font-display text-[0.9375rem] leading-relaxed tracking-[0.01em] md:text-base">
             our founder roberto shows you the spots, with local partners for lessons.
