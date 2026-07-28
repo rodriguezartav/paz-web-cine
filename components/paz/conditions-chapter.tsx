@@ -106,18 +106,18 @@ export function ConditionsChapter() {
 
   return (
     <section aria-label="the conditions" className="bg-bone text-ink">
-      <div className="mx-auto grid max-w-6xl items-center gap-16 px-6 pb-[6vh] pt-[24vh] md:grid-cols-[1fr_0.82fr] md:gap-20 md:px-10">
+      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 pb-[6vh] pt-[24vh] md:gap-14 md:px-10">
         <Reveal as="p" className="type-lead max-w-2xl text-balance">
           far enough from the world that there is nothing left to follow but the tides, the sun and
           the birds.
         </Reveal>
-        <Reveal delay={0.1} className="relative aspect-[4/3] w-full overflow-hidden">
+        <Reveal delay={0.1} className="relative aspect-[4/3] w-full overflow-hidden md:aspect-[16/9]">
           <div className="grain absolute inset-0">
             <Image
-              src="/images/dropbox/hero-coast.webp"
-              alt="A solitary figure standing among driftwood on a wild Pacific shoreline."
+              src="/images/dropbox/aerial-coast.webp"
+              alt="An aerial view of turquoise Pacific water breaking along a sand spit where the rainforest meets the sea."
               fill
-              sizes="(max-width: 767px) 100vw, 45vw"
+              sizes="(max-width: 767px) 100vw, 92vw"
               className="object-cover"
             />
           </div>
