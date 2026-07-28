@@ -232,6 +232,12 @@ export function ConditionsChapter() {
 
       <SpaChapter />
 
+      <div className="bg-bone px-6 pb-[6vh] pt-[10vh] text-ink md:px-12 md:pb-[7vh] md:pt-[12vh]">
+        <Reveal as="p" className="type-lead mx-auto max-w-3xl text-balance text-center">
+          he built a lodge at his home within the rainforest, for people to stay.
+        </Reveal>
+      </div>
+
       <ImmersiveCondition
         image="/images/dropbox/DSCF9683.JPG"
         imageAlt="Wildlife observed in the dense rainforest around Paz."
