@@ -33,24 +33,16 @@ export function SpaChapter() {
           our founder has studied natural presence meditation for 20 years, in the rainforest with the
           most life on earth.
         </Reveal>
-        <Reveal
-          as="p"
-          delay={0.1}
-          className="max-w-xl text-pretty font-display text-[1.0625rem] leading-[1.55] md:text-[1.125rem]"
-        >
-          our training center looks like a spa, uniquely created by asking this mystical rainforest for
-          help easing the mind and returning to the body.
-        </Reveal>
       </div>
 
-      <div className="measure mx-auto flex w-full flex-col px-6 pb-20 md:px-10 md:pb-24">
-        <Reveal className="flex w-full items-start gap-3 md:gap-5">
+      <div className="mx-auto flex w-full max-w-5xl flex-col px-6 pb-20 md:px-10 md:pb-24">
+        <Reveal className="flex w-full flex-wrap items-start gap-3 md:flex-nowrap md:gap-5">
           {supportFrames.map((frame, index) => (
             <figure
               key={frame.src}
               className={cn(
-                'film-grain flex-1 overflow-hidden rounded-sm',
-                index === 1 ? 'md:mt-10' : index === 2 ? 'md:mt-4' : '',
+                'film-grain w-[calc((100%-1.5rem)/3)] overflow-hidden rounded-sm md:w-auto md:flex-1',
+                index === 1 ? 'md:mt-10' : index === 2 ? 'md:order-4 md:mt-4' : '',
               )}
             >
               <div className="relative aspect-[3/4]">
@@ -65,6 +57,11 @@ export function SpaChapter() {
               </div>
             </figure>
           ))}
+
+          <p className="w-full text-pretty pt-4 font-display text-[1.0625rem] leading-[1.55] md:order-3 md:w-[26%] md:flex-none md:self-center md:pt-0 md:text-base">
+            our training center looks like a spa, uniquely created by asking this mystical rainforest
+            for help easing the mind and returning to the body.
+          </p>
         </Reveal>
       </div>
 
