@@ -87,9 +87,9 @@ export function SpaChapter() {
               className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/25 to-transparent"
               aria-hidden="true"
             />
-            <figcaption className="absolute inset-x-0 bottom-0 px-6 pb-10 md:px-12 md:pb-14">
-              <p className="max-w-xl text-pretty font-display text-[1.0625rem] leading-[1.55] md:text-[1.125rem]">
-                a portal unique to paz, in service of the most mystical rainforest on earth.
+            <figcaption className="absolute inset-x-0 bottom-0 px-6 pb-12 md:px-12 md:pb-16">
+              <p className="type-lead mx-auto max-w-3xl text-balance text-center">
+                a portal available only in paz ~ in service of the most mystical rainforest on earth.
               </p>
             </figcaption>
           </div>
