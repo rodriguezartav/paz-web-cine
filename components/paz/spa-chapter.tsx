@@ -30,8 +30,8 @@ export function SpaChapter() {
           as="p"
           className="max-w-2xl text-pretty font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2]"
         >
-          roberto has studied natural presence meditation for 20 years, here in the rainforest with the
-          most life on earth.
+          built a training center guided by nature to support easing the mind and returning to the
+          body.
         </Reveal>
       </div>
 
@@ -59,8 +59,8 @@ export function SpaChapter() {
           ))}
 
           <p className="w-full text-pretty pt-4 font-display text-[1.0625rem] leading-[1.55] md:order-3 md:w-[26%] md:flex-none md:self-center md:pt-0 md:text-base">
-            built a training center guided by nature to support easing the mind and returning to the
-            body.
+            roberto has studied natural presence meditation for 20 years, here in the rainforest with
+            the most life on earth.
           </p>
         </Reveal>
       </div>
