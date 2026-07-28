@@ -59,8 +59,8 @@ export function SpaChapter() {
           ))}
 
           <p className="w-full text-pretty pt-4 font-display text-[1.0625rem] leading-[1.55] md:order-3 md:w-[26%] md:flex-none md:self-center md:pt-0 md:text-base">
-            built a training center, uniquely created by asking nature for help easing the mind and
-            returning to the body.
+            built a training center guided by nature to support easing the mind and returning to the
+            body.
           </p>
         </Reveal>
       </div>
