@@ -2,11 +2,15 @@ import type { Metadata } from 'next'
 import {
   Navigation,
   Hero,
+  Container,
   Reveal,
+  Section,
   CinematicChapter,
   ConditionsChapter,
+  EditorialChapter,
   FullscreenVideo,
-  LandCollage,
+  SectionDivider,
+  SiteFooter,
   WayWeLiveChapter,
 } from '@/components/paz'
 
@@ -38,8 +42,8 @@ export default function HomePage() {
         {/* ── Threshold ─────────────────────────────────────────────── */}
         {/* The extraordinary shown, not described. The place is not yet named. */}
         <Hero
-          image="/images/dropbox/empty-wave.webp"
-          imageAlt="A lone surfer walking an empty Pacific beach beneath overhanging palms."
+          image="/images/opening-coastline.png"
+          imageAlt="A wild, undeveloped coastline at dawn where primary rainforest runs down to an empty grey-sand beach, hills wrapped in low mist above a calm Pacific."
           title="the week you've been promising yourself"
           cue="keep walking"
         />
@@ -52,20 +56,82 @@ export default function HomePage() {
         <FullscreenVideo
           playbackId={DESKTOP_VIDEO_PLAYBACK_ID}
           mobilePlaybackId={MOBILE_VIDEO_PLAYBACK_ID}
-          poster="/images/dropbox/supporting-shell.webp"
-          posterAlt="A turquoise Pacific break framed by the branches of a coastal tree."
+          poster="/images/hero-jungle-ocean.png"
+          posterAlt="Dense green rainforest framing a pale, misty Pacific at first light, seen from within the trees."
           chapter="ii ~ a place that still belongs to nature"
           caption="this is paz in corcovado"
           align="end"
         />
 
-        <LandCollage />
-
         <WayWeLiveChapter />
 
+        <Section aria-label="roberto" className="overflow-hidden">
+          <Container width="measure" className="flex flex-col">
+            <div className="flex min-h-[70svh] items-center">
+              <Reveal>
+                <p className="type-lead max-w-xl text-balance text-ink">
+                  years ago, roberto came here with nothing left ~ and the land gave him back to
+                  himself.
+                </p>
+              </Reveal>
+            </div>
+
+            <div className="flex min-h-[70svh] items-center justify-end">
+              <Reveal delay={0.1} className="max-w-xl">
+                <p className="type-body text-pretty text-ink/85">
+                  that&apos;s the only reason the door is open. we can&apos;t hand you what happened to
+                  him. we can only bring you to the same place, and let it do what it does.
+                </p>
+              </Reveal>
+            </div>
+          </Container>
+        </Section>
+
+        <SectionDivider mark="~" tone="ink" />
+
+        <EditorialChapter lead="the land is protected. the access was never sold.">
+          <p>
+            there are no ticket gates here, and no crowds to funnel through
+            them. what keeps people away is simply distance — and distance, it
+            turns out, is what has kept the place alive.
+          </p>
+        </EditorialChapter>
+
+        {/* ── Movement Three — The Conditions ───────────────────────── */}
+        {/* Truth: nature sets the schedule. Present conditions; explain nothing. */}
         <CinematicChapter
-          image="/images/dropbox/closing-waterfall.webp"
-          imageAlt="A person standing beneath a rainforest waterfall, surrounded by dark stone and water."
+          image="/images/figure-shore.png"
+          imageAlt="A person crouched low at the edge of the ocean on a wild grey-sand beach at dawn, a misty headland behind."
+          chapter="iii ~ the conditions"
+          caption="here, the day is not something you plan."
+          align="end"
+          presentation="clearing"
+          imageScale="full"
+        />
+
+        <EditorialChapter lead="nature keeps the schedule.">
+          <p>morning begins with light, not an alarm.</p>
+          <p>the day follows the tide.</p>
+          <p>meals are shared at one long table.</p>
+          <p>phones lose their signal, and then their hold.</p>
+          <p>movement takes the place of entertainment.</p>
+          <p>and slowly, the silence comes back.</p>
+        </EditorialChapter>
+
+        <CinematicChapter
+          image="/images/shared-table.png"
+          imageAlt="A long, plain wooden table set for a shared meal under an open-air rainforest structure in soft morning light."
+          caption="almost everything here is shared — the table, the water, the weather."
+          align="start"
+          presentation="clearing"
+          imageScale="inset"
+        />
+
+        {/* ── Horizon — not a conclusion ────────────────────────────── */}
+        {/* The recognition, then a door left open. The walk has only begun. */}
+        <CinematicChapter
+          image="/images/cold-water-dawn.png"
+          imageAlt="A person submerged to the chest in cold, dark, still water at dawn, breath held, mist on the surface."
           variant="banner"
           caption="come back to life"
           note="you have not reached the end of anything. you have only started walking."
@@ -74,14 +140,7 @@ export default function HomePage() {
           cta={{ label: 'continue the descent', href: '/about' }}
         />
 
-        <div className="flex min-h-svh items-end justify-center bg-ink px-6 pb-10 pt-[20vh] text-center md:px-12 md:pb-14">
-          <Reveal
-            as="p"
-            className="max-w-[30ch] text-balance font-display text-[1.75rem] uppercase leading-[1.35] tracking-[0.15em] text-bone md:text-[2rem]"
-          >
-            raw nature that changes you from within, without words.
-          </Reveal>
-        </div>
+        <SiteFooter />
       </main>
     </>
   )
