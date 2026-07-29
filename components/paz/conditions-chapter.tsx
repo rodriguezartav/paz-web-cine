@@ -101,9 +101,14 @@ export function ConditionsChapter() {
   return (
     <section aria-label="the conditions" className="bg-bone text-ink">
       <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 pb-[6vh] pt-[24vh] md:flex-row md:items-center md:gap-14 md:px-10">
-        <Reveal as="p" className="type-lead max-w-2xl text-balance md:w-[38%] md:shrink-0">
-          far enough from the world that there is nothing left to follow but the tides, the sun and
-          the birds.
+        <Reveal className="flex max-w-2xl flex-col gap-6 md:w-[38%] md:shrink-0 md:gap-7">
+          <p className="type-lead text-balance">
+            let me tell you a story about a place the world forgot to change ~
+          </p>
+          <p className="type-lead text-balance">
+            far enough from the world that there is nothing left to follow but the tides, the sun and
+            the birds.
+          </p>
         </Reveal>
         <Reveal
           delay={0.1}
