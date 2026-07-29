@@ -102,7 +102,7 @@ export function ConditionsChapter() {
     <section aria-label="the conditions" className="bg-bone text-ink">
       <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-8 px-6 pt-[22vh] text-center md:gap-10 md:px-10 md:pt-[26vh]">
         <Reveal as="p" className="type-lead max-w-3xl text-balance">
-          let me tell you a story about a place the world forgot to change ~
+          let me tell you a story about a place the world forgot to change ~ it is my home. 
         </Reveal>
         <Reveal as="p" delay={0.1} className="type-lead max-w-3xl text-balance">
           here, a set of conditions comes together to make something that, as far as we know, is the
