@@ -111,6 +111,26 @@ export function ConditionsChapter() {
           here I build two lofts for people to stay within the most mystical rainforest on Earth while learning to surf ~ and experience a nature-led approach to life.
         </Reveal>
 
+      </div>
+
+      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 pb-[6vh] pt-[14vh] md:flex-row md:items-center md:gap-14 md:px-10 md:pt-[16vh]">
+        <Reveal
+          delay={0.1}
+          className="relative aspect-[4/3] w-full overflow-hidden md:aspect-[4/3] md:flex-1"
+        >
+          <div className="grain absolute inset-0">
+            <Image
+              src="/images/dropbox/aerial-coast.webp"
+              alt="An aerial view of turquoise Pacific water breaking along a sand spit where the rainforest meets the sea."
+              fill
+              sizes="(max-width: 767px) 100vw, 60vw"
+              className="object-cover"
+            />
+          </div>
+        </Reveal>
+      </div>
+
+      <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-8 px-6 pt-[14vh] text-center md:gap-10 md:px-10 md:pt-[16vh]">
         <Reveal as="p" delay={0.1} className="type-lead max-w-3xl text-balance">
           here, a set of conditions comes together to make something that, as far as we know, is the
           last of its kind.
@@ -237,26 +257,7 @@ export function ConditionsChapter() {
         </Reveal>
       </div>
 
-      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 pb-[6vh] pt-[14vh] md:flex-row md:items-center md:gap-14 md:px-10 md:pt-[16vh]">
-        <Reveal as="p" className="type-lead max-w-2xl text-balance md:w-[38%] md:shrink-0">
-          far enough from the world that there is nothing left to follow but the tides, the sun and
-          the birds.
-        </Reveal>
-        <Reveal
-          delay={0.1}
-          className="relative aspect-[4/3] w-full overflow-hidden md:aspect-[4/3] md:flex-1"
-        >
-          <div className="grain absolute inset-0">
-            <Image
-              src="/images/dropbox/aerial-coast.webp"
-              alt="An aerial view of turquoise Pacific water breaking along a sand spit where the rainforest meets the sea."
-              fill
-              sizes="(max-width: 767px) 100vw, 60vw"
-              className="object-cover"
-            />
-          </div>
-        </Reveal>
-      </div>
+
 
       <ImmersiveCondition
         image="/images/dropbox/DSCF9683.JPG"
