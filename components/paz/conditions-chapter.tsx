@@ -100,15 +100,20 @@ export function ConditionsChapter() {
 
   return (
     <section aria-label="the conditions" className="bg-bone text-ink">
-      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 pb-[6vh] pt-[24vh] md:flex-row md:items-center md:gap-14 md:px-10">
-        <Reveal className="flex max-w-2xl flex-col gap-6 md:w-[38%] md:shrink-0 md:gap-7">
-          <p className="type-lead text-balance">
-            let me tell you a story about a place the world forgot to change ~
-          </p>
-          <p className="type-lead text-balance">
-            far enough from the world that there is nothing left to follow but the tides, the sun and
-            the birds.
-          </p>
+      <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-8 px-6 pt-[22vh] text-center md:gap-10 md:px-10 md:pt-[26vh]">
+        <Reveal as="p" className="type-lead max-w-3xl text-balance">
+          let me tell you a story about a place the world forgot to change ~
+        </Reveal>
+        <Reveal as="p" delay={0.1} className="type-lead max-w-3xl text-balance">
+          here, a set of conditions comes together to make something that, as far as we know, is the
+          last of its kind.
+        </Reveal>
+      </div>
+
+      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 pb-[6vh] pt-[14vh] md:flex-row md:items-center md:gap-14 md:px-10 md:pt-[16vh]">
+        <Reveal as="p" className="type-lead max-w-2xl text-balance md:w-[38%] md:shrink-0">
+          far enough from the world that there is nothing left to follow but the tides, the sun and
+          the birds.
         </Reveal>
         <Reveal
           delay={0.1}
