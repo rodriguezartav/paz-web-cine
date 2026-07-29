@@ -118,27 +118,6 @@ export function ConditionsChapter() {
         
       </div>
 
-      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 pb-[6vh] pt-[14vh] md:flex-row md:items-center md:gap-14 md:px-10 md:pt-[16vh]">
-        <Reveal as="p" className="type-lead max-w-2xl text-balance md:w-[38%] md:shrink-0">
-          far enough from the world that there is nothing left to follow but the tides, the sun and
-          the birds.
-        </Reveal>
-        <Reveal
-          delay={0.1}
-          className="relative aspect-[4/3] w-full overflow-hidden md:aspect-[4/3] md:flex-1"
-        >
-          <div className="grain absolute inset-0">
-            <Image
-              src="/images/dropbox/aerial-coast.webp"
-              alt="An aerial view of turquoise Pacific water breaking along a sand spit where the rainforest meets the sea."
-              fill
-              sizes="(max-width: 767px) 100vw, 60vw"
-              className="object-cover"
-            />
-          </div>
-        </Reveal>
-      </div>
-
       <div className="mx-auto grid w-full max-w-5xl grid-cols-2 items-center gap-6 px-6 pb-[18vh] md:grid-cols-[1fr_1.7fr_1fr] md:gap-12 md:px-10 md:pb-[22vh] md:pt-0">
         <Reveal className="relative col-start-1 row-start-1 aspect-square w-full overflow-hidden rounded-sm md:-translate-y-6">
           <Image
@@ -255,6 +234,27 @@ export function ConditionsChapter() {
       <div className="bg-bone px-6 pb-[6vh] pt-[10vh] text-ink md:px-12 md:pb-[7vh] md:pt-[12vh]">
         <Reveal as="p" className="type-lead mx-auto max-w-3xl text-balance text-center">
           he built a lodge at his home within the rainforest, for people to stay.
+        </Reveal>
+      </div>
+
+      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 pb-[6vh] pt-[14vh] md:flex-row md:items-center md:gap-14 md:px-10 md:pt-[16vh]">
+        <Reveal as="p" className="type-lead max-w-2xl text-balance md:w-[38%] md:shrink-0">
+          far enough from the world that there is nothing left to follow but the tides, the sun and
+          the birds.
+        </Reveal>
+        <Reveal
+          delay={0.1}
+          className="relative aspect-[4/3] w-full overflow-hidden md:aspect-[4/3] md:flex-1"
+        >
+          <div className="grain absolute inset-0">
+            <Image
+              src="/images/dropbox/aerial-coast.webp"
+              alt="An aerial view of turquoise Pacific water breaking along a sand spit where the rainforest meets the sea."
+              fill
+              sizes="(max-width: 767px) 100vw, 60vw"
+              className="object-cover"
+            />
+          </div>
         </Reveal>
       </div>
 
