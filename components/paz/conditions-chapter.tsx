@@ -104,7 +104,7 @@ export function ConditionsChapter() {
         <Reveal as="p" className="type-lead max-w-3xl text-balance">
           let me tell you a story about a place the world forgot to change.
            
-          it is my home ~ the most mystical rainforest in the world.
+          it is my home ~ here i built a lodge host people in the w
         </Reveal>
         
          <Reveal as="p" delay={0.1} className="type-lead max-w-3xl text-balance">
