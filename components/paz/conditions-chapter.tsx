@@ -60,19 +60,17 @@ function ImmersiveCondition({
         {!above && (
           <>
             <div
-              className={`absolute inset-0 ${
-                calm
-                  ? 'bg-ink/20'
-                  : topOnMobile
-                    ? 'bg-gradient-to-b from-ink/60 via-ink/10 to-transparent md:bg-gradient-to-t md:from-ink/55'
-                    : 'bg-gradient-to-t from-ink/55 via-ink/10 to-transparent'
-              }`}
+              className={`absolute inset-0 ${calm
+                ? 'bg-ink/20'
+                : topOnMobile
+                  ? 'bg-gradient-to-b from-ink/60 via-ink/10 to-transparent md:bg-gradient-to-t md:from-ink/55'
+                  : 'bg-gradient-to-t from-ink/55 via-ink/10 to-transparent'
+                }`}
               aria-hidden="true"
             />
             <div
-              className={`relative flex h-full justify-center px-6 md:items-center md:px-12 md:py-24 ${
-                topOnMobile ? 'items-start pb-24 pt-12' : 'items-center py-24'
-              }`}
+              className={`relative flex h-full justify-center px-6 md:items-center md:px-12 md:py-24 ${topOnMobile ? 'items-start pb-24 pt-12' : 'items-center py-24'
+                }`}
             >
               <Reveal as="p" className="type-lead max-w-4xl text-balance text-center text-bone">
                 {children}
@@ -103,19 +101,15 @@ export function ConditionsChapter() {
       <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-8 px-6 pt-[22vh] text-center md:gap-10 md:px-10 md:pt-[26vh]">
         <Reveal as="p" className="type-lead max-w-3xl text-balance">
           let me tell you a story about a place the world forgot to change.
-           
-          it is my home ~ here i built a lodge host people in the w
-        </Reveal>
-        
-         <Reveal as="p" delay={0.1} className="type-lead max-w-3xl text-balance">
-          I built lofts to host people ~ that like me ~ want to learn how to live from nature. surfing, beaches, wildlife, bonfires and waterfalls.
+
+          it is my home ~ the most mystical rainforest in the world.
         </Reveal>
 
         <Reveal as="p" delay={0.1} className="type-lead max-w-3xl text-balance">
           here, a set of conditions comes together to make something that, as far as we know, is the
           last of its kind.
         </Reveal>
-        
+
       </div>
 
       <div className="mx-auto grid w-full max-w-5xl grid-cols-2 items-center gap-6 px-6 pb-[18vh] md:grid-cols-[1fr_1.7fr_1fr] md:gap-12 md:px-10 md:pb-[22vh] md:pt-0">
