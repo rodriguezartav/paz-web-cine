@@ -179,7 +179,7 @@ export function ConditionsChapter() {
         above
         overlay="catch more waves in a morning than most do in a week ~ in the longest rides of your life."
       >
-        waves, and no one waiting for a turn ~ long mellow rides to finally surf like you dream.
+        waves up upfront, and no one waiting for a turn ~ to reach the surf level you dream.
       </ImmersiveCondition>
 
       <div className="mx-auto grid w-full max-w-5xl items-center gap-6 px-6 py-[18vh] md:grid-cols-[1.15fr_0.85fr_1fr] md:gap-10 md:px-10 md:py-[22vh]">
