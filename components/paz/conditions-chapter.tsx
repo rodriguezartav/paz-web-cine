@@ -101,8 +101,10 @@ export function ConditionsChapter() {
       <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-8 px-6 pt-[22vh] text-center md:gap-10 md:px-10 md:pt-[26vh]">
         <Reveal as="p" className="type-lead max-w-3xl text-balance">
           let me tell you a story about a place the world forgot to change.
+        </Reveal>
 
-          it is my home ~ the most mystical rainforest in the world.
+        <Reveal as="p" className="type-lead max-w-3xl text-balance">
+          next to my home ~ I two lofts for people to stay within the most mystical rainforest in the world while learning to surf
         </Reveal>
 
         <Reveal as="p" delay={0.1} className="type-lead max-w-3xl text-balance">
