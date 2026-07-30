@@ -57,27 +57,21 @@ export function SpaChapter() {
             </figure>
           ))}
 
-          <div className="flex w-full flex-col gap-5 text-pretty pt-4 font-display text-[1.0625rem] leading-[1.55] md:order-3 md:w-[26%] md:flex-none md:self-center md:pt-0 md:text-[1.125rem]">
-            <p>
-              roberto has studied natural presence meditation for 20 years, here in the rainforest
-              with the most life on earth.
-            </p>
-            <p>
-              he shares how to get to the right place at the right time ~ then gets out of the way to
-              let nature do its thing.
-            </p>
-          </div>
+          <p className="w-full text-pretty pt-4 font-display text-[1.0625rem] leading-[1.55] md:order-3 md:w-[26%] md:flex-none md:self-center md:pt-0 md:text-base">
+            roberto has studied natural presence meditation for 20 years, here in the rainforest with
+            the most life on earth.
+          </p>
         </Reveal>
       </div>
 
-      <div className="measure mx-auto flex w-full flex-col items-center gap-5 px-6 pb-10 pt-[12vh] md:gap-6 md:px-10 md:pb-12 md:pt-[16vh]">
+      <div className="measure mx-auto flex w-full flex-col items-center gap-5 px-6 pb-10 md:gap-6 md:px-10 md:pb-12">
         <Reveal as="h2" className="type-lead mx-auto max-w-3xl text-balance text-center">
           <span className="inline-block rounded-sm bg-sage px-4 py-1.5 text-bone">cave sauna</span>
           <span className="mt-5 block md:mt-6">the womb of creation</span>
         </Reveal>
       </div>
 
-      <Reveal className="px-[4vw] md:px-[5vw]">
+      <Reveal className="px-[4vw] pb-[10vh] md:px-[5vw] md:pb-[12vh]">
         <figure className="film-grain relative overflow-hidden rounded-sm text-bone">
           <div className="relative aspect-[4/3] md:aspect-[16/9]">
             <Image
@@ -100,16 +94,6 @@ export function SpaChapter() {
           </div>
         </figure>
       </Reveal>
-
-      <div className="measure mx-auto w-full px-6 pb-[12vh] pt-10 md:px-10 md:pb-[14vh] md:pt-12">
-        <Reveal
-          as="p"
-          className="mx-auto max-w-2xl text-pretty text-center font-display text-[1.0625rem] leading-[1.55] md:text-[1.125rem]"
-        >
-          born in paz ~ came out of thin air ~ to help us detach from our construction of reality,
-          enough, for nature to show us hers.
-        </Reveal>
-      </div>
     </div>
   )
 }

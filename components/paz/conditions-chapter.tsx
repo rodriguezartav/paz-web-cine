@@ -100,25 +100,7 @@ export function ConditionsChapter() {
 
   return (
     <section aria-label="the conditions" className="bg-bone text-ink">
-      <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-8 px-6 pt-[22vh] text-center md:gap-10 md:px-10 md:pt-[26vh]">
-        <Reveal as="p" className="type-lead max-w-3xl text-balance">
-          let me tell you a story about a place the world forgot to change.
-           
-          it is my home ~ the most mystical rainforest in the world.
-        </Reveal>
-        
-         <Reveal as="p" delay={0.1} className="type-lead max-w-3xl text-balance">
-          I built lofts to host people ~ that like me ~ want to learn how to live from nature. surfing, beaches, wildlife, bonfires and waterfalls.
-        </Reveal>
-
-        <Reveal as="p" delay={0.1} className="type-lead max-w-3xl text-balance">
-          here, a set of conditions comes together to make something that, as far as we know, is the
-          last of its kind.
-        </Reveal>
-        
-      </div>
-
-      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 pb-[6vh] pt-[14vh] md:flex-row md:items-center md:gap-14 md:px-10 md:pt-[16vh]">
+      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 pb-[6vh] pt-[24vh] md:flex-row md:items-center md:gap-14 md:px-10">
         <Reveal as="p" className="type-lead max-w-2xl text-balance md:w-[38%] md:shrink-0">
           far enough from the world that there is nothing left to follow but the tides, the sun and
           the birds.
@@ -152,7 +134,7 @@ export function ConditionsChapter() {
 
         <Reveal
           delay={0.1}
-          className="col-span-2 row-start-2 flex flex-col gap-5 text-balance font-display text-[1.0625rem] leading-relaxed tracking-[0.01em] md:col-span-1 md:col-start-2 md:row-span-2 md:row-start-1 md:self-center md:text-center md:text-[1.125rem]"
+          className="col-span-2 row-start-2 flex flex-col gap-5 text-balance font-display text-[0.9375rem] leading-relaxed tracking-[0.01em] md:col-span-1 md:col-start-2 md:row-span-2 md:row-start-1 md:self-center md:text-center md:text-base"
         >
           <p>
             something remarkable happens when you truly step away from the world into raw, untamed
@@ -197,7 +179,7 @@ export function ConditionsChapter() {
         above
         overlay="catch more waves in a morning than most do in a week ~ in the longest rides of your life."
       >
-        waves, and no one waiting for a turn ~ long mellow rides to finally surf like you dream.
+        waves up upfront, and no one waiting for a turn ~ to reach the surf level you dream.
       </ImmersiveCondition>
 
       <div className="mx-auto grid w-full max-w-5xl items-center gap-6 px-6 py-[18vh] md:grid-cols-[1.15fr_0.85fr_1fr] md:gap-10 md:px-10 md:py-[22vh]">
@@ -215,10 +197,10 @@ export function ConditionsChapter() {
           delay={0.1}
           className="flex flex-col gap-5 md:col-start-2 md:row-span-2 md:row-start-1 md:self-center md:text-center"
         >
-          <p className="text-balance font-display text-[1.0625rem] leading-relaxed tracking-[0.01em] md:text-[1.125rem]">
+          <p className="text-balance font-display text-[0.9375rem] leading-relaxed tracking-[0.01em] md:text-base">
             grab a board any time of the day and jump out to sea ~ the spot is right out front.
           </p>
-          <p className="text-balance font-display text-[1.0625rem] leading-relaxed tracking-[0.01em] md:text-[1.125rem]">
+          <p className="text-balance font-display text-[0.9375rem] leading-relaxed tracking-[0.01em] md:text-base">
             our founder roberto shows you the spots, with local partners for lessons.
           </p>
         </Reveal>
