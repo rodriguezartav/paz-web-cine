@@ -8,7 +8,6 @@ import {
   FullscreenVideo,
   LandCollage,
   WayWeLiveChapter,
-  StoryChapter,
 } from '@/components/paz'
 
 const DESKTOP_VIDEO_PLAYBACK_ID = 'SkgfY9F8a33A1rGZIq0147z2KM3CLBm02gdje3aax44Tg'
@@ -44,10 +43,6 @@ export default function HomePage() {
           title="the week you've been promising yourself"
           cue="keep walking"
         />
-
-        {/* ── The Voice ─────────────────────────────────────────────── */}
-        {/* Roberto speaks: a letter written across the land, told downhill. */}
-        <StoryChapter />
 
         {/* ── Movement One — The Last of Its Kind ───────────────────── */}
         <ConditionsChapter />
