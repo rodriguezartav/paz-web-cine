@@ -4,47 +4,75 @@ import { Reveal } from './reveal'
 import { cn } from '@/lib/utils'
 
 type Passage = {
-  text: string
+  text?: string
+  /** A quieter line set directly beneath the passage's leading voice. */
+  subtext?: string
   image: string
   imageAlt: string
+  /** Optional second photograph, paired with the first as an upright diptych. */
+  secondImage?: string
+  secondImageAlt?: string
+  /** Pulls the block up so it reads as attached to the passage above it. */
+  attached?: boolean
+  /** Sets the words above the photograph instead of beneath it. */
+  textFirst?: boolean
+  /** A trio of smaller photographs, collaged beneath the block. */
+  supportImages?: { src: string; alt: string }[]
+  /** A centred statement that closes the block, with an optional house note. */
+  aside?: { text: string; note?: string }
+  /** Lets the photograph run wider than the chapter's alternating rhythm. */
+  wide?: boolean
   side: 'left' | 'right'
 }
 
 const passages: Passage[] = [
   {
-    text: "so this was never a business. it's our home ~ and we just leave the door open.",
-    // TODO: replace with the final lived-in threshold photograph.
-    image: '/images/open-forest-threshold.png',
-    imageAlt: 'A simple lived-in threshold opening from a wooden porch into the rainforest.',
+    text: 'an architecture that makes you feel inside while being outside ~ as if you are always on a nature hike ~ in the place with the most wildlife on earth.',
+    subtext:
+      'the forest walks in with you. it moves through the house while you sleep, and still you stay safe and fresh ~ medicine for your nervous system.',
+    image: '/images/dropbox/DSCF9708.webp',
+    imageAlt: 'An open screened living room looking directly into dense rainforest.',
     side: 'right',
   },
   {
-    text: 'the forest walks in with you. it moves through the house while you sleep, and still you stay warm.',
-    // TODO: replace with the final screened-house photograph.
-    image: '/images/screened-cabin.png',
-    imageAlt: 'The rainforest moving through the open screens of a simple bedroom at dawn.',
+    image: '/images/dropbox/DSCF9734.webp',
+    imageAlt: 'A glass-walled room open to the rainforest, someone reading on a low daybed.',
+    secondImage: '/images/dropbox/DSCF9878.webp',
+    secondImageAlt: 'Someone resting on a bed beside a window that opens onto the palms at dusk.',
+    attached: true,
     side: 'left',
   },
   {
     text: "there are no guests at the table ~ only people who were strangers on monday, and aren't by friday.",
-    // TODO: replace with a candid mid-meal photograph at the long table.
-    image: '/images/shared-table.png',
-    imageAlt: 'A long shared table beneath an open rainforest shelter after a meal.',
+    image: '/images/dropbox/family-fire.webp',
+    imageAlt: 'Friends gathered around a shared table and fire beneath the palms at night.',
+    textFirst: true,
+    supportImages: [
+      {
+        src: '/images/dropbox/kitchen2.webp',
+        alt: 'Two people cooking together at the stove in the open kitchen.',
+      },
+      {
+        src: '/images/dropbox/live-shared-fire.webp',
+        alt: 'A guitar and a wooden flute played together under the palm roof at night.',
+      },
+      {
+        src: '/images/dropbox/kitchen3.webp',
+        alt: 'Laughter over pots on the stove while dinner comes together.',
+      },
+    ],
+    aside: {
+      text: 'we give you the chance to rest from all spiritual, social, and economic performances ~ be yourself.',
+      note: 'this is a drug free residence',
+    },
     side: 'right',
   },
   {
     text: "nobody's guiding you. we just take you ~ to the waterfall when it's running, the beach when the light's right, the wave when it turns on. and after that, you go back on your own, whenever you want.",
-    // TODO: replace with the final waterfall, creek, or forest-walk photograph.
-    image: '/images/forest-waterfall-walk.png',
-    imageAlt: 'A narrow rainforest path leading toward a small waterfall and creek.',
+    image: '/images/dropbox/DSCF9026.webp',
+    imageAlt: 'Two people beside a tall rainforest waterfall falling into a dark pool.',
+    wide: true,
     side: 'left',
-  },
-  {
-    text: "and when the fire's lit in the cave dug into the earth, the last wall ~ the one inside you ~ tends to come down too.",
-    // TODO: replace with the final cave-sauna film photograph.
-    image: '/images/earthen-cave-sauna.png',
-    imageAlt: 'A dark earthen cave sauna lit softly by firelight.',
-    side: 'right',
   },
 ]
 
@@ -54,44 +82,151 @@ const passages: Passage[] = [
  */
 export function WayWeLiveChapter() {
   return (
-    <Section className="overflow-hidden">
+    <Section space="none" className="overflow-hidden">
       <Container width="measure" className="flex flex-col gap-40 md:gap-48">
-        <Reveal>
-          <p className="type-lead max-w-xl text-balance text-sage">
-            what opens people here isn&apos;t anything we built ~ it&apos;s the way we live.
-          </p>
-        </Reveal>
+        <div className="mx-auto flex max-w-[52ch] flex-col items-center py-[24vh] text-center font-display text-[1.25rem] leading-[1.8] tracking-[0.01em] text-ink md:text-[1.375rem]">
+          <Reveal as="p" className="text-balance">
+            we didn&apos;t create it, and don&apos;t claim to understand it ~ years ago, our founder
+            came here with nothing left ~ and the land gave him back to himself.
+          </Reveal>
+          <Reveal as="p" delay={0.1} className="mt-[9vh] text-balance">
+            we can&apos;t hand you what happened to him. we can only bring you to the same place, open
+            the door, and let nature do the rest.
+          </Reveal>
+        </div>
 
         {passages.map((passage, index) => (
-          <div key={passage.text} className="flex flex-col gap-20 md:gap-24">
+          <div
+            key={passage.image}
+            className={cn(
+              'flex flex-col gap-20 md:gap-24',
+              passage.attached && '-mt-28 md:-mt-36',
+            )}
+          >
             <Reveal
               className={cn(
-                index % 2 === 0
-                  ? 'w-[72%] md:w-[86%]'
-                  : 'w-[62%] md:w-[72%]',
-                passage.side === 'right' ? 'self-end' : 'self-start',
+                passage.secondImage
+                  ? 'w-[88%] md:w-[80%]'
+                  : passage.wide
+                    ? 'w-full md:relative md:left-1/2 md:w-[min(94vw,84rem)] md:max-w-none md:-translate-x-1/2'
+                    : index % 2 === 0
+                      ? 'w-[72%] md:w-[86%]'
+                      : 'w-[62%] md:w-[72%]',
+                passage.wide
+                  ? 'self-stretch'
+                  : passage.side === 'right'
+                    ? 'self-end'
+                    : 'self-start',
               )}
             >
-              <figure className="film-grain overflow-hidden rounded-sm">
-                <div className="relative aspect-[4/3] md:aspect-[16/9]">
-                  <Image
-                    src={passage.image}
-                    alt={passage.imageAlt}
-                    fill
-                    sizes="(max-width: 767px) 55vw, (max-width: 1023px) 52rem, 58rem"
-                    className="object-cover"
-                  />
+              {passage.secondImage ? (
+                <div className="flex items-start gap-4 md:gap-6">
+                  <figure className="film-grain flex-1 overflow-hidden rounded-sm">
+                    <div className="relative aspect-[3/4]">
+                      <Image
+                        src={passage.image}
+                        alt={passage.imageAlt}
+                        fill
+                        sizes="(max-width: 767px) 42vw, 28rem"
+                        className="object-cover"
+                      />
+                    </div>
+                  </figure>
+                  <figure className="film-grain mt-10 flex-1 overflow-hidden rounded-sm md:mt-16">
+                    <div className="relative aspect-[3/4]">
+                      <Image
+                        src={passage.secondImage}
+                        alt={passage.secondImageAlt ?? ''}
+                        fill
+                        sizes="(max-width: 767px) 42vw, 28rem"
+                        className="object-cover"
+                      />
+                    </div>
+                  </figure>
                 </div>
-              </figure>
+              ) : (
+                <figure className="film-grain overflow-hidden rounded-sm">
+                  <div className="relative aspect-[4/3] md:aspect-[16/9]">
+                    <Image
+                      src={passage.image}
+                      alt={passage.imageAlt}
+                      fill
+                      sizes={
+                        passage.wide
+                          ? '(max-width: 767px) 90vw, 94vw'
+                          : '(max-width: 767px) 55vw, (max-width: 1023px) 52rem, 58rem'
+                      }
+                      className="object-cover"
+                    />
+                  </div>
+                </figure>
+              )}
             </Reveal>
-            <Reveal>
-              <p className="type-body max-w-xl text-pretty text-ink">{passage.text}</p>
-            </Reveal>
+            {(passage.text || passage.subtext) && (
+              <Reveal
+                className={cn(
+                  'flex flex-col gap-6 md:gap-7',
+                  passage.textFirst && 'order-first',
+                )}
+              >
+                {passage.text && (
+                  <p className="max-w-2xl text-pretty font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2] text-ink">
+                    {passage.text}
+                  </p>
+                )}
+                {passage.subtext && (
+                  <p className="max-w-xl text-pretty font-display text-[1.0625rem] leading-[1.55] text-ink md:text-[1.125rem]">
+                    {passage.subtext}
+                  </p>
+                )}
+              </Reveal>
+            )}
+            {passage.aside && (
+              <Reveal className="-mt-10 flex flex-col items-center gap-6 text-center md:-mt-12">
+                <p className="max-w-[46ch] text-balance font-display text-[1.0625rem] leading-[1.55] text-ink md:text-[1.125rem]">
+                  {passage.aside.text}
+                </p>
+                {passage.aside.note && (
+                  <p className="font-sans text-xs uppercase tracking-[0.24em] text-ink/50">
+                    {passage.aside.note}
+                  </p>
+                )}
+              </Reveal>
+            )}
+            {passage.supportImages && (
+              <Reveal
+                className={cn(
+                  'flex items-start gap-3 md:gap-5',
+                  passage.side === 'right' ? 'self-end' : 'self-start',
+                  'w-[72%] md:w-[86%]',
+                )}
+              >
+                {passage.supportImages.map((support, supportIndex) => (
+                  <figure
+                    key={support.src}
+                    className={cn(
+                      'film-grain flex-1 overflow-hidden rounded-sm',
+                      supportIndex === 1 ? 'md:mt-10' : supportIndex === 2 ? 'md:mt-4' : '',
+                    )}
+                  >
+                    <div className="relative aspect-[4/3]">
+                      <Image
+                        src={support.src}
+                        alt={support.alt}
+                        fill
+                        sizes="(max-width: 767px) 31vw, 18rem"
+                        className="object-cover"
+                      />
+                    </div>
+                  </figure>
+                ))}
+              </Reveal>
+            )}
           </div>
         ))}
 
         <Reveal className="py-10 text-center md:py-16">
-          <p className="type-body mx-auto max-w-lg text-balance text-ink">
+          <p className="mx-auto max-w-2xl text-balance font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2] text-ink">
             we open it to a few at a time ~ with faith that it gives them what they need.
           </p>
         </Reveal>

@@ -2,12 +2,11 @@ import type { Metadata } from 'next'
 import {
   Navigation,
   Hero,
-  Container,
   Reveal,
-  Section,
   CinematicChapter,
   ConditionsChapter,
   FullscreenVideo,
+  LandCollage,
   WayWeLiveChapter,
 } from '@/components/paz'
 
@@ -39,8 +38,8 @@ export default function HomePage() {
         {/* ── Threshold ─────────────────────────────────────────────── */}
         {/* The extraordinary shown, not described. The place is not yet named. */}
         <Hero
-          image="/images/opening-coastline.png"
-          imageAlt="A wild, undeveloped coastline at dawn where primary rainforest runs down to an empty grey-sand beach, hills wrapped in low mist above a calm Pacific."
+          image="/images/dropbox/empty-wave.webp"
+          imageAlt="A lone surfer walking an empty Pacific beach beneath overhanging palms."
           title="the week you've been promising yourself"
           cue="keep walking"
         />
@@ -53,41 +52,20 @@ export default function HomePage() {
         <FullscreenVideo
           playbackId={DESKTOP_VIDEO_PLAYBACK_ID}
           mobilePlaybackId={MOBILE_VIDEO_PLAYBACK_ID}
-          poster="/images/hero-jungle-ocean.png"
-          posterAlt="Dense green rainforest framing a pale, misty Pacific at first light, seen from within the trees."
+          poster="/images/dropbox/supporting-shell.webp"
+          posterAlt="A turquoise Pacific break framed by the branches of a coastal tree."
           chapter="ii ~ a place that still belongs to nature"
           caption="this is paz in corcovado"
           align="end"
         />
 
+        <LandCollage />
+
         <WayWeLiveChapter />
 
-        <Section aria-label="roberto" className="overflow-hidden">
-          <Container width="measure" className="flex flex-col">
-            <div className="flex items-end pt-[28vh]">
-              <Reveal>
-                <p className="type-lead max-w-xl text-balance text-ink">
-                  years ago, roberto came here with nothing left ~ and the land gave him back to
-                  himself.
-                </p>
-              </Reveal>
-            </div>
-
-            <div className="flex items-start justify-end pb-[28vh] pt-8 md:pt-10">
-              <Reveal delay={0.1} className="max-w-xl">
-                <p className="type-body text-pretty text-ink/85">
-                  that&apos;s the only reason the door is open. we can&apos;t hand you what happened to
-                  him. we can only bring you to the same place, and let it do what it does.
-                </p>
-              </Reveal>
-            </div>
-          </Container>
-
-        </Section>
-
         <CinematicChapter
-          image="/images/cold-water-dawn.png"
-          imageAlt="A person submerged to the chest in cold, dark, still water at dawn, breath held, mist on the surface."
+          image="/images/dropbox/closing-waterfall.webp"
+          imageAlt="A person standing beneath a rainforest waterfall, surrounded by dark stone and water."
           variant="banner"
           caption="come back to life"
           note="you have not reached the end of anything. you have only started walking."
@@ -96,6 +74,14 @@ export default function HomePage() {
           cta={{ label: 'continue the descent', href: '/about' }}
         />
 
+        <div className="flex min-h-svh items-end justify-center bg-ink px-6 pb-10 pt-[20vh] text-center md:px-12 md:pb-14">
+          <Reveal
+            as="p"
+            className="max-w-[30ch] text-balance font-display text-[1.75rem] uppercase leading-[1.35] tracking-[0.15em] text-bone md:text-[2rem]"
+          >
+            raw nature that changes you from within, without words.
+          </Reveal>
+        </div>
       </main>
     </>
   )
