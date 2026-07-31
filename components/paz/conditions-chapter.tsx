@@ -36,7 +36,7 @@ function ImmersiveCondition({
   topOnMobile?: boolean
   /** Sets the copy on the bone surface above the frame, leaving the photograph clean. */
   above?: boolean
-  /** A line set inside the photograph itself, beneath copy placed above it. */
+  /** A line set inside the photograph, in a narrow column against its left edge. */
   overlay?: React.ReactNode
 }) {
   return (
@@ -81,17 +81,14 @@ function ImmersiveCondition({
           </>
         )}
         {overlay && (
-          <>
-            <div
-              className="absolute inset-0 bg-gradient-to-b from-ink/55 via-ink/10 to-transparent"
-              aria-hidden="true"
-            />
-            <div className="relative flex h-full items-start justify-center px-6 pt-16 md:px-12 md:pt-20">
-              <Reveal as="p" className="type-lead max-w-3xl text-balance text-center text-bone">
-                {overlay}
-              </Reveal>
-            </div>
-          </>
+          <div className="relative flex h-full items-end px-6 pb-12 md:items-center md:justify-start md:px-12 md:pb-0">
+            <Reveal
+              as="p"
+              className="type-lead max-w-md text-pretty text-bone [text-shadow:0_1px_3px_color-mix(in_oklab,var(--color-ink)_70%,transparent),0_2px_20px_color-mix(in_oklab,var(--color-ink)_55%,transparent)] md:w-[30%] md:max-w-none"
+            >
+              {overlay}
+            </Reveal>
+          </div>
         )}
       </div>
     </div>
@@ -103,18 +100,31 @@ export function ConditionsChapter() {
 
   return (
     <section aria-label="the conditions" className="bg-bone text-ink">
-      <div className="mx-auto grid max-w-6xl items-center gap-16 px-6 pb-[6vh] pt-[24vh] md:grid-cols-[1fr_0.82fr] md:gap-20 md:px-10">
-        <Reveal as="p" className="type-lead max-w-2xl text-balance">
+      <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-8 px-6 pt-[22vh] text-center md:gap-10 md:px-10 md:pt-[26vh]">
+        <Reveal as="p" className="type-lead max-w-3xl text-balance">
+          let me tell you a story about a place the world forgot to change ~
+        </Reveal>
+        <Reveal as="p" delay={0.1} className="type-lead max-w-3xl text-balance">
+          here, a set of conditions comes together to make something that, as far as we know, is the
+          last of its kind.
+        </Reveal>
+      </div>
+
+      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 pb-[6vh] pt-[14vh] md:flex-row md:items-center md:gap-14 md:px-10 md:pt-[16vh]">
+        <Reveal as="p" className="type-lead max-w-2xl text-balance md:w-[38%] md:shrink-0">
           far enough from the world that there is nothing left to follow but the tides, the sun and
           the birds.
         </Reveal>
-        <Reveal delay={0.1} className="relative aspect-[4/3] w-full overflow-hidden">
+        <Reveal
+          delay={0.1}
+          className="relative aspect-[4/3] w-full overflow-hidden md:aspect-[4/3] md:flex-1"
+        >
           <div className="grain absolute inset-0">
             <Image
-              src="/images/dropbox/hero-coast.webp"
-              alt="A solitary figure standing among driftwood on a wild Pacific shoreline."
+              src="/images/dropbox/aerial-coast.webp"
+              alt="An aerial view of turquoise Pacific water breaking along a sand spit where the rainforest meets the sea."
               fill
-              sizes="(max-width: 767px) 100vw, 45vw"
+              sizes="(max-width: 767px) 100vw, 60vw"
               className="object-cover"
             />
           </div>
@@ -133,12 +143,17 @@ export function ConditionsChapter() {
         </Reveal>
 
         <Reveal
-          as="p"
           delay={0.1}
-          className="col-span-2 row-start-2 text-balance font-display text-[0.9375rem] leading-relaxed tracking-[0.01em] md:col-span-1 md:col-start-2 md:row-span-2 md:row-start-1 md:self-center md:text-center md:text-base"
+          className="col-span-2 row-start-2 flex flex-col gap-5 text-balance font-display text-[1.0625rem] leading-relaxed tracking-[0.01em] md:col-span-1 md:col-start-2 md:row-span-2 md:row-start-1 md:self-center md:text-center md:text-[1.125rem]"
         >
-          something remarkable happens when you truly step away from the world into raw, untamed
-          nature ~ yet so few places left to do it.
+          <p>
+            something remarkable happens when you truly step away from the world into raw, untamed
+            nature.
+          </p>
+          <p>
+            without any effort the body changes, the mind eases, the nervous system finally gets some
+            rest.
+          </p>
         </Reveal>
 
         <Reveal
@@ -172,9 +187,9 @@ export function ConditionsChapter() {
         image="/images/dropbox/supporting-shell.webp"
         imageAlt="An empty turquoise Pacific wave framed by the branches of a coastal tree."
         above
+        overlay="catch more waves in a morning than most do in a week ~ in the longest rides of your life."
       >
-        waves, and no one waiting for a turn ~ long mellow rides to finally reach the surf you dream
-        of.
+        waves, and no one waiting for a turn ~ long mellow rides to finally surf like you dream.
       </ImmersiveCondition>
 
       <div className="mx-auto grid w-full max-w-5xl items-center gap-6 px-6 py-[18vh] md:grid-cols-[1.15fr_0.85fr_1fr] md:gap-10 md:px-10 md:py-[22vh]">
@@ -192,13 +207,10 @@ export function ConditionsChapter() {
           delay={0.1}
           className="flex flex-col gap-5 md:col-start-2 md:row-span-2 md:row-start-1 md:self-center md:text-center"
         >
-          <p className="text-balance font-display text-[0.9375rem] leading-relaxed tracking-[0.01em] md:text-base">
+          <p className="text-balance font-display text-[1.0625rem] leading-relaxed tracking-[0.01em] md:text-[1.125rem]">
             grab a board any time of the day and jump out to sea ~ the spot is right out front.
           </p>
-          <p className="text-balance font-display text-[0.9375rem] leading-relaxed tracking-[0.01em] md:text-base">
-            catch more waves in a morning than most do in a week ~ with up to 1-minute rides.
-          </p>
-          <p className="text-balance font-display text-[0.9375rem] leading-relaxed tracking-[0.01em] md:text-base">
+          <p className="text-balance font-display text-[1.0625rem] leading-relaxed tracking-[0.01em] md:text-[1.125rem]">
             our founder roberto shows you the spots, with local partners for lessons.
           </p>
         </Reveal>
@@ -232,6 +244,12 @@ export function ConditionsChapter() {
 
       <SpaChapter />
 
+      <div className="bg-bone px-6 pb-[6vh] pt-[10vh] text-ink md:px-12 md:pb-[7vh] md:pt-[12vh]">
+        <Reveal as="p" className="type-lead mx-auto max-w-3xl text-balance text-center">
+          he built a lodge at his home within the rainforest, for people to stay.
+        </Reveal>
+      </div>
+
       <ImmersiveCondition
         image="/images/dropbox/DSCF9683.JPG"
         imageAlt="Wildlife observed in the dense rainforest around Paz."
@@ -257,7 +275,7 @@ export function ConditionsChapter() {
         </Reveal>
       </div>
 
-      <div className="bg-bone px-[4vw] pb-[18vh] pt-0 md:px-[5vw] md:pb-[22vh]">
+      <div className="bg-bone px-[4vw] pb-0 pt-[4vh] md:px-[5vw]">
         <div className="columns-2 gap-2.5 md:columns-3 lg:columns-4">
           {wildlifeImages.map((image, index) => (
             <motion.div
@@ -286,19 +304,7 @@ export function ConditionsChapter() {
       </div>
 
       <div className="bg-bone px-6 text-ink md:px-12">
-        <div className="mx-auto flex min-h-svh max-w-2xl items-center justify-center py-[24vh] text-center">
-          <motion.p
-            className="type-body text-balance"
-            initial={reduceMotion ? false : { opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, amount: 0.65 }}
-            transition={{ duration: reduceMotion ? 0 : 1.8, ease: EASE_CINEMATIC }}
-          >
-            somewhere, this still exists.
-          </motion.p>
-        </div>
-
-        <div className="mx-auto flex min-h-svh max-w-[52ch] flex-col items-center justify-center py-[28vh] text-center font-display text-[1.25rem] leading-[1.8] tracking-[0.01em] md:text-[1.375rem]">
+        <div className="mx-auto flex max-w-[52ch] flex-col items-center justify-center pb-[22vh] pt-[14vh] text-center font-display text-[1.25rem] leading-[1.8] tracking-[0.01em] md:pb-[24vh] md:pt-[16vh] md:text-[1.375rem]">
           <motion.p
             className="text-balance"
             initial={reduceMotion ? false : { opacity: 0 }}
