@@ -17,6 +17,7 @@ export function Hero({
   eyebrow,
   meta,
   title,
+  subtitle,
   tagline,
   cue,
   children,
@@ -29,6 +30,8 @@ export function Hero({
   meta?: ReactNode
   /** the large display statement beneath the wordmark */
   title?: ReactNode
+  /** a quieter line set directly beneath the title */
+  subtitle?: ReactNode
   /** the single line beneath the wordmark */
   tagline?: ReactNode
   /** the quiet scroll cue at the base */
@@ -99,6 +102,11 @@ export function Hero({
             <h1 className="type-hero mx-auto max-w-4xl text-balance text-bone drop-shadow-[0_1px_22px_rgba(64,59,58,0.45)] md:mx-0 md:max-w-2xl">
               {title}
             </h1>
+            {subtitle ? (
+              <p className="mx-auto mt-5 max-w-2xl text-balance font-display text-[1.0625rem] leading-[1.55] text-bone/90 drop-shadow-[0_1px_14px_rgba(64,59,58,0.45)] md:mx-0 md:mt-6 md:text-[1.125rem]">
+                {subtitle}
+              </p>
+            ) : null}
           </div>
         ) : null}
 

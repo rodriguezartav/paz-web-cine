@@ -41,6 +41,7 @@ export default function HomePage() {
           image="/images/dropbox/empty-wave.webp"
           imageAlt="A lone surfer walking an empty Pacific beach beneath overhanging palms."
           title="the week you've been promising yourself"
+          subtitle="nature-led surf retreat ~ to prepare you for the changes you are ready to make."
           cue="keep walking"
         />
 
