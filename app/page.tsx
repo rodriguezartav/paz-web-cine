@@ -41,9 +41,20 @@ export default function HomePage() {
           image="/images/dropbox/empty-wave.webp"
           imageAlt="A lone surfer walking an empty Pacific beach beneath overhanging palms."
           title="the week you've been promising yourself"
-          subtitle="nature-led surf retreat ~ to prepare you for the changes you are ready to make."
           cue="keep walking"
         />
+
+        {/* The retreat named, once, in the first quiet after the image. */}
+        <section className="bg-bone text-ink">
+          <div className="mx-auto flex w-full max-w-4xl flex-col items-center px-6 py-[12vh] text-center md:px-10 md:py-[14vh]">
+            <Reveal
+              as="h2"
+              className="max-w-3xl text-pretty font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2]"
+            >
+              nature-led surf retreat ~ to prepare you for the changes you are ready to make.
+            </Reveal>
+          </div>
+        </section>
 
         {/* ── Movement One — The Last of Its Kind ───────────────────── */}
         <ConditionsChapter />
