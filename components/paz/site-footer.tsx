@@ -22,7 +22,7 @@ export function SiteFooter({
     <footer className="bg-ink px-6 py-24 text-bone md:py-32">
       <div className="mx-auto flex max-w-5xl flex-col gap-16 md:flex-row md:items-end md:justify-between">
         <div className="max-w-sm">
-          <Wordmark className="text-bone [&_*]:text-bone" />
+          <Wordmark size="lg" className="w-[8.5rem] md:w-[10rem]" />
           <p className="mt-8 font-sans text-sm leading-relaxed text-bone/70">{address}</p>
           <a
             href={`mailto:${email}`}
