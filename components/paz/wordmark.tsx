@@ -1,41 +1,39 @@
+import Image from 'next/image'
 import { cn } from '@/lib/utils'
 
 type WordmarkProps = {
   className?: string
-  /** size of the "pàz" wordmark, in rem via tailwind text sizes */
+  /** size of the mark */
   size?: 'sm' | 'lg'
+  /**
+   * the mark is drawn in bone. on light surfaces pass 'ink' and it is
+   * darkened in place, so a single asset serves the whole site.
+   */
+  tone?: 'bone' | 'ink'
   subdued?: boolean
 }
 
-/**
- * The Paz Corcovado wordmark — a fluid cursive "pàz" set in the Swear
- * Banner display face, with CORCOVADO beneath in the Polymath display face.
- */
-export function Wordmark({ className, size = 'sm', subdued = false }: WordmarkProps) {
+/** the drawn "paz salvaje" mark — one asset, used everywhere */
+export function Wordmark({ className, size = 'sm', tone = 'bone', subdued = false }: WordmarkProps) {
   return (
     <span
-      className={cn('inline-flex flex-col items-center leading-none', className)}
-      aria-label="Paz Corcovado"
+      className={cn(
+        'inline-block',
+        size === 'lg' ? 'w-[9.5rem] md:w-[13rem]' : 'w-[3.75rem]',
+        tone === 'ink' && '[filter:brightness(0)_saturate(0)] opacity-[0.82]',
+        subdued && 'opacity-70',
+        className,
+      )}
     >
-      <span
-        aria-hidden="true"
-        className={cn(
-          'font-banner lowercase',
-          size === 'lg' ? 'text-6xl md:text-8xl' : 'text-2xl',
-        )}
-      >
-        pàz
-      </span>
-      <span
-        aria-hidden="true"
-        className={cn(
-          'font-display uppercase tracking-[0.28em]',
-          size === 'lg' ? 'mt-2 text-xs md:text-sm' : 'text-[0.5rem]',
-          subdued && 'opacity-70',
-        )}
-      >
-        Corcovado
-      </span>
+      <Image
+        src="/images/brand/paz-salvaje.png"
+        alt="paz salvaje"
+        width={589}
+        height={561}
+        priority={size === 'lg'}
+        sizes={size === 'lg' ? '(max-width: 767px) 152px, 208px' : '60px'}
+        className="h-auto w-full"
+      />
     </span>
   )
 }

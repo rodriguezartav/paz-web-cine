@@ -47,8 +47,8 @@ export function Navigation({
             aria-label="Primary"
             className="flex items-center justify-between border-b border-ink/10 bg-background/80 px-6 py-3 backdrop-blur-md md:px-10"
           >
-            <Link href="/" aria-label="Paz Corcovado — home" className="text-ink">
-              <Wordmark size="sm" />
+            <Link href="/" aria-label="paz salvaje — home" className="text-ink">
+              <Wordmark size="sm" tone="ink" />
             </Link>
             <a
               href={enquireHref}
