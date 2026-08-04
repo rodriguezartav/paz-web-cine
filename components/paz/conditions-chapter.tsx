@@ -201,7 +201,7 @@ export function ConditionsChapter() {
             grab a board any time of the day and jump out to sea ~ the spot is right out front.
           </p>
           <p className="text-balance font-display text-[0.9375rem] leading-relaxed tracking-[0.01em] md:text-base">
-            our founder roberto shows you the spots, with local partners for lessons.
+            we show you the spots, tides, winds and join our local partners for guides and lessons.
           </p>
         </Reveal>
 
