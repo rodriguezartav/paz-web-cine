@@ -30,8 +30,8 @@ export function SpaChapter() {
           as="p"
           className="max-w-2xl text-pretty font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2]"
         >
-          our founder, roberto, has been learning about natural meditation here in the rainforest with
-          the most life on Earth.
+          personally hosted by our founder, roberto, who has been studying natural meditation ~ here
+          in the rainforest with the most life on Earth.
         </Reveal>
 
         <Reveal
