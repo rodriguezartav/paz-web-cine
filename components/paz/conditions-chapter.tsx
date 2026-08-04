@@ -84,7 +84,7 @@ function ImmersiveCondition({
           <div className="relative flex h-full items-end px-6 pb-12 md:items-center md:justify-start md:px-12 md:pb-0">
             <Reveal
               as="p"
-              className="type-lead max-w-md text-pretty text-bone [text-shadow:0_1px_3px_color-mix(in_oklab,var(--color-ink)_70%,transparent),0_2px_20px_color-mix(in_oklab,var(--color-ink)_55%,transparent)] md:w-[30%] md:max-w-none"
+              className="type-lead max-w-xl text-pretty text-bone [text-shadow:0_1px_3px_color-mix(in_oklab,var(--color-ink)_35%,transparent),0_2px_20px_color-mix(in_oklab,var(--color-ink)_28%,transparent)] md:w-[44%] md:max-w-none"
             >
               {overlay}
             </Reveal>
