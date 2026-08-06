@@ -7,6 +7,7 @@ import {
   ConditionsChapter,
   FullscreenVideo,
   LandCollage,
+  ConditionsCollage,
   WayWeLiveChapter,
 } from '@/components/paz'
 
@@ -46,7 +47,7 @@ export default function HomePage() {
 
         {/* The retreat named, once, in the first quiet after the image. */}
         <section className="bg-bone text-ink">
-          <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-6 px-6 pb-[5vh] pt-[12vh] text-center md:gap-7 md:px-10 md:pb-[6vh] md:pt-[14vh]">
+          <div className="mx-auto flex w-full max-w-4xl flex-col items-center px-6 pb-[14vh] pt-[18vh] text-center md:px-10 md:pb-[16vh] md:pt-[20vh]">
             <Reveal
               as="h2"
               className="mx-auto max-w-3xl text-balance text-center font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2]"
@@ -54,16 +55,11 @@ export default function HomePage() {
               paz ~ a surf retreat on costa rica&apos;s wildest coast, made to find the strength for
               the change you&apos;re ready to make.
             </Reveal>
-            <Reveal
-              as="p"
-              delay={0.1}
-              className="mx-auto max-w-3xl text-balance text-center font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2]"
-            >
-              here, a set of conditions comes together to make something that, as far as we know, is
-              the last of its kind.
-            </Reveal>
           </div>
         </section>
+
+        {/* The conditions, set between three frames of the place. */}
+        <ConditionsCollage />
 
         {/* ── Movement One — The Last of Its Kind ───────────────────── */}
         <ConditionsChapter />
