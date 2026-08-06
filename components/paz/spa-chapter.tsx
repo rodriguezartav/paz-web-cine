@@ -75,6 +75,16 @@ export function SpaChapter() {
           <span className="inline-block rounded-sm bg-sage px-4 py-1.5 text-bone">cave sauna</span>
           <span className="mt-5 block md:mt-6">the womb of creation</span>
         </Reveal>
+
+        <Reveal
+          as="p"
+          delay={0.1}
+          className="mx-auto max-w-2xl text-pretty text-center font-display text-[1.0625rem] leading-[1.55] md:text-[1.125rem]"
+        >
+          he invented the cave sauna and the spa around it as a way to quickly get rid of our
+          emotional load ~ grounding and connection then become much easier ~ it is also a magical
+          space where everything is possible.
+        </Reveal>
       </div>
 
       <Reveal className="px-[4vw] pb-[10vh] md:px-[5vw] md:pb-[12vh]">
