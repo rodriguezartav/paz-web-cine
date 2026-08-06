@@ -15,6 +15,9 @@ export function LandCollage() {
           <h2 className="type-lead text-balance">
             this is an invitation to an authentic experience
           </h2>
+          <p className="text-balance font-display text-[clamp(1.125rem,1.9vw,1.375rem)] leading-[1.35]">
+            he built a lodge at his home within the rainforest, for people to stay.
+          </p>
           <p className="text-pretty font-display text-[1.0625rem] leading-[1.55] md:text-[1.125rem]">
             live 7 to 21 days on costa rican land, the old way ~ unhurried. tied to nature in ways
             english has no words for.
