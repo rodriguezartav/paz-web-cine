@@ -51,8 +51,8 @@ export default function HomePage() {
               as="h2"
               className="mx-auto max-w-3xl text-balance text-center font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2]"
             >
-              paz ~ a nature-led surf residency from another world. made for the change you&apos;re
-              ready to make.
+              paz ~ a surf retreat on costa rica&apos;s wildest coast, made to find the strength for
+              the change you&apos;re ready to make.
             </Reveal>
             <Reveal
               as="p"
