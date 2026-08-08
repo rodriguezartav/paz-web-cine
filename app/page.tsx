@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import {
   Navigation,
   Hero,
@@ -54,6 +55,21 @@ export default function HomePage() {
             >
               paz ~ a surf retreat on costa rica&apos;s wildest coast, made to find the strength for
               the change you&apos;re ready to make.
+            </Reveal>
+
+            <Reveal
+              delay={0.1}
+              className="relative mt-[9vh] aspect-[4/3] w-full overflow-hidden rounded-sm md:mt-[10vh]"
+            >
+              <div className="grain absolute inset-0">
+                <Image
+                  src="/images/dropbox/aerial-coast.webp"
+                  alt="An aerial view of turquoise Pacific water breaking along a sand spit where the rainforest meets the sea."
+                  fill
+                  sizes="(max-width: 767px) 88vw, 56rem"
+                  className="object-cover"
+                />
+              </div>
             </Reveal>
           </div>
         </section>
