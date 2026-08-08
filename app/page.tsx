@@ -49,7 +49,7 @@ export default function HomePage() {
 
         {/* The retreat named, once, in the first quiet after the image. */}
         <section className="bg-bone text-ink">
-          <div className="mx-auto flex w-full max-w-4xl flex-col items-center px-6 pb-[14vh] pt-0 text-center md:px-10 md:pb-[16vh] md:pt-0">
+          <div className="mx-auto flex w-full max-w-4xl flex-col items-center px-6 pb-[14vh] pt-[10px] text-center md:px-10 md:pb-[16vh]">
             {/* The place, named quietly and pinned to the map. */}
             <Reveal>
               <a
