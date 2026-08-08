@@ -49,7 +49,7 @@ export default function HomePage() {
 
         {/* The retreat named, once, in the first quiet after the image. */}
         <section className="bg-bone text-ink">
-          <div className="mx-auto flex w-full max-w-4xl flex-col items-center px-6 pb-[14vh] pt-[18vh] text-center md:px-10 md:pb-[16vh] md:pt-[20vh]">
+          <div className="mx-auto flex w-full max-w-4xl flex-col items-center px-6 pb-[14vh] pt-0 text-center md:px-10 md:pb-[16vh] md:pt-0">
             {/* The place, named quietly and pinned to the map. */}
             <Reveal>
               <a
@@ -67,7 +67,7 @@ export default function HomePage() {
             <Reveal
               as="h2"
               delay={0.1}
-              className="mx-auto mt-10 max-w-3xl text-balance text-center font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2] md:mt-12"
+              className="mx-auto mt-[14vh] max-w-3xl text-balance text-center font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2] md:mt-[16vh]"
             >
               paz ~ a surf retreat on costa rica&apos;s wildest coast, made to find the strength for
               the change you&apos;re ready to make.
