@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import { MapPin } from 'lucide-react'
 import {
   Navigation,
   Hero,
@@ -49,16 +50,31 @@ export default function HomePage() {
         {/* The retreat named, once, in the first quiet after the image. */}
         <section className="bg-bone text-ink">
           <div className="mx-auto flex w-full max-w-4xl flex-col items-center px-6 pb-[14vh] pt-[18vh] text-center md:px-10 md:pb-[16vh] md:pt-[20vh]">
+            {/* The place, named quietly and pinned to the map. */}
+            <Reveal>
+              <a
+                href="https://www.google.com/maps/place/Osa+Peninsula,+Costa+Rica/@8.5449,-83.4487,10z"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-ink/20 px-4 py-2 font-display text-[0.8125rem] uppercase tracking-[0.16em] text-ink/75 transition-colors hover:border-ink/45 hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink/50"
+              >
+                <MapPin aria-hidden="true" className="size-4 shrink-0" />
+                Osa Peninsula, Costa Rica
+                <span className="sr-only">— open this location on Google Maps</span>
+              </a>
+            </Reveal>
+
             <Reveal
               as="h2"
-              className="mx-auto max-w-3xl text-balance text-center font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2]"
+              delay={0.1}
+              className="mx-auto mt-10 max-w-3xl text-balance text-center font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2] md:mt-12"
             >
               paz ~ a surf retreat on costa rica&apos;s wildest coast, made to find the strength for
               the change you&apos;re ready to make.
             </Reveal>
 
             <Reveal
-              delay={0.1}
+              delay={0.2}
               className="relative mt-[9vh] aspect-[4/3] w-full overflow-hidden rounded-sm md:mt-[10vh]"
             >
               <div className="grain absolute inset-0">
