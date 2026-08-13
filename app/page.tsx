@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import { MapPin } from 'lucide-react'
 import {
   Navigation,
@@ -10,6 +9,8 @@ import {
   FullscreenVideo,
   LandCollage,
   ConditionsCollage,
+  TaglineStatement,
+  WhatItIs,
   WayWeLiveChapter,
 } from '@/components/paz'
 
@@ -47,10 +48,9 @@ export default function HomePage() {
           cue="keep walking"
         />
 
-        {/* The retreat named, once, in the first quiet after the image. */}
+        {/* The place, named quietly and pinned to the map, flush to the image. */}
         <section className="bg-bone text-ink">
-          <div className="mx-auto flex w-full max-w-4xl flex-col items-center px-6 pb-[14vh] pt-[10px] text-center md:px-10 md:pb-[16vh]">
-            {/* The place, named quietly and pinned to the map. */}
+          <div className="mx-auto flex w-full max-w-4xl flex-col items-center px-6 pt-[10px] text-center md:px-10">
             <Reveal>
               <a
                 href="https://www.google.com/maps/place/Osa+Peninsula,+Costa+Rica/@8.5449,-83.4487,10z"
@@ -63,31 +63,14 @@ export default function HomePage() {
                 <span className="sr-only">— open this location on Google Maps</span>
               </a>
             </Reveal>
-
-            <Reveal
-              as="h2"
-              delay={0.1}
-              className="mx-auto mt-[14vh] max-w-3xl text-balance text-center font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2] md:mt-[16vh]"
-            >
-              the week you&apos;ve been promising yourself
-            </Reveal>
-
-            <Reveal
-              delay={0.2}
-              className="relative mt-[9vh] aspect-[4/3] w-full overflow-hidden rounded-sm md:mt-[10vh]"
-            >
-              <div className="grain absolute inset-0">
-                <Image
-                  src="/images/dropbox/empty-wave.webp"
-                  alt="A lone surfer walking an empty Pacific beach beneath overhanging palms."
-                  fill
-                  sizes="(max-width: 767px) 88vw, 56rem"
-                  className="object-cover"
-                />
-              </div>
-            </Reveal>
           </div>
         </section>
+
+        {/* i — the retreat named in full, alone on its own quiet screen. */}
+        <TaglineStatement />
+
+        {/* ii — what it is, in plain words. Three beats, a breath apart. */}
+        <WhatItIs />
 
         {/* The conditions, set between three frames of the place. */}
         <ConditionsCollage />
