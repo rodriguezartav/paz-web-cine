@@ -96,7 +96,7 @@ export function Hero({
               size="lg"
               className="mb-7 drop-shadow-[0_1px_18px_rgba(64,59,58,0.4)] md:hidden"
             />
-            <h1 className="type-hero mx-auto max-w-4xl text-balance text-bone drop-shadow-[0_1px_22px_rgba(64,59,58,0.45)] md:mx-0 md:max-w-2xl">
+            <h1 className="mx-auto max-w-2xl text-balance font-display text-[clamp(1.375rem,3vw,2.125rem)] leading-[1.18] tracking-[-0.01em] text-bone drop-shadow-[0_1px_22px_rgba(64,59,58,0.45)] md:mx-0 md:max-w-3xl">
               {title}
             </h1>
           </div>
