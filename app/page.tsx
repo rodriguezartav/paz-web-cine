@@ -41,9 +41,9 @@ export default function HomePage() {
         {/* ── Threshold ─────────────────────────────────────────────── */}
         {/* The extraordinary shown, not described. The place is not yet named. */}
         <Hero
-          image="/images/dropbox/empty-wave.webp"
-          imageAlt="A lone surfer walking an empty Pacific beach beneath overhanging palms."
-          title="the week you've been promising yourself"
+          image="/images/dropbox/aerial-coast.webp"
+          imageAlt="An aerial view of turquoise Pacific water breaking along a sand spit where the rainforest meets the sea."
+          title="the surf retreat on costa rica's wildest coast, made to find the strength for the change you're ready to make."
           cue="keep walking"
         />
 
@@ -69,8 +69,7 @@ export default function HomePage() {
               delay={0.1}
               className="mx-auto mt-[14vh] max-w-3xl text-balance text-center font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2] md:mt-[16vh]"
             >
-              the surf retreat on costa rica&apos;s wildest coast, made to find the strength for the
-              change you&apos;re ready to make.
+              the week you&apos;ve been promising yourself
             </Reveal>
 
             <Reveal
@@ -79,8 +78,8 @@ export default function HomePage() {
             >
               <div className="grain absolute inset-0">
                 <Image
-                  src="/images/dropbox/aerial-coast.webp"
-                  alt="An aerial view of turquoise Pacific water breaking along a sand spit where the rainforest meets the sea."
+                  src="/images/dropbox/empty-wave.webp"
+                  alt="A lone surfer walking an empty Pacific beach beneath overhanging palms."
                   fill
                   sizes="(max-width: 767px) 88vw, 56rem"
                   className="object-cover"
