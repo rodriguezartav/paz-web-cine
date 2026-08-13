@@ -75,9 +75,10 @@ export function Hero({
             <>
               <Wordmark
                 size="lg"
+                variant="badge"
                 className={cn(
-                  'drop-shadow-[0_1px_18px_rgba(64,59,58,0.4)]',
-                  // on mobile the wordmark travels down to sit directly above the title
+                  'drop-shadow-[0_2px_24px_rgba(64,59,58,0.45)]',
+                  // on mobile the badge travels down to sit directly above the title
                   title && 'hidden md:block',
                 )}
               />
@@ -94,7 +95,8 @@ export function Hero({
           <div className="flex flex-col items-center px-6 pb-8 text-center md:items-start md:px-10 md:pb-10 md:text-left">
             <Wordmark
               size="lg"
-              className="mb-7 drop-shadow-[0_1px_18px_rgba(64,59,58,0.4)] md:hidden"
+              variant="badge"
+              className="mb-7 drop-shadow-[0_2px_24px_rgba(64,59,58,0.45)] md:hidden"
             />
             <h1 className="mx-auto max-w-2xl text-balance font-display text-[clamp(1.375rem,3vw,2.125rem)] leading-[1.18] tracking-[-0.01em] text-bone drop-shadow-[0_1px_22px_rgba(64,59,58,0.45)] md:mx-0 md:max-w-3xl">
               {title}
