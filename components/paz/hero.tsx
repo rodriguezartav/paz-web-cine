@@ -87,7 +87,7 @@ export function Hero({
               />
             </div>
 
-            <div className="flex flex-col items-center px-6 pb-8 text-center md:order-1 md:flex-1 md:items-start md:justify-center md:px-10 md:pb-0 md:text-left">
+            <div className="flex flex-col items-center px-6 pb-8 text-center md:order-1 md:flex-1 md:items-start md:justify-start md:px-10 md:pb-0 md:pt-[11vh] md:text-left">
               <h1 className="mx-auto max-w-2xl text-balance font-display text-[clamp(1.375rem,3vw,2.125rem)] leading-[1.18] tracking-[-0.01em] text-bone drop-shadow-[0_1px_22px_rgba(64,59,58,0.45)] md:mx-0 md:max-w-3xl">
                 {title}
               </h1>
