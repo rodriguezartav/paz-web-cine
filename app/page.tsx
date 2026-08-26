@@ -10,6 +10,7 @@ import {
   FullscreenVideo,
   LandCollage,
   ConditionsCollage,
+  MuxCountdown,
   WayWeLiveChapter,
 } from '@/components/paz'
 
@@ -89,6 +90,8 @@ export default function HomePage() {
             </Reveal>
           </div>
         </section>
+
+        <MuxCountdown playbackId="dwRfEhUnhVDfIAgzxkZo9diJjpxDE02fyLTTrN7pxlS8" />
 
         {/* The conditions, set between three frames of the place. */}
         <ConditionsCollage />
