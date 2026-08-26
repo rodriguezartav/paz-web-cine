@@ -70,55 +70,40 @@ export function Hero({
           </div>
         )}
 
-        {title && !children ? (
-          /*
-           * Mobile keeps the pair at the base — badge, then the statement.
-           * Desktop swaps them: the statement centres itself and the badge
-           * settles at the foot of the frame.
-           */
-          <>
-            <div aria-hidden="true" className="flex-1 md:hidden" />
-
-            <div className="flex flex-col items-center px-6 text-center md:order-2 md:items-start md:px-10 md:pb-10 md:text-left">
+        <div className="flex flex-1 flex-col items-center justify-center px-6 text-center md:items-start md:px-10 md:text-left">
+          {children ?? (
+            <>
               <Wordmark
                 size="lg"
-                variant="badge"
-                className="mb-7 drop-shadow-[0_2px_24px_rgba(64,59,58,0.45)] md:mb-0"
+                className={cn(
+                  'drop-shadow-[0_1px_18px_rgba(64,59,58,0.4)]',
+                  // on mobile the wordmark travels down to sit directly above the title
+                  title && 'hidden md:block',
+                )}
               />
-            </div>
-
-            <div className="flex flex-col items-center px-6 pb-8 text-center md:order-1 md:flex-1 md:items-start md:justify-start md:px-10 md:pb-0 md:pt-[11vh] md:text-left">
-              <h1 className="mx-auto max-w-2xl text-balance font-display text-[clamp(1.375rem,3vw,2.125rem)] leading-[1.18] tracking-[-0.01em] text-bone drop-shadow-[0_1px_22px_rgba(64,59,58,0.45)] md:mx-0 md:max-w-3xl">
-                {title}
-              </h1>
               {tagline ? (
-                <p className="mt-6 max-w-md text-balance font-display text-lg leading-relaxed text-bone/90 md:text-xl">
+                <p className="mt-8 max-w-md font-display text-lg leading-relaxed text-balance text-bone/90 md:text-xl">
                   {tagline}
                 </p>
               ) : null}
-            </div>
-          </>
-        ) : (
-          <div className="flex flex-1 flex-col items-center justify-center px-6 text-center md:items-start md:px-10 md:text-left">
-            {children ?? (
-              <>
-                <Wordmark
-                  size="lg"
-                  variant="badge"
-                  className="drop-shadow-[0_2px_24px_rgba(64,59,58,0.45)]"
-                />
-                {tagline ? (
-                  <p className="mt-8 max-w-md text-balance font-display text-lg leading-relaxed text-bone/90 md:text-xl">
-                    {tagline}
-                  </p>
-                ) : null}
-              </>
-            )}
+            </>
+          )}
+        </div>
+
+        {title && !children ? (
+          <div className="flex flex-col items-center px-6 pb-8 text-center md:items-start md:px-10 md:pb-10 md:text-left">
+            <Wordmark
+              size="lg"
+              className="mb-7 drop-shadow-[0_1px_18px_rgba(64,59,58,0.4)] md:hidden"
+            />
+            <h1 className="type-hero mx-auto max-w-4xl text-balance text-bone drop-shadow-[0_1px_22px_rgba(64,59,58,0.45)] md:mx-0 md:max-w-2xl">
+              {title}
+            </h1>
           </div>
-        )}
+        ) : null}
 
         {cue ? (
-          <div className="flex items-end justify-center pb-9 md:order-3">
+          <div className="flex items-end justify-center pb-9">
             <span
               className={cn('font-sans text-[0.7rem] lowercase tracking-[0.24em] text-bone/70')}
             >
