@@ -16,14 +16,14 @@ export function MuxCountdown({ playbackId }: { playbackId: string }) {
 
   return (
     <section className="bg-bone px-6 py-[12vh] text-ink md:px-10 md:py-[14vh]" aria-label="Video retreat film">
-      <div className="mx-auto flex max-w-5xl flex-col items-center gap-8 text-center md:gap-10">
-        <Reveal>
-          <p className="font-display text-[clamp(4rem,12vw,10rem)] leading-none tracking-[-0.05em] tabular-nums" aria-live="polite">
-            {formatTime(remaining || duration)}
-          </p>
-          <span className="sr-only">time remaining in the film</span>
-        </Reveal>
+      <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
         <Reveal delay={0.1} className="relative aspect-video w-full overflow-hidden rounded-sm bg-ink">
+          <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center">
+            <p className="font-display text-[clamp(4rem,12vw,10rem)] leading-none tracking-[-0.05em] text-bone drop-shadow-[0_2px_16px_color-mix(in_oklab,var(--color-ink)_65%,transparent)] tabular-nums" aria-live="polite">
+              {formatTime(remaining || duration)}
+            </p>
+            <span className="sr-only">time remaining in the film</span>
+          </div>
           <MuxVideo
             ref={videoRef}
             className="absolute inset-0 h-full w-full object-cover"
