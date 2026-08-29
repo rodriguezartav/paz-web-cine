@@ -69,8 +69,7 @@ export default function HomePage() {
               delay={0.1}
               className="mx-auto mt-[14vh] max-w-3xl text-balance text-center font-display text-[clamp(1.125rem,2.55vw,1.875rem)] leading-[1.2] md:mt-[16vh]"
             >
-              paz salvaje ~ a surf retreat guided by nature on costa rica&apos;s wildest coast, made to
-              find the strength for the change you&apos;re ready to make.
+              paz salvaje ~ a surf retreat guided by nature on costa rica&apos;s wildest coast.
               <span className="mt-6 block md:mt-7">
                 for those in the middle of a change ~ a real place to step out of the world, catch
                 your breath, and gather the strength for what&apos;s next.
